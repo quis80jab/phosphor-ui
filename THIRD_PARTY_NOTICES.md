@@ -1,6 +1,6 @@
 # Third-party notices
 
-Original UI code is covered by the root LICENSE. The following retain their
+Original UI code is covered by the root MIT LICENSE. The following retain their
 separate licenses and notices:
 
 | Component | License | Notice / source |

@@ -3822,10 +3822,16 @@
     "Render the native 3D scene and UI into the shared compositor; avoid independent per-control grids or bloom passes.",
     "Keep semantic DOM controls accessible and fallback-visible until the optical renderer succeeds.",
     "Use the same vendored Three.js instance for Spark and scene code.",
-    "Original UI code has no separately declared open-source license; no license grant is invented here.",
+    "Original UI code is licensed under MIT; see LICENSE. Third-party libraries and datasets retain their separate licenses.",
     "Logistics and readiness are demo workflows; maps/sensors/flight do not provide operational or hardware guarantees."
   ],
   "licenses": [
+    {
+      "id": "phosphor-ui",
+      "name": "Original Phosphor UI code",
+      "license": "MIT",
+      "notice": "LICENSE"
+    },
     {
       "id": "three",
       "name": "Three.js",

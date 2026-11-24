@@ -128,7 +128,7 @@ node --test tests/*.test.mjs
 
 The handoff adds round-trip, malformed-file, storage-failure/rollback and programmatic control tests. Browser verification covers the backup page and live integration controls. A passing code test is not a certification for real drone operation or calibrated sensing.
 
-Three.js r187 and Spark 2.4.0 are vendored with MIT notices. Original UI code remains project-owned; this package grants no new open-source license. Keep OSM attribution and asset notices. The croissant capture is CC BY-NC 4.0; Pumpkin and Shopping Center are CC BY 4.0. The UI can be reused without bundling these demonstration datasets. OSM heights/colors and sensor feeds include labeled estimates or simulated data.
+Three.js r187 and Spark 2.4.0 are vendored with MIT notices. Original UI code is licensed under MIT; see the root LICENSE. Third-party data retains its own license. Keep OSM attribution and asset notices. The croissant capture is CC BY-NC 4.0; Pumpkin and Shopping Center are CC BY 4.0. The UI can be reused without bundling these demonstration datasets. OSM heights/colors and sensor feeds include labeled estimates or simulated data.
 
 To make a fresh package after changes, run `node tools/prepare-handoff.mjs`, run the tests, save the exact source commit, then run `python3 tools/package-handoff.py --output /absolute/output/folder`. Do not place private snapshots in `dist`.
 

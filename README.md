@@ -99,8 +99,9 @@ Drone controls, authentication screens, telemetry, thermal feeds, cases and topo
 are UI simulations, not connected hardware or backend services. Settings and notes
 save to browser-local storage; use export/import to move them.
 
-See [LICENSE](LICENSE) for original code and [third-party notices](THIRD_PARTY_NOTICES.md)
-for dependencies, OSM and the sample capture.
+Original UI code is licensed under the **[MIT License](LICENSE)**, allowing reuse,
+modification and redistribution, including commercial use. Dependencies, OSM and
+the sample capture retain their separate [third-party licenses](THIRD_PARTY_NOTICES.md).
 
 ## Validate
 

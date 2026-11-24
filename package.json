@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "description": "VFD visual components, shared pixel-grid shaders, flow editor and 3D hologram UI",
   "type": "module",
-  "license": "UNLICENSED",
+  "license": "MIT",
   "engines": {
     "node": ">=22"
   },

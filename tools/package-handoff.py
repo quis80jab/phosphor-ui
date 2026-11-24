@@ -32,7 +32,7 @@ provenance = {'format': 'phosphor-source-handoff', 'version': 1, 'sourceCommit':
               'runtime': 'native-browser-esm', 'entry': 'dist/handoff.html',
               'programEntry': 'dist/phosphor-kit.js', 'settingsEntry': 'dist/project-backup.js',
               'settingsOrigins': [json.loads(p.read_text())['origin'] for n, p in files if n.startswith('handoff/snapshots/')],
-              'originalCodeLicense': 'See the bundled root LICENSE; third-party components retain their notices.'}
+              'originalCodeLicense': 'MIT; see the bundled root LICENSE. Third-party components retain their notices.'}
 reports = []
 for variant in ('complete', 'ui-only'):
     selected = [(n, p) for n, p in files if variant == 'complete' or not n.startswith('dist/assets/') or n.endswith(('-license.txt', '-splats.json'))]
