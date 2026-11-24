@@ -1,0 +1,375 @@
+{
+  "version": 1,
+  "format": "original-ply-gzip-chunks",
+  "encoding": "gzip",
+  "lossless": true,
+  "count": 236452,
+  "shDegree": 3,
+  "source": {
+    "filename": "scene.ply",
+    "title": "Pumpkin!",
+    "sha256": "e0f63e6937b27496892a760cba97ebf115a987ffac49f2a04373565c9b061642",
+    "vertices": 236452,
+    "properties": 59,
+    "headerComments": [],
+    "author": "Mavrick Hansen",
+    "authorUrl": "https://superspl.at/user/mahansen36",
+    "url": "https://superspl.at/scene/2bc92c71",
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+    "licenseFile": "pumpkin-license.txt",
+    "bytes": 55804149,
+    "propertyCount": 59,
+    "propertyList": [
+      {
+        "name": "x",
+        "type": "float"
+      },
+      {
+        "name": "y",
+        "type": "float"
+      },
+      {
+        "name": "z",
+        "type": "float"
+      },
+      {
+        "name": "rot_0",
+        "type": "float"
+      },
+      {
+        "name": "rot_1",
+        "type": "float"
+      },
+      {
+        "name": "rot_2",
+        "type": "float"
+      },
+      {
+        "name": "rot_3",
+        "type": "float"
+      },
+      {
+        "name": "scale_0",
+        "type": "float"
+      },
+      {
+        "name": "scale_1",
+        "type": "float"
+      },
+      {
+        "name": "scale_2",
+        "type": "float"
+      },
+      {
+        "name": "opacity",
+        "type": "float"
+      },
+      {
+        "name": "f_dc_0",
+        "type": "float"
+      },
+      {
+        "name": "f_dc_1",
+        "type": "float"
+      },
+      {
+        "name": "f_dc_2",
+        "type": "float"
+      },
+      {
+        "name": "f_rest_0",
+        "type": "float"
+      },
+      {
+        "name": "f_rest_1",
+        "type": "float"
+      },
+      {
+        "name": "f_rest_2",
+        "type": "float"
+      },
+      {
+        "name": "f_rest_3",
+        "type": "float"
+      },
+      {
+        "name": "f_rest_4",
+        "type": "float"
+      },
+      {
+        "name": "f_rest_5",
+        "type": "float"
+      },
+      {
+        "name": "f_rest_6",
+        "type": "float"
+      },
+      {
+        "name": "f_rest_7",
+        "type": "float"
+      },
+      {
+        "name": "f_rest_8",
+        "type": "float"
+      },
+      {
+        "name": "f_rest_9",
+        "type": "float"
+      },
+      {
+        "name": "f_rest_10",
+        "type": "float"
+      },
+      {
+        "name": "f_rest_11",
+        "type": "float"
+      },
+      {
+        "name": "f_rest_12",
+        "type": "float"
+      },
+      {
+        "name": "f_rest_13",
+        "type": "float"
+      },
+      {
+        "name": "f_rest_14",
+        "type": "float"
+      },
+      {
+        "name": "f_rest_15",
+        "type": "float"
+      },
+      {
+        "name": "f_rest_16",
+        "type": "float"
+      },
+      {
+        "name": "f_rest_17",
+        "type": "float"
+      },
+      {
+        "name": "f_rest_18",
+        "type": "float"
+      },
+      {
+        "name": "f_rest_19",
+        "type": "float"
+      },
+      {
+        "name": "f_rest_20",
+        "type": "float"
+      },
+      {
+        "name": "f_rest_21",
+        "type": "float"
+      },
+      {
+        "name": "f_rest_22",
+        "type": "float"
+      },
+      {
+        "name": "f_rest_23",
+        "type": "float"
+      },
+      {
+        "name": "f_rest_24",
+        "type": "float"
+      },
+      {
+        "name": "f_rest_25",
+        "type": "float"
+      },
+      {
+        "name": "f_rest_26",
+        "type": "float"
+      },
+      {
+        "name": "f_rest_27",
+        "type": "float"
+      },
+      {
+        "name": "f_rest_28",
+        "type": "float"
+      },
+      {
+        "name": "f_rest_29",
+        "type": "float"
+      },
+      {
+        "name": "f_rest_30",
+        "type": "float"
+      },
+      {
+        "name": "f_rest_31",
+        "type": "float"
+      },
+      {
+        "name": "f_rest_32",
+        "type": "float"
+      },
+      {
+        "name": "f_rest_33",
+        "type": "float"
+      },
+      {
+        "name": "f_rest_34",
+        "type": "float"
+      },
+      {
+        "name": "f_rest_35",
+        "type": "float"
+      },
+      {
+        "name": "f_rest_36",
+        "type": "float"
+      },
+      {
+        "name": "f_rest_37",
+        "type": "float"
+      },
+      {
+        "name": "f_rest_38",
+        "type": "float"
+      },
+      {
+        "name": "f_rest_39",
+        "type": "float"
+      },
+      {
+        "name": "f_rest_40",
+        "type": "float"
+      },
+      {
+        "name": "f_rest_41",
+        "type": "float"
+      },
+      {
+        "name": "f_rest_42",
+        "type": "float"
+      },
+      {
+        "name": "f_rest_43",
+        "type": "float"
+      },
+      {
+        "name": "f_rest_44",
+        "type": "float"
+      }
+    ],
+    "recordStride": 236,
+    "headerBytes": 1477,
+    "headerText": "ply\nformat binary_little_endian 1.0\nelement vertex 236452\nproperty float x\nproperty float y\nproperty float z\nproperty float rot_0\nproperty float rot_1\nproperty float rot_2\nproperty float rot_3\nproperty float scale_0\nproperty float scale_1\nproperty float scale_2\nproperty float opacity\nproperty float f_dc_0\nproperty float f_dc_1\nproperty float f_dc_2\nproperty float f_rest_0\nproperty float f_rest_1\nproperty float f_rest_2\nproperty float f_rest_3\nproperty float f_rest_4\nproperty float f_rest_5\nproperty float f_rest_6\nproperty float f_rest_7\nproperty float f_rest_8\nproperty float f_rest_9\nproperty float f_rest_10\nproperty float f_rest_11\nproperty float f_rest_12\nproperty float f_rest_13\nproperty float f_rest_14\nproperty float f_rest_15\nproperty float f_rest_16\nproperty float f_rest_17\nproperty float f_rest_18\nproperty float f_rest_19\nproperty float f_rest_20\nproperty float f_rest_21\nproperty float f_rest_22\nproperty float f_rest_23\nproperty float f_rest_24\nproperty float f_rest_25\nproperty float f_rest_26\nproperty float f_rest_27\nproperty float f_rest_28\nproperty float f_rest_29\nproperty float f_rest_30\nproperty float f_rest_31\nproperty float f_rest_32\nproperty float f_rest_33\nproperty float f_rest_34\nproperty float f_rest_35\nproperty float f_rest_36\nproperty float f_rest_37\nproperty float f_rest_38\nproperty float f_rest_39\nproperty float f_rest_40\nproperty float f_rest_41\nproperty float f_rest_42\nproperty float f_rest_43\nproperty float f_rest_44\nend_header\n",
+    "shDegree": 3
+  },
+  "compressedBytes": 23355913,
+  "gzipBytes": 23355913,
+  "gzipSha256": "dbb2258a96d599e93f98e195406d0c952edf9f1de22d5be1a15da6114c9f18d4",
+  "gzipMtime": 0,
+  "compressionLevel": 6,
+  "maximumChunkBytes": 16777216,
+  "chunks": [
+    {
+      "url": "pumpkin-splats/part-000.bin",
+      "bytes": 16777216,
+      "sha256": "461a06914e701f2a20f57a37ad4b84f70b607d6fba4c928a151e6f7f706efb44"
+    },
+    {
+      "url": "pumpkin-splats/part-001.bin",
+      "bytes": 6578697,
+      "sha256": "1bfd1f567ddd4e78fecb05e2e77d4551c4e5c073e6fb865c4be458e75771e010"
+    }
+  ],
+  "transform": {
+    "sourceCenter": [
+      0.0018117427825927734,
+      -0.4553379639983177,
+      -0.15814686566591263
+    ],
+    "scale": 4.527358261637704,
+    "rotation": [
+      1,
+      0,
+      0,
+      0,
+      -1,
+      0,
+      0,
+      0,
+      -1
+    ],
+    "flipYZ": true,
+    "purpose": "View placement only; this transform applies to every original Gaussian."
+  },
+  "bounds": {
+    "min": [
+      -2.0,
+      -1.3625,
+      -1.8250000000000002
+    ],
+    "max": [
+      2.0,
+      1.3625,
+      1.8250000000000002
+    ]
+  },
+  "boundsPurpose": "camera-framing-only",
+  "framing": {
+    "cameraOnly": true,
+    "sourceMetadata": "pumpkin.json",
+    "bounds": {
+      "min": [
+        -2.0,
+        -1.3625,
+        -1.8250000000000002
+      ],
+      "max": [
+        2.0,
+        1.3625,
+        1.8250000000000002
+      ]
+    },
+    "transform": {
+      "sourceCenter": [
+        0.0018117427825927734,
+        -0.4553379639983177,
+        -0.15814686566591263
+      ],
+      "scale": 4.527358261637704,
+      "rotation": [
+        1,
+        0,
+        0,
+        0,
+        -1,
+        0,
+        0,
+        0,
+        -1
+      ],
+      "flipYZ": true,
+      "purpose": "View placement only; this transform applies to every original Gaussian."
+    },
+    "note": "Reuses the prior camera placement only. Bounds are not a data filter or clipping volume."
+  },
+  "processing": {
+    "filtering": false,
+    "cropping": false,
+    "voxelization": false,
+    "decimation": false,
+    "quantization": false,
+    "reordering": false,
+    "originalRecordsPreserved": 236452,
+    "propertiesPerRecord": 59,
+    "coordinateTransformInPayload": false
+  },
+  "verification": {
+    "verified": true,
+    "reconstructedBytes": 55804149,
+    "reconstructedSha256": "e0f63e6937b27496892a760cba97ebf115a987ffac49f2a04373565c9b061642",
+    "gzipMembers": 1,
+    "allOriginalPropertyBytesPreserved": true
+  },
+  "credit": "Pumpkin! by Mavrick Hansen. CC BY 4.0. Original Gaussian PLY delivered losslessly."
+}

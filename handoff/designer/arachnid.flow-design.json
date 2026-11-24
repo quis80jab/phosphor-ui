@@ -1,0 +1,2746 @@
+{
+  "format": "phosphor-flow-designer",
+  "version": 2,
+  "hiddenPages": [
+    {
+      "id": "sign-in",
+      "label": "Sign in"
+    },
+    {
+      "id": "sign-up",
+      "label": "Sign up"
+    },
+    {
+      "id": "reset-password",
+      "label": "Reset password"
+    },
+    {
+      "id": "site-find",
+      "label": "Site: find a place"
+    },
+    {
+      "id": "site-preview",
+      "label": "Site: preview"
+    },
+    {
+      "id": "site-simulate",
+      "label": "Site: simulate / edit"
+    },
+    {
+      "id": "site-run",
+      "label": "Site: run"
+    },
+    {
+      "id": "site-review",
+      "label": "Site: review"
+    },
+    {
+      "id": "site-compare",
+      "label": "Site: compare"
+    },
+    {
+      "id": "system-modules",
+      "label": "System: modules"
+    },
+    {
+      "id": "system-chains",
+      "label": "System: chains"
+    },
+    {
+      "id": "system-activity",
+      "label": "System: activity"
+    },
+    {
+      "id": "system-device",
+      "label": "Device"
+    },
+    {
+      "id": "bench",
+      "label": "Bench"
+    },
+    {
+      "id": "files",
+      "label": "Files"
+    },
+    {
+      "id": "pipeline",
+      "label": "Pipeline editor"
+    },
+    {
+      "id": "assistant",
+      "label": "Assistant"
+    },
+    {
+      "id": "simkit",
+      "label": "Sim Kit and training"
+    },
+    {
+      "id": "settings",
+      "label": "Settings"
+    }
+  ],
+  "pages": {
+    "home": [
+      {
+        "id": "home-map",
+        "type": "rectangle",
+        "x": 0,
+        "y": 0,
+        "width": 50,
+        "height": 40,
+        "label": "sites and devices",
+        "link": null
+      },
+      {
+        "id": "home-mine",
+        "type": "rectangle",
+        "x": 51,
+        "y": 0,
+        "width": 26,
+        "height": 20,
+        "label": "my assigned work",
+        "link": null
+      },
+      {
+        "id": "home-attention",
+        "type": "rectangle",
+        "x": 78,
+        "y": 0,
+        "width": 26,
+        "height": 20,
+        "label": "needs attention",
+        "link": null
+      },
+      {
+        "id": "home-today",
+        "type": "rectangle",
+        "x": 51,
+        "y": 21,
+        "width": 53,
+        "height": 19,
+        "label": "today",
+        "link": null
+      },
+      {
+        "id": "home-flights",
+        "type": "rectangle",
+        "x": 0,
+        "y": 41,
+        "width": 34,
+        "height": 16,
+        "label": "flights under way",
+        "link": null
+      },
+      {
+        "id": "home-cases",
+        "type": "rectangle",
+        "x": 35,
+        "y": 41,
+        "width": 34,
+        "height": 16,
+        "label": "cases to decide",
+        "link": null
+      },
+      {
+        "id": "home-activity",
+        "type": "rectangle",
+        "x": 70,
+        "y": 41,
+        "width": 34,
+        "height": 16,
+        "label": "activity",
+        "link": null
+      },
+      {
+        "id": "home-notes",
+        "type": "rectangle",
+        "x": 0,
+        "y": 58,
+        "width": 34,
+        "height": 12,
+        "label": "notes",
+        "link": null
+      },
+      {
+        "id": "home-system",
+        "type": "rectangle",
+        "x": 35,
+        "y": 58,
+        "width": 69,
+        "height": 12,
+        "label": "system state",
+        "link": null
+      },
+      {
+        "id": "home-go-bench",
+        "type": "rectangle",
+        "x": 0,
+        "y": 71,
+        "width": 16,
+        "height": 4,
+        "label": "open bench",
+        "link": "bench"
+      },
+      {
+        "id": "home-go-files",
+        "type": "rectangle",
+        "x": 17,
+        "y": 71,
+        "width": 16,
+        "height": 4,
+        "label": "open files",
+        "link": "files"
+      },
+      {
+        "id": "home-go-pipeline",
+        "type": "rectangle",
+        "x": 34,
+        "y": 71,
+        "width": 18,
+        "height": 4,
+        "label": "open pipeline editor",
+        "link": "pipeline"
+      },
+      {
+        "id": "home-go-assistant",
+        "type": "rectangle",
+        "x": 53,
+        "y": 71,
+        "width": 16,
+        "height": 4,
+        "label": "open assistant",
+        "link": "assistant"
+      },
+      {
+        "id": "home-go-simkit",
+        "type": "rectangle",
+        "x": 70,
+        "y": 71,
+        "width": 18,
+        "height": 4,
+        "label": "open sim kit and training",
+        "link": "simkit"
+      },
+      {
+        "id": "home-go-settings",
+        "type": "rectangle",
+        "x": 89,
+        "y": 71,
+        "width": 15,
+        "height": 4,
+        "label": "open settings",
+        "link": "settings"
+      }
+    ],
+    "site": [
+      {
+        "id": "rect-98d1c6fa-2fac-4a0c-ac47-2ba2518fed0b",
+        "type": "rectangle",
+        "x": 0,
+        "y": 11,
+        "width": 74,
+        "height": 63,
+        "label": "site map: assets highlighted",
+        "link": null
+      },
+      {
+        "id": "rect-9812aae0-d3d3-4119-8d29-3c7f702b2a3e",
+        "type": "rectangle",
+        "x": 0,
+        "y": 0,
+        "width": 74,
+        "height": 11,
+        "label": "data panel",
+        "link": null
+      },
+      {
+        "id": "rect-742e5a5f-fb43-48a8-add4-5b7052b02c9d",
+        "type": "rectangle",
+        "x": 0,
+        "y": 74,
+        "width": 74,
+        "height": 10,
+        "label": "asset details",
+        "link": null
+      },
+      {
+        "id": "rect-f20a007b-e3da-408f-a25d-4fa443cbf303",
+        "type": "rectangle",
+        "x": 74,
+        "y": 0,
+        "width": 30,
+        "height": 93,
+        "label": "details",
+        "link": null
+      },
+      {
+        "id": "rect-43b09773-8b70-4533-8aa1-2374cdeadb0c",
+        "type": "rectangle",
+        "x": 0,
+        "y": 4,
+        "width": 74,
+        "height": 7,
+        "label": "telemetry",
+        "link": null
+      },
+      {
+        "id": "rect-efd05934-c0f8-4d7b-834c-e3080a16ee70",
+        "type": "rectangle",
+        "x": 3,
+        "y": 8,
+        "width": 16,
+        "height": 3,
+        "label": "coordinates",
+        "link": null
+      },
+      {
+        "id": "rect-6434f479-1e03-42d1-8295-cac9d610d42d",
+        "type": "rectangle",
+        "x": 23,
+        "y": 8,
+        "width": 20,
+        "height": 3,
+        "label": "compass",
+        "link": null
+      },
+      {
+        "id": "rect-b0df0b4b-177f-4a97-8d12-abae3794b1f3",
+        "type": "rectangle",
+        "x": 48,
+        "y": 8,
+        "width": 20,
+        "height": 3,
+        "label": "mode",
+        "link": null
+      },
+      {
+        "id": "rect-01c5c173-30e1-46ba-8888-f5848545adaa",
+        "type": "rectangle",
+        "x": 12,
+        "y": 76,
+        "width": 19,
+        "height": 8,
+        "label": "pending",
+        "link": null
+      },
+      {
+        "id": "rect-b104bb82-1619-4298-98e9-350b260addc7",
+        "type": "rectangle",
+        "x": 34,
+        "y": 76,
+        "width": 18,
+        "height": 8,
+        "label": "recent",
+        "link": null
+      },
+      {
+        "id": "rect-2cbe0f05-9a17-4ca3-92e9-d199d7792bac",
+        "type": "rectangle",
+        "x": 56,
+        "y": 76,
+        "width": 18,
+        "height": 8,
+        "label": "notes",
+        "link": null
+      },
+      {
+        "id": "site-chain-return",
+        "type": "rectangle",
+        "x": 0,
+        "y": 85,
+        "width": 8,
+        "height": 4,
+        "label": "return",
+        "link": "home"
+      },
+      {
+        "id": "site-chain-1",
+        "type": "rectangle",
+        "x": 9,
+        "y": 85,
+        "width": 8,
+        "height": 4,
+        "label": "step 1: site",
+        "link": "site-find"
+      },
+      {
+        "id": "site-chain-2",
+        "type": "rectangle",
+        "x": 18,
+        "y": 85,
+        "width": 8,
+        "height": 4,
+        "label": "step 2: preview",
+        "link": "site-preview"
+      },
+      {
+        "id": "site-chain-3",
+        "type": "rectangle",
+        "x": 27,
+        "y": 85,
+        "width": 8,
+        "height": 4,
+        "label": "step 3: simulate",
+        "link": "site-simulate"
+      },
+      {
+        "id": "site-chain-4",
+        "type": "rectangle",
+        "x": 36,
+        "y": 85,
+        "width": 8,
+        "height": 4,
+        "label": "step 4: run",
+        "link": "site-run"
+      },
+      {
+        "id": "site-chain-5",
+        "type": "rectangle",
+        "x": 45,
+        "y": 85,
+        "width": 8,
+        "height": 4,
+        "label": "step 5: review",
+        "link": "site-review"
+      },
+      {
+        "id": "site-chain-6",
+        "type": "rectangle",
+        "x": 54,
+        "y": 85,
+        "width": 8,
+        "height": 4,
+        "label": "step 6: compare",
+        "link": "site-compare"
+      },
+      {
+        "id": "site-chain-next",
+        "type": "rectangle",
+        "x": 65,
+        "y": 85,
+        "width": 8,
+        "height": 4,
+        "label": "next",
+        "link": "site-find"
+      },
+      {
+        "id": "site-go-find",
+        "type": "rectangle",
+        "x": 0,
+        "y": 90,
+        "width": 20,
+        "height": 3,
+        "label": "find a site",
+        "link": "site-find"
+      }
+    ],
+    "cases": [
+      {
+        "id": "cases-filter",
+        "type": "rectangle",
+        "x": 0,
+        "y": 0,
+        "width": 30,
+        "height": 5,
+        "label": "filters",
+        "link": null
+      },
+      {
+        "id": "cases-queue",
+        "type": "rectangle",
+        "x": 0,
+        "y": 6,
+        "width": 30,
+        "height": 40,
+        "label": "case queue",
+        "link": null
+      },
+      {
+        "id": "cases-findings",
+        "type": "rectangle",
+        "x": 0,
+        "y": 47,
+        "width": 30,
+        "height": 20,
+        "label": "findings",
+        "link": null
+      },
+      {
+        "id": "cases-evidence",
+        "type": "rectangle",
+        "x": 31,
+        "y": 0,
+        "width": 44,
+        "height": 46,
+        "label": "evidence",
+        "link": null
+      },
+      {
+        "id": "cases-frames",
+        "type": "rectangle",
+        "x": 31,
+        "y": 47,
+        "width": 44,
+        "height": 20,
+        "label": "frames",
+        "link": null
+      },
+      {
+        "id": "cases-details",
+        "type": "rectangle",
+        "x": 76,
+        "y": 0,
+        "width": 28,
+        "height": 16,
+        "label": "case details",
+        "link": null
+      },
+      {
+        "id": "cases-decision",
+        "type": "rectangle",
+        "x": 76,
+        "y": 17,
+        "width": 28,
+        "height": 16,
+        "label": "decision",
+        "link": null
+      },
+      {
+        "id": "cases-history",
+        "type": "rectangle",
+        "x": 76,
+        "y": 34,
+        "width": 28,
+        "height": 18,
+        "label": "action history",
+        "link": null
+      },
+      {
+        "id": "cases-trail",
+        "type": "rectangle",
+        "x": 76,
+        "y": 53,
+        "width": 28,
+        "height": 14,
+        "label": "evidence trail",
+        "link": null
+      },
+      {
+        "id": "cases-ops",
+        "type": "rectangle",
+        "x": 0,
+        "y": 68,
+        "width": 104,
+        "height": 8,
+        "label": "disposition, parts, sign-off",
+        "link": null
+      }
+    ],
+    "assets": [
+      {
+        "id": "assets-filter",
+        "type": "rectangle",
+        "x": 0,
+        "y": 0,
+        "width": 40,
+        "height": 4,
+        "label": "planes, tanks, sites",
+        "link": null
+      },
+      {
+        "id": "assets-list",
+        "type": "rectangle",
+        "x": 0,
+        "y": 5,
+        "width": 40,
+        "height": 50,
+        "label": "asset list",
+        "link": null
+      },
+      {
+        "id": "assets-model",
+        "type": "rectangle",
+        "x": 41,
+        "y": 0,
+        "width": 40,
+        "height": 55,
+        "label": "the asset model",
+        "link": null
+      },
+      {
+        "id": "assets-record",
+        "type": "rectangle",
+        "x": 82,
+        "y": 0,
+        "width": 22,
+        "height": 30,
+        "label": "asset record",
+        "link": null
+      },
+      {
+        "id": "assets-scans",
+        "type": "rectangle",
+        "x": 41,
+        "y": 56,
+        "width": 40,
+        "height": 16,
+        "label": "scans over time",
+        "link": null
+      },
+      {
+        "id": "assets-cases",
+        "type": "rectangle",
+        "x": 82,
+        "y": 31,
+        "width": 22,
+        "height": 16,
+        "label": "open cases",
+        "link": null
+      },
+      {
+        "id": "assets-go-plan",
+        "type": "rectangle",
+        "x": 82,
+        "y": 48,
+        "width": 22,
+        "height": 4,
+        "label": "plan an inspection",
+        "link": "site-preview"
+      },
+      {
+        "id": "assets-regime",
+        "type": "rectangle",
+        "x": 82,
+        "y": 53,
+        "width": 22,
+        "height": 10,
+        "label": "regime",
+        "link": null
+      },
+      {
+        "id": "assets-identity",
+        "type": "rectangle",
+        "x": 0,
+        "y": 56,
+        "width": 40,
+        "height": 16,
+        "label": "identity and frame",
+        "link": null
+      }
+    ],
+    "system": [
+      {
+        "id": "rect-49bbd53e-dd8e-452a-99f3-39e6b0450d4b",
+        "type": "rectangle",
+        "x": 77,
+        "y": 0,
+        "width": 27,
+        "height": 93,
+        "label": "device details",
+        "link": null
+      },
+      {
+        "id": "rect-b0d147a5-3220-4fd8-9403-88aeea6c9edb",
+        "type": "rectangle",
+        "x": 77,
+        "y": 5,
+        "width": 27,
+        "height": 8,
+        "label": "device info",
+        "link": null
+      },
+      {
+        "id": "rect-9e995e00-361f-4d27-9488-e200ca01652c",
+        "type": "rectangle",
+        "x": 77,
+        "y": 13,
+        "width": 27,
+        "height": 16,
+        "label": "location",
+        "link": null
+      },
+      {
+        "id": "rect-b80df292-0200-46b4-a39f-199ff87243c4",
+        "type": "rectangle",
+        "x": 77,
+        "y": 29,
+        "width": 27,
+        "height": 43,
+        "label": "installed modules",
+        "link": null
+      },
+      {
+        "id": "rect-0b4f1c97-9099-4daf-a626-d60d6d15eb71",
+        "type": "rectangle",
+        "x": 77,
+        "y": 72,
+        "width": 27,
+        "height": 21,
+        "label": "device management",
+        "link": null
+      },
+      {
+        "id": "rect-d531925b-2bf3-45d2-9c20-907f17a462f1",
+        "type": "rectangle",
+        "x": 77,
+        "y": 58,
+        "width": 27,
+        "height": 14,
+        "label": "sensor types",
+        "link": null
+      },
+      {
+        "id": "system-view-devices",
+        "type": "rectangle",
+        "x": 0,
+        "y": 0,
+        "width": 18,
+        "height": 4,
+        "label": "view: devices",
+        "link": null
+      },
+      {
+        "id": "system-view-modules",
+        "type": "rectangle",
+        "x": 19,
+        "y": 0,
+        "width": 18,
+        "height": 4,
+        "label": "view: modules",
+        "link": "system-modules"
+      },
+      {
+        "id": "system-view-chains",
+        "type": "rectangle",
+        "x": 38,
+        "y": 0,
+        "width": 18,
+        "height": 4,
+        "label": "view: chains",
+        "link": "system-chains"
+      },
+      {
+        "id": "system-view-activity",
+        "type": "rectangle",
+        "x": 57,
+        "y": 0,
+        "width": 19,
+        "height": 4,
+        "label": "view: activity",
+        "link": "system-activity"
+      },
+      {
+        "id": "system-topology",
+        "type": "rectangle",
+        "x": 0,
+        "y": 5,
+        "width": 77,
+        "height": 88,
+        "label": "topology",
+        "link": null
+      },
+      {
+        "id": "system-links",
+        "type": "rectangle",
+        "x": 0,
+        "y": 94,
+        "width": 38,
+        "height": 26,
+        "label": "links",
+        "link": null
+      },
+      {
+        "id": "system-command-path",
+        "type": "rectangle",
+        "x": 39,
+        "y": 94,
+        "width": 38,
+        "height": 26,
+        "label": "command path",
+        "link": null
+      },
+      {
+        "id": "system-deploy",
+        "type": "rectangle",
+        "x": 0,
+        "y": 121,
+        "width": 38,
+        "height": 16,
+        "label": "deploy",
+        "link": null
+      },
+      {
+        "id": "system-telemetry",
+        "type": "rectangle",
+        "x": 39,
+        "y": 121,
+        "width": 38,
+        "height": 16,
+        "label": "telemetry of the picked device",
+        "link": null
+      },
+      {
+        "id": "system-go-device",
+        "type": "rectangle",
+        "x": 77,
+        "y": 94,
+        "width": 27,
+        "height": 4,
+        "label": "open the device page",
+        "link": "system-device"
+      }
+    ],
+    "calendar": [
+      {
+        "id": "rect-b13f49a1-f694-4e8b-a3e3-4f210f63a339",
+        "type": "rectangle",
+        "x": 74,
+        "y": 0,
+        "width": 30,
+        "height": 93,
+        "label": "event details",
+        "link": null
+      },
+      {
+        "id": "calendar-scope",
+        "type": "rectangle",
+        "x": 0,
+        "y": 0,
+        "width": 73,
+        "height": 4,
+        "label": "scope",
+        "link": null
+      },
+      {
+        "id": "calendar-grid",
+        "type": "rectangle",
+        "x": 0,
+        "y": 5,
+        "width": 73,
+        "height": 50,
+        "label": "the grid",
+        "link": null
+      },
+      {
+        "id": "calendar-upcoming",
+        "type": "rectangle",
+        "x": 0,
+        "y": 56,
+        "width": 46,
+        "height": 30,
+        "label": "upcoming",
+        "link": null
+      },
+      {
+        "id": "calendar-gates",
+        "type": "rectangle",
+        "x": 47,
+        "y": 56,
+        "width": 26,
+        "height": 30,
+        "label": "gates before a flight",
+        "link": null
+      }
+    ],
+    "analyze": [
+      {
+        "id": "rect-79eac940-2aa2-4e37-8208-6c3beccd895e",
+        "type": "rectangle",
+        "x": 70,
+        "y": 0,
+        "width": 34,
+        "height": 93,
+        "label": "analysis details",
+        "link": null
+      },
+      {
+        "id": "analyze-scope",
+        "type": "rectangle",
+        "x": 0,
+        "y": 0,
+        "width": 69,
+        "height": 4,
+        "label": "scope",
+        "link": null
+      },
+      {
+        "id": "analyze-coverage",
+        "type": "rectangle",
+        "x": 0,
+        "y": 5,
+        "width": 34,
+        "height": 22,
+        "label": "coverage over scans",
+        "link": null
+      },
+      {
+        "id": "analyze-findings",
+        "type": "rectangle",
+        "x": 35,
+        "y": 5,
+        "width": 34,
+        "height": 22,
+        "label": "findings over scans",
+        "link": null
+      },
+      {
+        "id": "analyze-esf",
+        "type": "rectangle",
+        "x": 0,
+        "y": 28,
+        "width": 34,
+        "height": 22,
+        "label": "expected, simulated, flown",
+        "link": null
+      },
+      {
+        "id": "analyze-runs",
+        "type": "rectangle",
+        "x": 35,
+        "y": 28,
+        "width": 34,
+        "height": 22,
+        "label": "runs",
+        "link": null
+      },
+      {
+        "id": "analyze-models",
+        "type": "rectangle",
+        "x": 0,
+        "y": 51,
+        "width": 34,
+        "height": 20,
+        "label": "models",
+        "link": null
+      },
+      {
+        "id": "analyze-pipeline",
+        "type": "rectangle",
+        "x": 35,
+        "y": 51,
+        "width": 34,
+        "height": 20,
+        "label": "pipeline timing",
+        "link": null
+      }
+    ],
+    "sign-in": [
+      {
+        "id": "sign-in-form",
+        "type": "rectangle",
+        "x": 35,
+        "y": 20,
+        "width": 34,
+        "height": 30,
+        "label": "sign in",
+        "link": null
+      },
+      {
+        "id": "sign-in-go-up",
+        "type": "rectangle",
+        "x": 35,
+        "y": 51,
+        "width": 16,
+        "height": 4,
+        "label": "sign up",
+        "link": "sign-up"
+      },
+      {
+        "id": "sign-in-go-reset",
+        "type": "rectangle",
+        "x": 53,
+        "y": 51,
+        "width": 16,
+        "height": 4,
+        "label": "reset password",
+        "link": "reset-password"
+      },
+      {
+        "id": "sign-in-about",
+        "type": "rectangle",
+        "x": 35,
+        "y": 57,
+        "width": 34,
+        "height": 12,
+        "label": "about sign-in",
+        "link": null
+      }
+    ],
+    "sign-up": [
+      {
+        "id": "sign-up-form",
+        "type": "rectangle",
+        "x": 35,
+        "y": 20,
+        "width": 34,
+        "height": 30,
+        "label": "sign up",
+        "link": null
+      },
+      {
+        "id": "sign-up-back",
+        "type": "rectangle",
+        "x": 35,
+        "y": 51,
+        "width": 18,
+        "height": 4,
+        "label": "back to sign in",
+        "link": "sign-in"
+      }
+    ],
+    "reset-password": [
+      {
+        "id": "reset-password-form",
+        "type": "rectangle",
+        "x": 35,
+        "y": 20,
+        "width": 34,
+        "height": 30,
+        "label": "reset password",
+        "link": null
+      },
+      {
+        "id": "reset-password-back",
+        "type": "rectangle",
+        "x": 35,
+        "y": 51,
+        "width": 18,
+        "height": 4,
+        "label": "back to sign in",
+        "link": "sign-in"
+      }
+    ],
+    "site-find": [
+      {
+        "id": "site-find-search",
+        "type": "rectangle",
+        "x": 0,
+        "y": 0,
+        "width": 26,
+        "height": 8,
+        "label": "find a place",
+        "link": null
+      },
+      {
+        "id": "site-find-places",
+        "type": "rectangle",
+        "x": 0,
+        "y": 9,
+        "width": 26,
+        "height": 20,
+        "label": "places found",
+        "link": null
+      },
+      {
+        "id": "site-find-kept",
+        "type": "rectangle",
+        "x": 0,
+        "y": 30,
+        "width": 26,
+        "height": 24,
+        "label": "sites kept",
+        "link": null
+      },
+      {
+        "id": "site-find-keep",
+        "type": "rectangle",
+        "x": 0,
+        "y": 55,
+        "width": 26,
+        "height": 4,
+        "label": "keep the site",
+        "link": null
+      },
+      {
+        "id": "site-find-map",
+        "type": "rectangle",
+        "x": 27,
+        "y": 0,
+        "width": 50,
+        "height": 78,
+        "label": "site map",
+        "link": null
+      },
+      {
+        "id": "site-find-picked",
+        "type": "rectangle",
+        "x": 78,
+        "y": 0,
+        "width": 26,
+        "height": 22,
+        "label": "picked building",
+        "link": null
+      },
+      {
+        "id": "site-find-roof",
+        "type": "rectangle",
+        "x": 78,
+        "y": 23,
+        "width": 26,
+        "height": 8,
+        "label": "roof by hand",
+        "link": null
+      },
+      {
+        "id": "site-find-outline",
+        "type": "rectangle",
+        "x": 78,
+        "y": 32,
+        "width": 26,
+        "height": 10,
+        "label": "edit the outline",
+        "link": null
+      },
+      {
+        "id": "site-find-source",
+        "type": "rectangle",
+        "x": 78,
+        "y": 43,
+        "width": 26,
+        "height": 8,
+        "label": "where it came from",
+        "link": null
+      },
+      {
+        "id": "site-find-holds",
+        "type": "rectangle",
+        "x": 27,
+        "y": 80,
+        "width": 50,
+        "height": 5,
+        "label": "what this site holds",
+        "link": null
+      },
+      {
+        "id": "site-find-chain-return",
+        "type": "rectangle",
+        "x": 0,
+        "y": 87,
+        "width": 10,
+        "height": 4,
+        "label": "return",
+        "link": "site"
+      },
+      {
+        "id": "site-find-chain-1",
+        "type": "rectangle",
+        "x": 11,
+        "y": 87,
+        "width": 12,
+        "height": 4,
+        "label": "step 1: site",
+        "link": null
+      },
+      {
+        "id": "site-find-chain-2",
+        "type": "rectangle",
+        "x": 24,
+        "y": 87,
+        "width": 12,
+        "height": 4,
+        "label": "step 2: preview",
+        "link": "site-preview"
+      },
+      {
+        "id": "site-find-chain-3",
+        "type": "rectangle",
+        "x": 37,
+        "y": 87,
+        "width": 12,
+        "height": 4,
+        "label": "step 3: simulate",
+        "link": "site-simulate"
+      },
+      {
+        "id": "site-find-chain-4",
+        "type": "rectangle",
+        "x": 50,
+        "y": 87,
+        "width": 12,
+        "height": 4,
+        "label": "step 4: run",
+        "link": "site-run"
+      },
+      {
+        "id": "site-find-chain-5",
+        "type": "rectangle",
+        "x": 63,
+        "y": 87,
+        "width": 12,
+        "height": 4,
+        "label": "step 5: review",
+        "link": "site-review"
+      },
+      {
+        "id": "site-find-chain-6",
+        "type": "rectangle",
+        "x": 76,
+        "y": 87,
+        "width": 12,
+        "height": 4,
+        "label": "step 6: compare",
+        "link": "site-compare"
+      },
+      {
+        "id": "site-find-chain-next",
+        "type": "rectangle",
+        "x": 94,
+        "y": 87,
+        "width": 10,
+        "height": 4,
+        "label": "next",
+        "link": "site-preview"
+      }
+    ],
+    "site-preview": [
+      {
+        "id": "site-preview-flights",
+        "type": "rectangle",
+        "x": 0,
+        "y": 0,
+        "width": 26,
+        "height": 12,
+        "label": "flights at this site",
+        "link": null
+      },
+      {
+        "id": "site-preview-covers",
+        "type": "rectangle",
+        "x": 0,
+        "y": 13,
+        "width": 26,
+        "height": 10,
+        "label": "this flight covers",
+        "link": null
+      },
+      {
+        "id": "site-preview-generator",
+        "type": "rectangle",
+        "x": 0,
+        "y": 24,
+        "width": 26,
+        "height": 7,
+        "label": "generator",
+        "link": null
+      },
+      {
+        "id": "site-preview-settings",
+        "type": "rectangle",
+        "x": 0,
+        "y": 32,
+        "width": 26,
+        "height": 16,
+        "label": "settings",
+        "link": null
+      },
+      {
+        "id": "site-preview-home",
+        "type": "rectangle",
+        "x": 0,
+        "y": 49,
+        "width": 26,
+        "height": 7,
+        "label": "home",
+        "link": null
+      },
+      {
+        "id": "site-preview-make",
+        "type": "rectangle",
+        "x": 0,
+        "y": 57,
+        "width": 26,
+        "height": 4,
+        "label": "make the plan",
+        "link": null
+      },
+      {
+        "id": "site-preview-scene",
+        "type": "rectangle",
+        "x": 27,
+        "y": 0,
+        "width": 50,
+        "height": 78,
+        "label": "the plan from above",
+        "link": null
+      },
+      {
+        "id": "site-preview-checks",
+        "type": "rectangle",
+        "x": 78,
+        "y": 0,
+        "width": 26,
+        "height": 12,
+        "label": "checks",
+        "link": null
+      },
+      {
+        "id": "site-preview-reach",
+        "type": "rectangle",
+        "x": 78,
+        "y": 13,
+        "width": 26,
+        "height": 16,
+        "label": "how far it reaches",
+        "link": null
+      },
+      {
+        "id": "site-preview-coverage",
+        "type": "rectangle",
+        "x": 78,
+        "y": 30,
+        "width": 26,
+        "height": 14,
+        "label": "coverage by target",
+        "link": null
+      },
+      {
+        "id": "site-preview-expected",
+        "type": "rectangle",
+        "x": 78,
+        "y": 45,
+        "width": 26,
+        "height": 8,
+        "label": "slam and splat expected",
+        "link": null
+      },
+      {
+        "id": "site-preview-missions",
+        "type": "rectangle",
+        "x": 78,
+        "y": 54,
+        "width": 26,
+        "height": 14,
+        "label": "missions",
+        "link": null
+      },
+      {
+        "id": "site-preview-profile",
+        "type": "rectangle",
+        "x": 27,
+        "y": 80,
+        "width": 50,
+        "height": 5,
+        "label": "height along the path",
+        "link": null
+      },
+      {
+        "id": "site-preview-chain-return",
+        "type": "rectangle",
+        "x": 0,
+        "y": 87,
+        "width": 10,
+        "height": 4,
+        "label": "return",
+        "link": "site-find"
+      },
+      {
+        "id": "site-preview-chain-1",
+        "type": "rectangle",
+        "x": 11,
+        "y": 87,
+        "width": 12,
+        "height": 4,
+        "label": "step 1: site",
+        "link": "site-find"
+      },
+      {
+        "id": "site-preview-chain-2",
+        "type": "rectangle",
+        "x": 24,
+        "y": 87,
+        "width": 12,
+        "height": 4,
+        "label": "step 2: preview",
+        "link": null
+      },
+      {
+        "id": "site-preview-chain-3",
+        "type": "rectangle",
+        "x": 37,
+        "y": 87,
+        "width": 12,
+        "height": 4,
+        "label": "step 3: simulate",
+        "link": "site-simulate"
+      },
+      {
+        "id": "site-preview-chain-4",
+        "type": "rectangle",
+        "x": 50,
+        "y": 87,
+        "width": 12,
+        "height": 4,
+        "label": "step 4: run",
+        "link": "site-run"
+      },
+      {
+        "id": "site-preview-chain-5",
+        "type": "rectangle",
+        "x": 63,
+        "y": 87,
+        "width": 12,
+        "height": 4,
+        "label": "step 5: review",
+        "link": "site-review"
+      },
+      {
+        "id": "site-preview-chain-6",
+        "type": "rectangle",
+        "x": 76,
+        "y": 87,
+        "width": 12,
+        "height": 4,
+        "label": "step 6: compare",
+        "link": "site-compare"
+      },
+      {
+        "id": "site-preview-chain-next",
+        "type": "rectangle",
+        "x": 94,
+        "y": 87,
+        "width": 10,
+        "height": 4,
+        "label": "next",
+        "link": "site-simulate"
+      }
+    ],
+    "site-simulate": [
+      {
+        "id": "site-simulate-on",
+        "type": "rectangle",
+        "x": 0,
+        "y": 0,
+        "width": 26,
+        "height": 5,
+        "label": "simulate on",
+        "link": null
+      },
+      {
+        "id": "site-simulate-guard",
+        "type": "rectangle",
+        "x": 0,
+        "y": 6,
+        "width": 26,
+        "height": 14,
+        "label": "the guard",
+        "link": null
+      },
+      {
+        "id": "site-simulate-waypoint",
+        "type": "rectangle",
+        "x": 0,
+        "y": 21,
+        "width": 26,
+        "height": 14,
+        "label": "waypoint",
+        "link": null
+      },
+      {
+        "id": "site-simulate-runs",
+        "type": "rectangle",
+        "x": 0,
+        "y": 36,
+        "width": 26,
+        "height": 18,
+        "label": "runs so far",
+        "link": null
+      },
+      {
+        "id": "site-simulate-go",
+        "type": "rectangle",
+        "x": 0,
+        "y": 55,
+        "width": 26,
+        "height": 4,
+        "label": "run the simulation",
+        "link": null
+      },
+      {
+        "id": "site-simulate-scene",
+        "type": "rectangle",
+        "x": 27,
+        "y": 0,
+        "width": 50,
+        "height": 60,
+        "label": "the simulated scene",
+        "link": null
+      },
+      {
+        "id": "site-simulate-camera",
+        "type": "rectangle",
+        "x": 27,
+        "y": 61,
+        "width": 50,
+        "height": 17,
+        "label": "simulated camera",
+        "link": null
+      },
+      {
+        "id": "site-simulate-sensors",
+        "type": "rectangle",
+        "x": 78,
+        "y": 0,
+        "width": 26,
+        "height": 20,
+        "label": "sensors on board",
+        "link": null
+      },
+      {
+        "id": "site-simulate-left",
+        "type": "rectangle",
+        "x": 78,
+        "y": 21,
+        "width": 26,
+        "height": 18,
+        "label": "where it left the plan",
+        "link": null
+      },
+      {
+        "id": "site-simulate-faults",
+        "type": "rectangle",
+        "x": 78,
+        "y": 40,
+        "width": 26,
+        "height": 14,
+        "label": "wind and faults",
+        "link": null
+      },
+      {
+        "id": "site-simulate-run",
+        "type": "rectangle",
+        "x": 27,
+        "y": 80,
+        "width": 50,
+        "height": 5,
+        "label": "the run",
+        "link": null
+      },
+      {
+        "id": "site-simulate-chain-return",
+        "type": "rectangle",
+        "x": 0,
+        "y": 87,
+        "width": 10,
+        "height": 4,
+        "label": "return",
+        "link": "site-preview"
+      },
+      {
+        "id": "site-simulate-chain-1",
+        "type": "rectangle",
+        "x": 11,
+        "y": 87,
+        "width": 12,
+        "height": 4,
+        "label": "step 1: site",
+        "link": "site-find"
+      },
+      {
+        "id": "site-simulate-chain-2",
+        "type": "rectangle",
+        "x": 24,
+        "y": 87,
+        "width": 12,
+        "height": 4,
+        "label": "step 2: preview",
+        "link": "site-preview"
+      },
+      {
+        "id": "site-simulate-chain-3",
+        "type": "rectangle",
+        "x": 37,
+        "y": 87,
+        "width": 12,
+        "height": 4,
+        "label": "step 3: simulate",
+        "link": null
+      },
+      {
+        "id": "site-simulate-chain-4",
+        "type": "rectangle",
+        "x": 50,
+        "y": 87,
+        "width": 12,
+        "height": 4,
+        "label": "step 4: run",
+        "link": "site-run"
+      },
+      {
+        "id": "site-simulate-chain-5",
+        "type": "rectangle",
+        "x": 63,
+        "y": 87,
+        "width": 12,
+        "height": 4,
+        "label": "step 5: review",
+        "link": "site-review"
+      },
+      {
+        "id": "site-simulate-chain-6",
+        "type": "rectangle",
+        "x": 76,
+        "y": 87,
+        "width": 12,
+        "height": 4,
+        "label": "step 6: compare",
+        "link": "site-compare"
+      },
+      {
+        "id": "site-simulate-chain-next",
+        "type": "rectangle",
+        "x": 94,
+        "y": 87,
+        "width": 10,
+        "height": 4,
+        "label": "next",
+        "link": "site-run"
+      }
+    ],
+    "site-run": [
+      {
+        "id": "site-run-on",
+        "type": "rectangle",
+        "x": 0,
+        "y": 0,
+        "width": 26,
+        "height": 5,
+        "label": "fly on",
+        "link": null
+      },
+      {
+        "id": "site-run-gates",
+        "type": "rectangle",
+        "x": 0,
+        "y": 6,
+        "width": 26,
+        "height": 20,
+        "label": "before it flies",
+        "link": null
+      },
+      {
+        "id": "site-run-ready",
+        "type": "rectangle",
+        "x": 0,
+        "y": 27,
+        "width": 26,
+        "height": 14,
+        "label": "ready?",
+        "link": null
+      },
+      {
+        "id": "site-run-controls",
+        "type": "rectangle",
+        "x": 0,
+        "y": 42,
+        "width": 26,
+        "height": 10,
+        "label": "start, pause, return, stop",
+        "link": null
+      },
+      {
+        "id": "site-run-sim",
+        "type": "rectangle",
+        "x": 27,
+        "y": 0,
+        "width": 50,
+        "height": 40,
+        "label": "simulator view",
+        "link": null
+      },
+      {
+        "id": "site-run-live",
+        "type": "rectangle",
+        "x": 27,
+        "y": 41,
+        "width": 50,
+        "height": 37,
+        "label": "live view with telemetry",
+        "link": null
+      },
+      {
+        "id": "site-run-control",
+        "type": "rectangle",
+        "x": 78,
+        "y": 0,
+        "width": 26,
+        "height": 12,
+        "label": "who holds control",
+        "link": null
+      },
+      {
+        "id": "site-run-recording",
+        "type": "rectangle",
+        "x": 78,
+        "y": 13,
+        "width": 26,
+        "height": 10,
+        "label": "recording",
+        "link": null
+      },
+      {
+        "id": "site-run-sensors",
+        "type": "rectangle",
+        "x": 78,
+        "y": 24,
+        "width": 26,
+        "height": 18,
+        "label": "sensors live",
+        "link": null
+      },
+      {
+        "id": "site-run-layers",
+        "type": "rectangle",
+        "x": 78,
+        "y": 43,
+        "width": 26,
+        "height": 10,
+        "label": "on the view",
+        "link": null
+      },
+      {
+        "id": "site-run-go-bench",
+        "type": "rectangle",
+        "x": 78,
+        "y": 54,
+        "width": 26,
+        "height": 4,
+        "label": "open bench",
+        "link": "bench"
+      },
+      {
+        "id": "site-run-run",
+        "type": "rectangle",
+        "x": 27,
+        "y": 80,
+        "width": 50,
+        "height": 5,
+        "label": "the run",
+        "link": null
+      },
+      {
+        "id": "site-run-chain-return",
+        "type": "rectangle",
+        "x": 0,
+        "y": 87,
+        "width": 10,
+        "height": 4,
+        "label": "return",
+        "link": "site-simulate"
+      },
+      {
+        "id": "site-run-chain-1",
+        "type": "rectangle",
+        "x": 11,
+        "y": 87,
+        "width": 12,
+        "height": 4,
+        "label": "step 1: site",
+        "link": "site-find"
+      },
+      {
+        "id": "site-run-chain-2",
+        "type": "rectangle",
+        "x": 24,
+        "y": 87,
+        "width": 12,
+        "height": 4,
+        "label": "step 2: preview",
+        "link": "site-preview"
+      },
+      {
+        "id": "site-run-chain-3",
+        "type": "rectangle",
+        "x": 37,
+        "y": 87,
+        "width": 12,
+        "height": 4,
+        "label": "step 3: simulate",
+        "link": "site-simulate"
+      },
+      {
+        "id": "site-run-chain-4",
+        "type": "rectangle",
+        "x": 50,
+        "y": 87,
+        "width": 12,
+        "height": 4,
+        "label": "step 4: run",
+        "link": null
+      },
+      {
+        "id": "site-run-chain-5",
+        "type": "rectangle",
+        "x": 63,
+        "y": 87,
+        "width": 12,
+        "height": 4,
+        "label": "step 5: review",
+        "link": "site-review"
+      },
+      {
+        "id": "site-run-chain-6",
+        "type": "rectangle",
+        "x": 76,
+        "y": 87,
+        "width": 12,
+        "height": 4,
+        "label": "step 6: compare",
+        "link": "site-compare"
+      },
+      {
+        "id": "site-run-chain-next",
+        "type": "rectangle",
+        "x": 94,
+        "y": 87,
+        "width": 10,
+        "height": 4,
+        "label": "next",
+        "link": "site-review"
+      }
+    ],
+    "site-review": [
+      {
+        "id": "site-review-recordings",
+        "type": "rectangle",
+        "x": 0,
+        "y": 0,
+        "width": 26,
+        "height": 14,
+        "label": "recordings of this flight",
+        "link": null
+      },
+      {
+        "id": "site-review-show",
+        "type": "rectangle",
+        "x": 0,
+        "y": 15,
+        "width": 26,
+        "height": 10,
+        "label": "show",
+        "link": null
+      },
+      {
+        "id": "site-review-topics",
+        "type": "rectangle",
+        "x": 0,
+        "y": 26,
+        "width": 26,
+        "height": 14,
+        "label": "topics",
+        "link": null
+      },
+      {
+        "id": "site-review-pipeline",
+        "type": "rectangle",
+        "x": 0,
+        "y": 41,
+        "width": 26,
+        "height": 10,
+        "label": "pipeline",
+        "link": null
+      },
+      {
+        "id": "site-review-go-pipeline",
+        "type": "rectangle",
+        "x": 0,
+        "y": 52,
+        "width": 26,
+        "height": 4,
+        "label": "open pipeline editor",
+        "link": "pipeline"
+      },
+      {
+        "id": "site-review-scene",
+        "type": "rectangle",
+        "x": 27,
+        "y": 0,
+        "width": 50,
+        "height": 78,
+        "label": "the result",
+        "link": null
+      },
+      {
+        "id": "site-review-picked",
+        "type": "rectangle",
+        "x": 78,
+        "y": 0,
+        "width": 26,
+        "height": 14,
+        "label": "picked",
+        "link": null
+      },
+      {
+        "id": "site-review-measured",
+        "type": "rectangle",
+        "x": 78,
+        "y": 15,
+        "width": 26,
+        "height": 14,
+        "label": "this run, measured",
+        "link": null
+      },
+      {
+        "id": "site-review-jobs",
+        "type": "rectangle",
+        "x": 78,
+        "y": 30,
+        "width": 26,
+        "height": 12,
+        "label": "jobs",
+        "link": null
+      },
+      {
+        "id": "site-review-export",
+        "type": "rectangle",
+        "x": 78,
+        "y": 43,
+        "width": 26,
+        "height": 4,
+        "label": "export to the rtx 2080",
+        "link": null
+      },
+      {
+        "id": "site-review-go-compare",
+        "type": "rectangle",
+        "x": 78,
+        "y": 48,
+        "width": 26,
+        "height": 4,
+        "label": "compare it",
+        "link": "site-compare"
+      },
+      {
+        "id": "site-review-recording",
+        "type": "rectangle",
+        "x": 27,
+        "y": 80,
+        "width": 50,
+        "height": 5,
+        "label": "the recording",
+        "link": null
+      },
+      {
+        "id": "site-review-chain-return",
+        "type": "rectangle",
+        "x": 0,
+        "y": 87,
+        "width": 10,
+        "height": 4,
+        "label": "return",
+        "link": "site-run"
+      },
+      {
+        "id": "site-review-chain-1",
+        "type": "rectangle",
+        "x": 11,
+        "y": 87,
+        "width": 12,
+        "height": 4,
+        "label": "step 1: site",
+        "link": "site-find"
+      },
+      {
+        "id": "site-review-chain-2",
+        "type": "rectangle",
+        "x": 24,
+        "y": 87,
+        "width": 12,
+        "height": 4,
+        "label": "step 2: preview",
+        "link": "site-preview"
+      },
+      {
+        "id": "site-review-chain-3",
+        "type": "rectangle",
+        "x": 37,
+        "y": 87,
+        "width": 12,
+        "height": 4,
+        "label": "step 3: simulate",
+        "link": "site-simulate"
+      },
+      {
+        "id": "site-review-chain-4",
+        "type": "rectangle",
+        "x": 50,
+        "y": 87,
+        "width": 12,
+        "height": 4,
+        "label": "step 4: run",
+        "link": "site-run"
+      },
+      {
+        "id": "site-review-chain-5",
+        "type": "rectangle",
+        "x": 63,
+        "y": 87,
+        "width": 12,
+        "height": 4,
+        "label": "step 5: review",
+        "link": null
+      },
+      {
+        "id": "site-review-chain-6",
+        "type": "rectangle",
+        "x": 76,
+        "y": 87,
+        "width": 12,
+        "height": 4,
+        "label": "step 6: compare",
+        "link": "site-compare"
+      },
+      {
+        "id": "site-review-chain-next",
+        "type": "rectangle",
+        "x": 94,
+        "y": 87,
+        "width": 10,
+        "height": 4,
+        "label": "next",
+        "link": "site-compare"
+      }
+    ],
+    "site-compare": [
+      {
+        "id": "site-compare-target",
+        "type": "rectangle",
+        "x": 0,
+        "y": 0,
+        "width": 26,
+        "height": 8,
+        "label": "which target",
+        "link": null
+      },
+      {
+        "id": "site-compare-scans",
+        "type": "rectangle",
+        "x": 0,
+        "y": 9,
+        "width": 26,
+        "height": 16,
+        "label": "scans of this area",
+        "link": null
+      },
+      {
+        "id": "site-compare-pair",
+        "type": "rectangle",
+        "x": 0,
+        "y": 26,
+        "width": 26,
+        "height": 8,
+        "label": "compare",
+        "link": null
+      },
+      {
+        "id": "site-compare-mode",
+        "type": "rectangle",
+        "x": 0,
+        "y": 35,
+        "width": 26,
+        "height": 8,
+        "label": "show",
+        "link": null
+      },
+      {
+        "id": "site-compare-scene",
+        "type": "rectangle",
+        "x": 27,
+        "y": 0,
+        "width": 50,
+        "height": 78,
+        "label": "two scans",
+        "link": null
+      },
+      {
+        "id": "site-compare-changed",
+        "type": "rectangle",
+        "x": 78,
+        "y": 0,
+        "width": 26,
+        "height": 16,
+        "label": "what changed",
+        "link": null
+      },
+      {
+        "id": "site-compare-numbers",
+        "type": "rectangle",
+        "x": 78,
+        "y": 17,
+        "width": 26,
+        "height": 16,
+        "label": "expected, simulated, flown",
+        "link": null
+      },
+      {
+        "id": "site-compare-go-preview",
+        "type": "rectangle",
+        "x": 78,
+        "y": 34,
+        "width": 26,
+        "height": 4,
+        "label": "back to preview",
+        "link": "site-preview"
+      },
+      {
+        "id": "site-compare-over-time",
+        "type": "rectangle",
+        "x": 27,
+        "y": 80,
+        "width": 50,
+        "height": 5,
+        "label": "scans over time",
+        "link": null
+      },
+      {
+        "id": "site-compare-chain-return",
+        "type": "rectangle",
+        "x": 0,
+        "y": 87,
+        "width": 10,
+        "height": 4,
+        "label": "return",
+        "link": "site-review"
+      },
+      {
+        "id": "site-compare-chain-1",
+        "type": "rectangle",
+        "x": 11,
+        "y": 87,
+        "width": 12,
+        "height": 4,
+        "label": "step 1: site",
+        "link": "site-find"
+      },
+      {
+        "id": "site-compare-chain-2",
+        "type": "rectangle",
+        "x": 24,
+        "y": 87,
+        "width": 12,
+        "height": 4,
+        "label": "step 2: preview",
+        "link": "site-preview"
+      },
+      {
+        "id": "site-compare-chain-3",
+        "type": "rectangle",
+        "x": 37,
+        "y": 87,
+        "width": 12,
+        "height": 4,
+        "label": "step 3: simulate",
+        "link": "site-simulate"
+      },
+      {
+        "id": "site-compare-chain-4",
+        "type": "rectangle",
+        "x": 50,
+        "y": 87,
+        "width": 12,
+        "height": 4,
+        "label": "step 4: run",
+        "link": "site-run"
+      },
+      {
+        "id": "site-compare-chain-5",
+        "type": "rectangle",
+        "x": 63,
+        "y": 87,
+        "width": 12,
+        "height": 4,
+        "label": "step 5: review",
+        "link": "site-review"
+      },
+      {
+        "id": "site-compare-chain-6",
+        "type": "rectangle",
+        "x": 76,
+        "y": 87,
+        "width": 12,
+        "height": 4,
+        "label": "step 6: compare",
+        "link": null
+      },
+      {
+        "id": "site-compare-chain-next",
+        "type": "rectangle",
+        "x": 94,
+        "y": 87,
+        "width": 10,
+        "height": 4,
+        "label": "next",
+        "link": "site"
+      }
+    ],
+    "system-modules": [
+      {
+        "id": "system-modules-view-devices",
+        "type": "rectangle",
+        "x": 0,
+        "y": 0,
+        "width": 18,
+        "height": 4,
+        "label": "view: devices",
+        "link": "system"
+      },
+      {
+        "id": "system-modules-view-modules",
+        "type": "rectangle",
+        "x": 19,
+        "y": 0,
+        "width": 18,
+        "height": 4,
+        "label": "view: modules",
+        "link": null
+      },
+      {
+        "id": "system-modules-view-chains",
+        "type": "rectangle",
+        "x": 38,
+        "y": 0,
+        "width": 18,
+        "height": 4,
+        "label": "view: chains",
+        "link": "system-chains"
+      },
+      {
+        "id": "system-modules-view-activity",
+        "type": "rectangle",
+        "x": 57,
+        "y": 0,
+        "width": 19,
+        "height": 4,
+        "label": "view: activity",
+        "link": "system-activity"
+      },
+      {
+        "id": "system-modules-list",
+        "type": "rectangle",
+        "x": 0,
+        "y": 5,
+        "width": 60,
+        "height": 60,
+        "label": "modules",
+        "link": null
+      },
+      {
+        "id": "system-modules-picked",
+        "type": "rectangle",
+        "x": 61,
+        "y": 5,
+        "width": 43,
+        "height": 40,
+        "label": "the picked module",
+        "link": null
+      },
+      {
+        "id": "system-modules-apps",
+        "type": "rectangle",
+        "x": 61,
+        "y": 46,
+        "width": 43,
+        "height": 19,
+        "label": "module apps in the shell",
+        "link": null
+      },
+      {
+        "id": "system-modules-interfaces",
+        "type": "rectangle",
+        "x": 0,
+        "y": 66,
+        "width": 104,
+        "height": 24,
+        "label": "interfaces",
+        "link": null
+      }
+    ],
+    "system-chains": [
+      {
+        "id": "system-chains-view-devices",
+        "type": "rectangle",
+        "x": 0,
+        "y": 0,
+        "width": 18,
+        "height": 4,
+        "label": "view: devices",
+        "link": "system"
+      },
+      {
+        "id": "system-chains-view-modules",
+        "type": "rectangle",
+        "x": 19,
+        "y": 0,
+        "width": 18,
+        "height": 4,
+        "label": "view: modules",
+        "link": "system-modules"
+      },
+      {
+        "id": "system-chains-view-chains",
+        "type": "rectangle",
+        "x": 38,
+        "y": 0,
+        "width": 18,
+        "height": 4,
+        "label": "view: chains",
+        "link": null
+      },
+      {
+        "id": "system-chains-view-activity",
+        "type": "rectangle",
+        "x": 57,
+        "y": 0,
+        "width": 19,
+        "height": 4,
+        "label": "view: activity",
+        "link": "system-activity"
+      },
+      {
+        "id": "system-chains-diagram",
+        "type": "rectangle",
+        "x": 0,
+        "y": 5,
+        "width": 104,
+        "height": 60,
+        "label": "chains",
+        "link": null
+      },
+      {
+        "id": "system-chains-picked",
+        "type": "rectangle",
+        "x": 0,
+        "y": 66,
+        "width": 104,
+        "height": 16,
+        "label": "the picked step of a chain",
+        "link": null
+      }
+    ],
+    "system-activity": [
+      {
+        "id": "system-activity-view-devices",
+        "type": "rectangle",
+        "x": 0,
+        "y": 0,
+        "width": 18,
+        "height": 4,
+        "label": "view: devices",
+        "link": "system"
+      },
+      {
+        "id": "system-activity-view-modules",
+        "type": "rectangle",
+        "x": 19,
+        "y": 0,
+        "width": 18,
+        "height": 4,
+        "label": "view: modules",
+        "link": "system-modules"
+      },
+      {
+        "id": "system-activity-view-chains",
+        "type": "rectangle",
+        "x": 38,
+        "y": 0,
+        "width": 18,
+        "height": 4,
+        "label": "view: chains",
+        "link": "system-chains"
+      },
+      {
+        "id": "system-activity-view-activity",
+        "type": "rectangle",
+        "x": 57,
+        "y": 0,
+        "width": 19,
+        "height": 4,
+        "label": "view: activity",
+        "link": null
+      },
+      {
+        "id": "system-activity-log",
+        "type": "rectangle",
+        "x": 0,
+        "y": 5,
+        "width": 64,
+        "height": 60,
+        "label": "command log",
+        "link": null
+      },
+      {
+        "id": "system-activity-leases",
+        "type": "rectangle",
+        "x": 65,
+        "y": 5,
+        "width": 39,
+        "height": 30,
+        "label": "leases",
+        "link": null
+      },
+      {
+        "id": "system-activity-deploys",
+        "type": "rectangle",
+        "x": 65,
+        "y": 36,
+        "width": 39,
+        "height": 29,
+        "label": "deploys",
+        "link": null
+      }
+    ],
+    "system-device": [
+      {
+        "id": "system-device-card",
+        "type": "rectangle",
+        "x": 0,
+        "y": 0,
+        "width": 40,
+        "height": 40,
+        "label": "device",
+        "link": null
+      },
+      {
+        "id": "system-device-ports",
+        "type": "rectangle",
+        "x": 41,
+        "y": 0,
+        "width": 30,
+        "height": 20,
+        "label": "ports",
+        "link": null
+      },
+      {
+        "id": "system-device-sensors",
+        "type": "rectangle",
+        "x": 41,
+        "y": 21,
+        "width": 30,
+        "height": 19,
+        "label": "sensors",
+        "link": null
+      },
+      {
+        "id": "system-device-driver",
+        "type": "rectangle",
+        "x": 72,
+        "y": 0,
+        "width": 32,
+        "height": 10,
+        "label": "driver",
+        "link": null
+      },
+      {
+        "id": "system-device-static",
+        "type": "rectangle",
+        "x": 72,
+        "y": 11,
+        "width": 32,
+        "height": 14,
+        "label": "static pods",
+        "link": null
+      },
+      {
+        "id": "system-device-logs",
+        "type": "rectangle",
+        "x": 0,
+        "y": 41,
+        "width": 104,
+        "height": 24,
+        "label": "logs",
+        "link": null
+      },
+      {
+        "id": "system-device-back",
+        "type": "rectangle",
+        "x": 0,
+        "y": 66,
+        "width": 20,
+        "height": 4,
+        "label": "back to system",
+        "link": "system"
+      }
+    ],
+    "bench": [
+      {
+        "id": "bench-weight",
+        "type": "rectangle",
+        "x": 0,
+        "y": 0,
+        "width": 50,
+        "height": 30,
+        "label": "weight and balance",
+        "link": null
+      },
+      {
+        "id": "bench-checklist",
+        "type": "rectangle",
+        "x": 51,
+        "y": 0,
+        "width": 53,
+        "height": 30,
+        "label": "props-off checklist",
+        "link": null
+      },
+      {
+        "id": "bench-aircraft",
+        "type": "rectangle",
+        "x": 0,
+        "y": 31,
+        "width": 50,
+        "height": 20,
+        "label": "the aircraft",
+        "link": null
+      },
+      {
+        "id": "bench-back",
+        "type": "rectangle",
+        "x": 0,
+        "y": 52,
+        "width": 16,
+        "height": 4,
+        "label": "back to home",
+        "link": "home"
+      }
+    ],
+    "files": [
+      {
+        "id": "files-sites",
+        "type": "rectangle",
+        "x": 0,
+        "y": 0,
+        "width": 34,
+        "height": 30,
+        "label": "sites",
+        "link": null
+      },
+      {
+        "id": "files-flights",
+        "type": "rectangle",
+        "x": 35,
+        "y": 0,
+        "width": 34,
+        "height": 30,
+        "label": "flights",
+        "link": null
+      },
+      {
+        "id": "files-recordings",
+        "type": "rectangle",
+        "x": 70,
+        "y": 0,
+        "width": 34,
+        "height": 30,
+        "label": "recordings",
+        "link": null
+      },
+      {
+        "id": "files-results",
+        "type": "rectangle",
+        "x": 0,
+        "y": 31,
+        "width": 104,
+        "height": 20,
+        "label": "results",
+        "link": null
+      },
+      {
+        "id": "files-back",
+        "type": "rectangle",
+        "x": 0,
+        "y": 52,
+        "width": 16,
+        "height": 4,
+        "label": "back to home",
+        "link": "home"
+      }
+    ],
+    "pipeline": [
+      {
+        "id": "pipeline-graph",
+        "type": "rectangle",
+        "x": 0,
+        "y": 0,
+        "width": 104,
+        "height": 40,
+        "label": "pipeline",
+        "link": null
+      },
+      {
+        "id": "pipeline-picked",
+        "type": "rectangle",
+        "x": 0,
+        "y": 41,
+        "width": 52,
+        "height": 20,
+        "label": "the picked stage",
+        "link": null
+      },
+      {
+        "id": "pipeline-jobs",
+        "type": "rectangle",
+        "x": 53,
+        "y": 41,
+        "width": 51,
+        "height": 20,
+        "label": "jobs",
+        "link": null
+      },
+      {
+        "id": "pipeline-back",
+        "type": "rectangle",
+        "x": 0,
+        "y": 62,
+        "width": 18,
+        "height": 4,
+        "label": "back to review",
+        "link": "site-review"
+      }
+    ],
+    "assistant": [
+      {
+        "id": "assistant-conversation",
+        "type": "rectangle",
+        "x": 0,
+        "y": 0,
+        "width": 70,
+        "height": 60,
+        "label": "conversation",
+        "link": null
+      },
+      {
+        "id": "assistant-may",
+        "type": "rectangle",
+        "x": 71,
+        "y": 0,
+        "width": 33,
+        "height": 30,
+        "label": "what it may do",
+        "link": null
+      },
+      {
+        "id": "assistant-may-not",
+        "type": "rectangle",
+        "x": 71,
+        "y": 31,
+        "width": 33,
+        "height": 29,
+        "label": "what it may not do",
+        "link": null
+      },
+      {
+        "id": "assistant-back",
+        "type": "rectangle",
+        "x": 0,
+        "y": 61,
+        "width": 16,
+        "height": 4,
+        "label": "back to home",
+        "link": "home"
+      }
+    ],
+    "simkit": [
+      {
+        "id": "simkit-scenarios",
+        "type": "rectangle",
+        "x": 0,
+        "y": 0,
+        "width": 34,
+        "height": 40,
+        "label": "scenarios",
+        "link": null
+      },
+      {
+        "id": "simkit-renders",
+        "type": "rectangle",
+        "x": 35,
+        "y": 0,
+        "width": 34,
+        "height": 40,
+        "label": "render jobs",
+        "link": null
+      },
+      {
+        "id": "simkit-training",
+        "type": "rectangle",
+        "x": 70,
+        "y": 0,
+        "width": 34,
+        "height": 40,
+        "label": "training runs",
+        "link": null
+      },
+      {
+        "id": "simkit-truth",
+        "type": "rectangle",
+        "x": 0,
+        "y": 41,
+        "width": 104,
+        "height": 16,
+        "label": "truth",
+        "link": null
+      },
+      {
+        "id": "simkit-back",
+        "type": "rectangle",
+        "x": 0,
+        "y": 58,
+        "width": 16,
+        "height": 4,
+        "label": "back to home",
+        "link": "home"
+      }
+    ],
+    "settings": [
+      {
+        "id": "settings-units",
+        "type": "rectangle",
+        "x": 0,
+        "y": 0,
+        "width": 50,
+        "height": 20,
+        "label": "units and time",
+        "link": null
+      },
+      {
+        "id": "settings-data",
+        "type": "rectangle",
+        "x": 51,
+        "y": 0,
+        "width": 53,
+        "height": 20,
+        "label": "preview data",
+        "link": null
+      },
+      {
+        "id": "settings-layout",
+        "type": "rectangle",
+        "x": 0,
+        "y": 21,
+        "width": 50,
+        "height": 16,
+        "label": "layout",
+        "link": null
+      },
+      {
+        "id": "settings-account",
+        "type": "rectangle",
+        "x": 51,
+        "y": 21,
+        "width": 53,
+        "height": 4,
+        "label": "account",
+        "link": "sign-in"
+      },
+      {
+        "id": "settings-back",
+        "type": "rectangle",
+        "x": 0,
+        "y": 38,
+        "width": 16,
+        "height": 4,
+        "label": "back to home",
+        "link": "home"
+      }
+    ]
+  }
+}

@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#05100e">
+  <meta name="description" content="Design page layouts and navigation flows on the Phosphor VFD grid.">
+  <title>Home · Phosphor</title>
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./ui-pages.css">
+  <link rel="stylesheet" href="./blank.css?v=designer-rail-1">
+  <script type="module" src="./blank.js?v=designer-rail-1"></script>
+</head>
+<body class="blank-workspace">
+  <canvas id="ui-pages-gl" aria-hidden="true"></canvas>
+  <div id="ui-shell" class="blank-shell">
+    <aside class="blank-rail" aria-label="Workspace pages" data-vfd="panel">
+      <a class="blank-brand" href="./workbench.html" data-vfd="label" aria-label="Phosphor component library">PHOSPHOR</a>
+      <button id="expand-page-groups" type="button" data-vfd="button" aria-controls="design-tabs">EXPAND ALL</button>
+      <nav id="design-tabs" class="blank-tabs" aria-label="App flow pages"></nav>
+      <div class="linked-rail">
+        <canvas id="rail-divider" class="rail-divider" data-vfd="canvas" aria-hidden="true"></canvas>
+        <button id="show-linked-pages" type="button" data-vfd="button" aria-haspopup="dialog">MANAGE PAGES</button>
+      </div>
+      <a class="blank-return" href="./viewer.html" data-vfd="button">VIEWER</a>
+    </aside>
+    <main class="blank-main">
+      <header class="blank-heading"><div class="blank-title-row"><h1 id="blank-title" data-vfd="label">HOME</h1><button id="preview-design" type="button" data-vfd="button" aria-pressed="false" aria-label="Toggle UI preview">UI PREVIEW</button></div><p id="page-scope" data-vfd="label" data-vfd-tone="dim"></p></header>
+      <div id="design-pages" class="design-pages"></div>
+    </main>
+  </div>
+  <aside id="design-tools" class="designer-tools floating-panel" data-vfd="panel" data-vfd-opaque="true" data-vfd-layer="20" aria-label="Drawing toolbox">
+    <div class="tools-heading"><button id="tools-drag" type="button" data-vfd="label" aria-label="Move toolbox. Drag or use arrow keys. Home resets its position.">:: TOOLS</button><button id="tools-collapse" type="button" data-vfd="button" aria-label="Collapse toolbox" aria-expanded="true" aria-controls="tools-body">-</button></div>
+    <div id="tools-body" class="tools-body">
+      <div class="tools-grid" role="group" aria-label="Drawing tools">
+        <button type="button" data-tool="select" data-vfd="button" aria-pressed="true">SELECT</button>
+        <button type="button" data-tool="rectangle" data-vfd="button" aria-pressed="false">RECTANGLE</button>
+        <button type="button" data-tool="divider" data-vfd="button" aria-pressed="false">DIVIDER</button>
+        <button type="button" data-tool="label" data-vfd="button" aria-pressed="false">LABEL</button>
+        <button id="delete-rectangle" type="button" data-vfd="button" disabled>DELETE</button>
+        <button id="design-grid" type="button" data-vfd="button" aria-pressed="false">GUIDES</button>
+      </div>
+      <label class="field"><span data-vfd="label" data-vfd-tone="dim">SELECTION</span><select id="rectangle-selection" data-vfd="select" aria-label="Selected element"><option value="">NO ELEMENTS</option></select></label>
+      <label class="field"><span data-vfd="label" data-vfd-tone="dim">LABEL</span><input id="rectangle-label" data-vfd="search" type="text" maxlength="80" autocomplete="off" placeholder="Name this element" aria-label="Element label" disabled></label>
+      <label class="field"><span data-vfd="label" data-vfd-tone="dim">LINK TO PAGE</span><select id="rectangle-link" data-vfd="select" aria-label="Element destination page" disabled><option value="">NONE</option></select></label>
+      <button id="follow-link" type="button" data-vfd="button" disabled>FOLLOW LINK</button>
+      <div class="tools-grid"><button id="undo-design" type="button" data-vfd="button" disabled>UNDO</button><button id="redo-design" type="button" data-vfd="button" disabled>REDO</button></div>
+      <div class="tools-grid"><button id="export-design" type="button" data-vfd="button">EXPORT</button><button id="import-design" type="button" data-vfd="button">IMPORT</button></div>
+      <input id="design-file" type="file" accept="application/json,.json" hidden>
+      <p class="tools-hint" data-vfd="label" data-vfd-tone="dim">R BOX / D LINE / V SELECT<br>T LABEL / DRAG END TO RESIZE</p>
+      <p id="design-status" class="design-status" role="status" data-vfd="label" data-vfd-tone="dim">SAVED LOCALLY</p>
+    </div>
+  </aside>
+  <div id="linked-backdrop" class="linked-backdrop" hidden>
+    <section id="linked-pages-dialog" class="linked-pages-dialog floating-panel" role="dialog" aria-modal="true" aria-labelledby="linked-pages-title" data-vfd="panel" data-vfd-opaque="true" data-vfd-layer="31">
+      <div class="linked-heading"><h2 id="linked-pages-title" data-vfd="label">MANAGE PAGES</h2><button id="close-linked-pages" type="button" data-vfd="button" aria-label="Close linked pages">X</button></div>
+      <p data-vfd="label" data-vfd-tone="dim">Pages are grouped in the rail.<br>Create and connect your flow.</p>
+      <label class="field"><span data-vfd="label" data-vfd-tone="dim">EDIT A LINKED PAGE</span><select id="linked-page-picker" data-vfd="select" aria-label="Linked page"></select></label>
+      <button id="open-linked-page" type="button" data-vfd="button">OPEN PAGE</button>
+      <label class="field"><span data-vfd="label" data-vfd-tone="dim">NEW PAGE NAME</span><input id="new-linked-page" data-vfd="search" type="text" maxlength="40" autocomplete="off" placeholder="e.g. Account settings" aria-label="New linked page name"></label>
+      <button id="create-linked-page" type="button" data-vfd="button">CREATE PAGE</button>
+      <p id="linked-page-status" role="status" data-vfd="label" data-vfd-tone="dim">Each page has its own saved canvas.</p>
+    </section>
+  </div>
+</body>
+</html>

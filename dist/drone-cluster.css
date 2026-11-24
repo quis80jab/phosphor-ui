@@ -1,0 +1,24 @@
+.drone-cluster{position:absolute;top:var(--cell);right:var(--cell);width:calc(38 * var(--cell));max-width:calc(100% - 2 * var(--cell));max-height:calc(100% - 2 * var(--cell));overflow:auto;overscroll-behavior:contain;touch-action:pan-y;z-index:6;padding:var(--cell);border:var(--pixel) solid var(--line);background:#061713;transform:translateY(var(--pixel-scroll-correction,0px));scrollbar-width:thin;scrollbar-color:var(--dim) #061713}
+.drone-cluster-header{position:sticky;top:0;z-index:2;background:#061713;display:grid;grid-template-columns:minmax(0,1fr) calc(7 * var(--cell));gap:var(--cell);height:calc(3 * var(--cell));align-items:center}
+.drone-cluster-header h3{margin:0;font:inherit;min-width:0;height:calc(3 * var(--cell));line-height:calc(3 * var(--cell))}
+.drone-cluster button{min-width:0;padding:0;height:calc(3 * var(--cell))}
+.drone-cluster-status{display:block;height:calc(2 * var(--cell));line-height:calc(2 * var(--cell));margin:var(--cell) 0;color:var(--dim)}
+.drone-cluster-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:var(--cell);align-items:stretch}
+.drone-cluster-identity{height:calc(5 * var(--cell));display:grid;grid-template-rows:var(--cell) calc(3 * var(--cell));gap:var(--cell);min-width:0}
+.drone-cluster-caption{display:block;height:var(--cell);line-height:var(--cell);color:var(--dim)}
+.drone-cluster-identity-value{display:block;min-width:0;height:calc(3 * var(--cell));line-height:calc(1.5 * var(--cell));overflow:hidden}
+.drone-gauge{display:flex;align-items:center;justify-content:center;text-align:center;border:var(--pixel) solid var(--line);background:#082018;overflow:hidden;min-width:0;padding:var(--cell)}
+.drone-gauge-primary{height:calc(12 * var(--cell))}.drone-gauge-small{height:calc(9 * var(--cell))}
+.drone-cluster-task{display:grid;grid-template-rows:var(--cell) calc(3 * var(--cell)) calc(3 * var(--cell));gap:var(--cell);height:calc(9 * var(--cell));min-width:0}
+.drone-cluster-task-value{height:calc(3 * var(--cell));line-height:calc(1.5 * var(--cell))}
+.drone-cluster-divider{grid-column:1/-1;height:calc(2 * var(--cell));padding-top:var(--cell);border-top:var(--pixel) solid var(--line);color:var(--dim)}
+.drone-feed-label{grid-column:1/-1;display:block;height:calc(2 * var(--cell));line-height:calc(2 * var(--cell));color:var(--dim)}
+.drone-feed-preview{grid-column:1/-1;height:calc(12 * var(--cell));border:var(--pixel) solid var(--line);background:#082018;display:grid;place-items:center;overflow:hidden;min-width:0}
+.drone-sensor-zoom-control{grid-column:1/-1;display:grid;gap:var(--cell);grid-template-rows:var(--cell) calc(3 * var(--cell));height:calc(5 * var(--cell))}
+.drone-sensor-zoom-heading{display:grid;grid-template-columns:1fr calc(6 * var(--cell));height:var(--cell);min-width:0}
+.drone-sensor-zoom-heading>*{height:var(--cell);line-height:var(--cell)}.drone-sensor-zoom-value{text-align:right}
+.drone-sensor-zoom{width:100%;height:calc(3 * var(--cell));margin:0;padding:0;border:0;accent-color:var(--ink);cursor:ew-resize}
+.vfd-rendered .drone-sensor-zoom{opacity:0}
+@media(width < 571.4285714285714px){.drone-cluster{width:calc(100% - 2 * var(--cell))}.drone-cluster-header{grid-template-columns:minmax(0,1fr) calc(6 * var(--cell))}}
+
+.drone-direct-button{grid-column:1/-1}

@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#0b1113">
+  <meta name="description" content="A VFD component workbench. Test and modify dials, wheels, sliders, indicators and search fields, with saved notes beside every component.">
+  <title>VFD interface lab · Phosphor</title>
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./workbench.css?v=glyph-2">
+  <script type="module" src="./workbench.js?v=glyph-2"></script>
+</head>
+<body>
+  <canvas id="bench-gl" aria-hidden="true"></canvas>
+  <div class="bench-shell">
+    <header class="bench-header">
+      <a class="bench-brand" href="./workbench.html">PHOSPHOR <span>VFD INTERFACE LAB</span></a>
+      <nav aria-label="Workbench actions"><a class="quiet-link" href="./blank.html">Blank workspace</a><a class="quiet-link" href="./saas.html">SaaS workspace</a><a class="quiet-link" href="./handoff.html">Save / handoff</a><a class="quiet-link" href="./ui-pages.html">UI pages</a><a class="quiet-link" href="./viewer.html">3D viewer</a><a class="quiet-link" href="./index.html">Optical layers</a><button id="import-bench" type="button">Import</button><button id="export-bench" type="button">Export JSON</button><button id="save-bench" type="button" class="primary">Save all</button><input id="bench-file" type="file" accept="application/json,.json" hidden></nav>
+    </header>
+    <section class="bench-intro">
+      <div><div class="eyebrow">CHARACTER + GRAPHIC / CONTROL LAB</div><h1>One display language<span>.</span></h1><p>The reference screens and component tester, drawn from the same phosphor cells.</p></div>
+      <div class="bench-summary"><strong>12</strong><span>GLYPH CONTROLS</span><small id="bench-save-status" role="status">Changes save on this device</small></div>
+    </section>
+    <section class="combined-console" aria-labelledby="combined-title">
+      <div class="console-heading"><div><span class="console-channel">LIVE / 01</span><h2 id="combined-title">Character + graphic console</h2></div><span>POSITION · TRANSPORT · COMPONENTS</span></div>
+      <div class="console-body">
+        <div class="console-display-column"><div id="combined-display" aria-label="Combined interactive VFD console"></div><p class="console-help">Use the original keys and transport. Select a component in the lower bank to test it here.</p></div>
+        <aside class="console-inspector" aria-label="Selected component editor">
+          <div class="inspector-eyebrow">SELECTED COMPONENT</div><h3 id="selected-component-title">Rotary dial</h3>
+          <label>Display label<input id="selected-label" type="text" maxlength="40" aria-label="Selected component label"></label>
+          <div class="selected-style-row"><label>Fill marks<select id="selected-mark" aria-label="Selected component fill marks"><option value="dots">· Dots</option><option value="hashes"># Hashes</option><option value="blocks">■ Blocks</option><option value="lines">≡ Lines</option></select></label><label>Color<input id="selected-color" type="color" aria-label="Selected component color"></label></div>
+          <label id="selected-value-field">Test value <output id="selected-value-output"></output><input id="selected-value" type="range" aria-label="Selected component test value"></label>
+          <label class="selected-note-label">EDIT NOTES<textarea id="selected-note" maxlength="4000" placeholder="Edits for this component…" aria-label="Selected component edit notes"></textarea></label>
+          <div class="selected-note-actions"><small id="selected-note-status">Saved with the component</small><button type="button" id="save-selected-note">Save note</button></div>
+          <button type="button" id="edit-selected-component" class="edit-selected">Open component modifiers</button>
+        </aside>
+      </div>
+    </section>
+    <div class="glyph-toolbar"><div><span class="inspector-eyebrow">COMPONENT BANK</span><h2>Glyph construction</h2></div><div class="glyph-controls" role="group" aria-label="Apply fill marks to all components"><span>APPLY TO ALL</span><button type="button" data-all-mark="dots" aria-pressed="true">· Dots</button><button type="button" data-all-mark="hashes" aria-pressed="false"># Hashes</button><button type="button" data-all-mark="blocks" aria-pressed="false">■ Blocks</button><button type="button" data-all-mark="lines" aria-pressed="false">≡ Lines</button></div></div>
+    <details class="optics-panel">
+      <summary><span class="optics-title">Display effects <small>Shared across the gallery</small></span><span class="optics-summary">Emission · glow · grid · refraction</span></summary>
+      <div class="optics-controls">
+        <label>Emission <output data-optics-output="brightness">100%</output><input type="range" min="20" max="200" value="100" data-optics="brightness" aria-label="Gallery emission"></label>
+        <label>Glow <output data-optics-output="glow">25%</output><input type="range" min="0" max="100" value="25" data-optics="glow" aria-label="Gallery glow"></label>
+        <label>Contrast <output data-optics-output="contrast">110%</output><input type="range" min="50" max="220" value="110" data-optics="contrast" aria-label="Gallery contrast"></label>
+        <label>Square grid <output data-optics-output="grid">35%</output><input type="range" min="0" max="100" value="35" data-optics="grid" aria-label="Gallery grid"></label>
+        <label>Cell refraction <output data-optics-output="refraction">0%</output><input type="range" min="0" max="100" value="0" data-optics="refraction" aria-label="Gallery refraction"></label>
+      </div>
+    </details>
+    <div class="bench-toolbar">
+      <label class="gallery-search"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m15.5 15.5 5 5"/></svg><input id="component-filter" type="search" placeholder="Find a component or note…" aria-label="Find a component or note"></label>
+      <div class="category-filters" role="group" aria-label="Component categories"><button type="button" data-category="All" aria-pressed="true">All <span>12</span></button><button type="button" data-category="Inputs" aria-pressed="false">Inputs</button><button type="button" data-category="Feedback" aria-pressed="false">Feedback</button><button type="button" data-category="Actions" aria-pressed="false">Actions</button><button type="button" data-category="Notes" aria-pressed="false">With notes</button></div>
+      <span id="visible-count" aria-live="polite">12 components</span>
+    </div>
+    <div id="bench-error" role="alert" hidden></div>
+    <main class="component-grid" id="component-grid" aria-label="Interactive component gallery"></main>
+    <div class="empty-state" id="empty-state" hidden><h2>No components match.</h2><p>Try a different name, note, or category.</p><button id="clear-filters" type="button">Clear filters</button></div>
+    <footer class="bench-footer"><span>PHOSPHOR / COMPONENT LIBRARY</span><span>Settings and notes save in this browser. Export JSON to keep a portable copy.</span></footer>
+  </div>
+</body>
+</html>

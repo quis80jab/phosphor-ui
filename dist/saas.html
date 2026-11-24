@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Phosphor operations workspace. Fleet, inspections and analytics on one VFD display grid.">
+  <title>Phosphor / Operations</title>
+  <link rel="stylesheet" href="./ui-pages.css?v=saas-1"><link rel="stylesheet" href="./saas.css?v=1">
+  <script type="module" src="./saas.js?v=1"></script>
+</head>
+<body>
+  <canvas id="ui-pages-gl" aria-hidden="true"></canvas>
+  <div id="ui-shell" class="saas-shell">
+    <aside class="saas-rail" aria-label="Workspace navigation" data-vfd="panel">
+      <a class="saas-brand" href="./saas.html" data-vfd="label" data-vfd-scale="2">PHOSPHOR</a>
+      <span class="rail-caption" data-vfd="label" data-vfd-tone="dim">OPERATIONS WORKSPACE</span>
+      <button id="workspace-shortcut" class="workspace-shortcut" data-vfd="button">FIELD OPERATIONS</button>
+      <nav id="saas-nav" aria-label="SaaS screens"></nav>
+      <div class="saas-rail-foot">
+        <span data-vfd="label" data-vfd-color="#ffc782">DEMO WORKSPACE</span>
+        <p data-vfd="label" data-vfd-tone="dim">EXPLORE WITH SAMPLE DATA. CHANGES SAVE ON THIS DEVICE.</p>
+        <a data-vfd="button" href="./viewer.html">3D VIEWER</a>
+        <a data-vfd="button" href="./handoff.html">SAVE / HANDOFF</a>
+      </div>
+    </aside>
+    <div class="saas-body">
+      <header class="saas-topbar">
+        <span id="workspace-name" data-vfd="label">PHOSPHOR FIELD OPS</span>
+        <span data-vfd="label" data-vfd-tone="dim" class="topbar-context">SAN FRANCISCO / SAMPLE DATA</span>
+        <button id="export-workspace" data-vfd="button">EXPORT</button>
+      </header>
+      <main id="saas-main" class="saas-main">
+        <div class="saas-heading">
+          <div><span id="page-eyebrow" class="eyebrow" data-vfd="label"></span><h1 id="page-title" data-vfd="label" data-vfd-scale="2"></h1><p id="page-description" data-vfd="label" data-vfd-tone="dim"></p></div>
+          <a id="heading-action" href="./viewer.html" data-vfd="button">OPEN VIEWER</a>
+        </div>
+        <div id="scope-toolbar" class="saas-scope">
+          <label class="scope-site"><span data-vfd="label" data-vfd-tone="dim">SITE</span><select id="site-filter" data-vfd="select" aria-label="Site scope"><option value="all">ALL SITES</option><option value="waterfront">WATERFRONT</option><option value="shipyard">SHIPYARD</option></select></label>
+          <div id="period-buttons" class="period-buttons" role="group" aria-label="Reporting period"><button data-range="7d" data-vfd="button">7 DAYS</button><button data-range="30d" data-vfd="button">30 DAYS</button><button data-range="90d" data-vfd="button">90 DAYS</button></div>
+          <span id="scope-caption" data-vfd="label" data-vfd-tone="dim"></span>
+        </div>
+        <section id="saas-content" aria-label="Workspace screen"></section>
+        <footer class="saas-footer"><span id="saas-message" role="status" data-vfd="label">READY / DEMO DATA</span><span data-vfd="label" data-vfd-tone="dim">PHOSPHOR / SHARED DISPLAY GRID</span></footer>
+      </main>
+    </div>
+  </div>
+  <dialog id="detail-dialog" class="saas-dialog" data-vfd="panel" data-vfd-layer="20" data-vfd-opaque="true" aria-labelledby="detail-title"><div class="dialog-heading"><h2 id="detail-title" data-vfd="label" data-vfd-scale="2"></h2><button id="close-detail" data-vfd="button">CLOSE</button></div><div id="detail-content"></div></dialog>
+</body>
+</html>

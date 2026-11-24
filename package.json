@@ -1,0 +1,19 @@
+{
+  "name": "phosphor-ui",
+  "version": "0.1.0",
+  "description": "VFD visual components, shared pixel-grid shaders, flow editor and 3D hologram UI",
+  "type": "module",
+  "license": "UNLICENSED",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "start": "node tools/serve.mjs",
+    "test": "node --test tests/*.test.mjs",
+    "check:layout": "node tools/build-designer-layout.mjs --check"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/quis80jab/phosphor-ui.git"
+  }
+}

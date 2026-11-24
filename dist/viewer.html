@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#060e0e">
+  <meta name="description" content="A glyph-based 3D inspection viewer with RGB, thermal and defect layers, an interactive cube and a scrub-through turntable.">
+  <title>Inspection viewer · Phosphor</title>
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./viewer.css?v=replay-1">
+  <link rel="stylesheet" href="./drone-cluster.css?v=hologram-12">
+  <link rel="stylesheet" href="./direct-operate.css?v=hologram-12">
+  <script type="module" src="./viewer.js?v=scan-5"></script>
+</head>
+<body>
+  <canvas id="viewer-ui-gl" aria-hidden="true"></canvas>
+  <header class="app-header">
+    <a class="wordmark" data-vfd="label" data-vfd-label="PHOSPHOR / INSPECTION" href="./viewer.html"><span class="brand-mark" aria-hidden="true">▦</span> PHOSPHOR<span class="brand-divider">/</span><span class="brand-section">INSPECTION</span></a>
+    <nav aria-label="Lab screens"><a data-vfd="button" href="./handoff.html">Handoff</a><a data-vfd="button" href="./viewer.html" aria-current="page">Viewer</a><a data-vfd="button" href="./workbench.html">Components</a><a data-vfd="button" href="./index.html">Optical layers</a></nav>
+    <span class="demo-tag">SIMULATED CAPTURE</span>
+  </header>
+  <main class="workspace">
+    <aside class="left-rail" aria-label="Capture browser">
+      <div class="rail-heading"><h1 data-vfd="label">CAPTURES</h1><span id="capture-count" hidden>03</span></div>
+      <label class="search-box"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M4 4h10v10H4zM14 14l6 6"/></svg><input id="capture-search" data-vfd="search" type="search" placeholder="Search" aria-label="Search captures" autocomplete="off"></label>
+      <label class="field-label" for="capture-filter">COLLECTION</label>
+      <select id="capture-filter" data-vfd="select" aria-label="Capture collection"><option value="all">All captures</option><option value="sf-waterfront">SF Waterfront</option><option value="mcap-replay">SLAM replay</option><option value="arch-of-constantine" disabled>Arch of Constantine</option><option value="cologne-cathedral" disabled>Cologne Cathedral</option><option value="pumpkin">Pumpkin!</option><option value="shopping-center" disabled>Shopping center</option><option value="snow-globe" disabled>Snow globe</option><option value="calibration">Calibration</option><option value="surface">Surfaces</option><option value="thermal">Thermal</option></select>
+      <div class="list-label"><span>CAPTURE / OBJECT</span><span>3D</span></div>
+      <div id="capture-list" class="capture-list" role="group" aria-label="Available captures"></div>
+      <div class="replay-open"><button id="open-mcap" data-vfd="button" type="button" aria-label="Open an MCAP recording for SLAM replay">Open .mcap</button><input id="mcap-file" type="file" accept=".mcap" hidden><span id="replay-source" class="replay-source" hidden></span></div>
+      <div class="no-results" id="capture-empty" hidden><p>No captures match.</p><button id="clear-search" data-vfd="button" type="button">Clear filters</button></div>
+      <section class="capture-details" aria-label="Capture details"><span class="field-label">SELECTED CAPTURE</span><dl><div><dt>Geometry</dt><dd>Cube / 6 faces</dd></div><div><dt>Sequence</dt><dd>24 sec / 720 fr</dd></div><div><dt>Source</dt><dd>Demo model</dd></div></dl></section>
+      <details class="rail-settings" open><summary data-vfd="button">Edit notes &amp; setup</summary><section class="rail-notes"><label class="field-label" for="viewer-notes">EDIT NOTES</label><textarea id="viewer-notes" maxlength="4000" placeholder="Keep your viewer edits here…" aria-label="Viewer edit notes"></textarea><div class="note-meta"><span id="note-status">Saved locally</span><span id="note-count">0 / 4000</span></div></section>
+      <div class="rail-bottom"><button id="save-viewer" data-vfd="button" data-vfd-label="SAVE" aria-label="Save setup" type="button">Save setup</button><button id="export-viewer" data-vfd="button" type="button" aria-label="Export viewer setup">Export</button></div>
+      <p id="save-status" class="save-status" role="status">Stored on this device.</p></details>
+    </aside>
+    <section class="viewer-workspace" aria-labelledby="viewer-title">
+      <header class="viewer-heading"><div><div class="eyebrow">SPATIAL INSPECTION</div><h2 id="viewer-title" data-vfd="label">Calibration cube<span id="capture-code" hidden>CUBE_001</span></h2></div><div class="capture-state"><span class="live-cell" aria-hidden="true"></span><span id="playback-status" data-vfd="label">READY</span></div></header>
+      <div class="layer-toolbar"><div class="layer-buttons" role="group" aria-label="Display layers">
+        <div class="layer-unit" data-channel="rgb" role="group" aria-label="RGB layer"><span class="layer-caption" data-vfd="label">RGB</span><button type="button" data-vfd="button" data-layer="rgb" data-enabled="false" aria-label="Disable RGB" aria-pressed="false">OFF</button><button type="button" data-vfd="button" data-layer="rgb" data-enabled="true" aria-label="Enable RGB" aria-pressed="true">ON</button></div>
+        <div class="layer-unit" data-channel="thermal" role="group" aria-label="THERMAL layer"><span class="layer-caption" data-vfd="label">THERMAL</span><button type="button" data-vfd="button" data-layer="thermal" data-enabled="false" aria-label="Disable THERMAL" aria-pressed="true">OFF</button><button type="button" data-vfd="button" data-layer="thermal" data-enabled="true" aria-label="Enable THERMAL" aria-pressed="false">ON</button></div>
+        <div class="layer-unit" data-channel="defect" role="group" aria-label="DEFECT layer"><span class="layer-caption" data-vfd="label">DEFECT</span><button type="button" data-vfd="button" data-layer="defect" data-enabled="false" aria-label="Disable DEFECT" aria-pressed="false">OFF</button><button type="button" data-vfd="button" data-layer="defect" data-enabled="true" aria-label="Enable DEFECT" aria-pressed="true">ON</button></div>
+      </div><label class="render-control" id="render-control"><select id="scene-rendering" data-vfd="select" aria-label="Scene rendering"><option value="voxels">VFD VOXELS</option><option value="vfd">VFD SPLATS</option><option value="smooth">SMOOTH</option></select></label><label class="mark-control"><select id="viewer-mark" data-vfd="select" aria-label="Display cell pattern"><option value="dots">· Dots</option><option value="hashes"># Hashes</option><option value="blocks">■ Blocks</option><option value="lines">≡ Lines</option></select></label></div>
+      <div class="viewer-frame" data-vfd="panel">
+        <div class="viewport-topbar"><span id="scene-name" data-vfd="label">TURNTABLE</span><div class="view-presets" role="group" aria-label="Camera view"><button type="button" data-vfd="button" data-view="iso" aria-pressed="true">ISO</button><button type="button" data-vfd="button" data-view="front" aria-pressed="false">FRONT</button><button type="button" data-vfd="button" data-view="top" aria-pressed="false">TOP</button><button type="button" data-vfd="button" data-view="right" aria-pressed="false">RIGHT</button></div></div>
+        <div id="viewport" class="viewport">
+          <canvas id="cube-canvas" tabindex="0" aria-label="Interactive turntable scene. Drag to rotate, scroll to zoom, use arrow keys to rotate, plus and minus to zoom, Home to reset, and Space to play or pause."></canvas>
+          <div id="selection-overlay" data-vfd="lasso-overlay" data-points="[]" aria-hidden="true"></div>
+          <div class="viewport-corner corner-tl"></div><div class="viewport-corner corner-tr"></div><div class="viewport-corner corner-bl"></div><div class="viewport-corner corner-br"></div>
+          <div class="viewport-hud hud-left" aria-hidden="true"><span>OBJECT / CUBE</span><span id="pose-readout">AZ 035° / EL 025°</span><span hidden>6 SURFACES</span></div>
+          <div class="viewport-hud hud-right"><span id="layer-readout">RGB + DEFECT</span><span id="frame-readout">FRAME 000 / 720</span></div>
+          <div id="map-marker-overlay" class="map-marker-overlay" data-vfd="marker-tether" hidden>
+            <div class="map-marker-card" data-vfd="marker-panel">
+              <button id="map-marker-flag" type="button" data-vfd="marker-flag" aria-label="Demo track flag" aria-expanded="false" aria-controls="map-marker-view">
+                <span class="map-marker-title">DEMO TRACK</span>
+                <span class="map-marker-coordinates"></span>
+              </button>
+              <button id="map-marker-view" type="button" data-vfd="button" hidden>View</button>
+            </div>
+          </div>
+          <div id="map-compass" class="map-compass" data-vfd="compass" data-heading="0" data-elevation="0" data-gesture="idle" role="img" aria-label="Map orientation compass" hidden>COMPASS</div>
+          <div id="scene-loading" class="scene-loading" data-vfd="label" data-vfd-align="center" role="status" hidden>LOADING SCENE</div>
+          <div id="viewer-error" class="viewer-error" data-vfd="alert" style="overflow-wrap:anywhere;white-space:pre-wrap" role="alert" hidden></div>
+          <div class="viewport-bottom"><span>DRAG TO ORBIT</span><button id="reset-view" data-vfd="button" type="button">Reset view</button></div>
+          <div id="thermal-legend" class="thermal-legend" hidden><span>THERMAL</span><div data-vfd="thermal-ramp" aria-hidden="true"></div><span>18°</span><span>64°C</span></div>
+        </div>
+        <div class="transport-panel">
+          <div class="transport-main"><div class="transport-buttons" role="group" aria-label="Playback controls">
+            <button id="stop-playback" data-vfd="transport-key" type="button" aria-label="Stop playback" title="Stop" aria-pressed="true">Stop</button>
+            <button id="step-back" data-vfd="transport-key" type="button" aria-label="Previous frame" title="Previous frame">Previous</button>
+            <button id="play-pause" data-vfd="transport-key" type="button" aria-label="Play turntable" aria-pressed="false">Play</button>
+            <button id="step-forward" data-vfd="transport-key" type="button" aria-label="Next frame" title="Next frame">Next</button>
+          </div><div class="timecode" data-vfd="time"><output id="current-time">00:00.00</output><span>/ 00:24.00</span></div><div class="playback-options"><button id="loop-toggle" data-vfd="button" type="button" aria-label="Loop playback" aria-pressed="true">LOOP</button><label><select id="playback-speed" data-vfd="select" aria-label="Playback speed"><option value="0.25">0.25×</option><option value="0.5">0.5×</option><option value="1" selected>1×</option><option value="2">2×</option></select></label></div></div>
+          <div class="scrubber-wrap" data-vfd="slider"><div class="scrubber-track" aria-hidden="true"><div id="scrubber-fill"></div><span id="scrubber-head"></span></div><input id="timeline" type="range" min="0" max="720" step="1" value="0" aria-label="Playback scrubber" aria-valuetext="0 seconds of 24 seconds"></div>
+          <div class="timeline-labels" aria-hidden="true"><span>00:00</span><span>00:06</span><span>00:12</span><span>00:18</span><span>00:24</span></div>
+        </div>
+      </div>
+      <footer class="viewer-footer"><span data-vfd="label" data-vfd-tone="dim">PIXEL GRID / UI GRID</span><span id="pattern-readout" hidden>DOTS</span><button id="grid-toggle" data-vfd="button" type="button" aria-pressed="false">UI GRID</button></footer>
+      <div id="scene-credit" class="scene-credit" hidden><a data-vfd="label" data-vfd-tone="dim" href="https://superspl.at/scene/0107d9cd" target="_blank" rel="noopener noreferrer" aria-label="Scene by Mateo Vallarino">MATEO VALLARINO</a><a data-vfd="label" data-vfd-tone="dim" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener noreferrer">CC BY-NC</a></div>
+      <div id="map-credit" class="scene-credit map-credit" hidden><a data-vfd="label" data-vfd-tone="dim" data-vfd-label="(C) OPENSTREETMAP CONTRIBUTORS" data-vfd-lines="2" href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener noreferrer">© OpenStreetMap contributors</a></div>
+    </section>
+    <aside id="point-tools" class="right-rail" data-vfd="panel" aria-labelledby="point-tools-title">
+      <header class="point-tools-heading"><h2 id="point-tools-title" data-vfd="label">POINT TOOLS</h2><span data-vfd="label" data-vfd-tone="dim">LOCAL EDITS</span></header>
+      <section class="point-tool-section" aria-labelledby="voxel-size-label">
+        <div class="point-tool-label"><label id="voxel-size-label" for="voxel-size" data-vfd="label">VOXEL SIZE</label><output id="voxel-size-value" for="voxel-size" data-vfd="label" data-vfd-align="right">1.00X</output></div>
+        <input id="voxel-size" data-vfd="slider" type="range" min="0.25" max="8" step="0.25" value="1" aria-label="Voxel size multiplier" aria-valuetext="1 times display pixel size">
+      </section>
+      <section class="point-tool-section" aria-labelledby="histogram-label">
+        <h3 id="histogram-label" data-vfd="label">BRIGHTNESS</h3>
+        <div id="point-histogram" data-vfd="histogram" data-bins="[]" data-selected-bins="[]" role="img" aria-label="Point brightness histogram, 32 bins from 0 to 255"></div>
+        <dl class="point-counts">
+          <div><dt data-vfd="label" data-vfd-tone="dim">VISIBLE</dt><dd id="point-count" data-vfd="label" data-vfd-align="right">0</dd></div>
+          <div><dt data-vfd="label" data-vfd-tone="dim">SELECTED</dt><dd id="selected-count" data-vfd="label" data-vfd-align="right">0</dd></div>
+          <div><dt data-vfd="label" data-vfd-tone="dim">DELETED</dt><dd id="deleted-count" data-vfd="label" data-vfd-align="right">0</dd></div>
+        </dl>
+      </section>
+      <section class="point-tool-section" aria-labelledby="selection-tools-label">
+        <h3 id="selection-tools-label" data-vfd="label">SELECTION</h3>
+        <div class="point-tool-modes" role="group" aria-label="Point editing tool">
+          <button data-edit-tool="orbit" data-vfd="button" type="button" aria-pressed="true">ORBIT</button>
+          <button data-edit-tool="select" data-vfd="button" type="button" aria-pressed="false">SELECT</button>
+          <button data-edit-tool="lasso" data-vfd="button" type="button" aria-pressed="false">LASSO</button>
+        </div>
+        <div class="point-tool-actions"><button id="select-all" data-vfd="button" type="button">SELECT ALL</button><button id="clear-selection" data-vfd="button" type="button">CLEAR</button><button id="delete-selection" data-vfd="button" type="button" disabled>DELETE</button><button id="undo-edit" data-vfd="button" type="button" disabled>UNDO</button><button id="restore-points" data-vfd="button" type="button" disabled>RESTORE POINTS</button></div>
+        <p class="point-tool-help" data-vfd="label" data-vfd-tone="dim" data-vfd-lines="5">DRAG LOOP / CLICK + ENTER. THROUGH DEPTH. SHIFT ADD / ALT REMOVE.</p>
+      </section>
+      <section class="point-tool-section" aria-labelledby="point-groups-label">
+        <h3 id="point-groups-label" data-vfd="label">POINT GROUPS</h3>
+        <label class="point-group-name"><span class="field-label" data-vfd="label">GROUP NAME</span><input id="group-name" data-vfd="search" type="text" maxlength="40" placeholder="NAME THIS GROUP" aria-label="Point group name" autocomplete="off"></label>
+        <button id="create-group" data-vfd="button" type="button" disabled>CREATE GROUP</button>
+        <div id="point-groups" class="point-groups" role="group" aria-label="Saved point groups"></div>
+      </section>
+      <p id="edit-status" class="point-edit-status" data-vfd="label" data-vfd-lines="5" role="status">SELECT POINTS TO EDIT. CHANGES SAVE LOCALLY.</p>
+    </aside>
+    <aside id="hologram-tools" class="right-rail hologram-tools" data-vfd="panel" aria-labelledby="hologram-tools-title" hidden>
+      <header class="point-tools-heading"><h2 id="hologram-tools-title" data-vfd="label">HOLOGRAM</h2><span id="hologram-scene" data-vfd="label" data-vfd-tone="dim">SF WATERFRONT</span></header>
+      <button id="holo-enabled" data-vfd="button" type="button" aria-label="Focus map with hologram projector" aria-pressed="true">PROJECTOR ON</button>
+      <label class="holo-control" for="holo-zoom" title="Enlarge map geometry within the fixed projector. The projection footprint and display cell size stay fixed."><span class="holo-control-label"><span data-vfd="label" data-vfd-tone="dim">MAP SCALE</span><output id="holo-zoom-value" for="holo-zoom" data-vfd="label" data-vfd-align="right">1.0X</output></span><input id="holo-zoom" data-vfd="slider" type="range" min="0.55" max="12" step="0.05" value="1" aria-label="Map geometry scale"></label>
+      <section class="holo-control-group" aria-label="Projector aim">
+        <label class="holo-control" for="holo-x"><span class="holo-control-label"><span data-vfd="label" data-vfd-tone="dim">AIM X</span><output id="holo-x-value" for="holo-x" data-vfd="label" data-vfd-align="right">-30%</output></span><input id="holo-x" data-vfd="slider" type="range" min="-1" max="1" step="0.01" value="-0.3" aria-label="Projector aim east or west"></label>
+        <label class="holo-control" for="holo-z"><span class="holo-control-label"><span data-vfd="label" data-vfd-tone="dim">AIM Z</span><output id="holo-z-value" for="holo-z" data-vfd="label" data-vfd-align="right">0.00</output></span><input id="holo-z" data-vfd="slider" type="range" min="-1" max="1" step="0.01" value="0" aria-label="Projector aim north or south"></label>
+      </section>
+      <section class="holo-control-group" aria-label="Projector shape">
+        <label class="holo-control" for="holo-radius"><span class="holo-control-label"><span data-vfd="label" data-vfd-tone="dim">CONE</span><output id="holo-radius-value" for="holo-radius" data-vfd="label" data-vfd-align="right">60%</output></span><input id="holo-radius" data-vfd="slider" type="range" min="0.2" max="1" step="0.01" value="0.6" aria-label="Hologram cone radius"></label>
+        <label class="holo-control" for="holo-height"><span class="holo-control-label"><span data-vfd="label" data-vfd-tone="dim">HEIGHT</span><output id="holo-height-value" for="holo-height" data-vfd="label" data-vfd-align="right">3.0</output></span><input id="holo-height" data-vfd="slider" type="range" min="1" max="5" step="0.1" value="3" aria-label="Projector height"></label>
+      </section>
+      <section class="holo-control-group" aria-label="Projector light">
+        <label class="holo-control" for="holo-intensity"><span class="holo-control-label"><span data-vfd="label" data-vfd-tone="dim">BRIGHT</span><output id="holo-intensity-value" for="holo-intensity" data-vfd="label" data-vfd-align="right">1.0X</output></span><input id="holo-intensity" data-vfd="slider" type="range" min="0.2" max="3" step="0.1" value="1" aria-label="Hologram brightness"></label>
+        <label class="holo-control" for="holo-edge"><span class="holo-control-label"><span data-vfd="label" data-vfd-tone="dim">EDGE</span><output id="holo-edge-value" for="holo-edge" data-vfd="label" data-vfd-align="right">1.4X</output></span><input id="holo-edge" data-vfd="slider" type="range" min="0" max="3" step="0.1" value="1.4" aria-label="Cone edge brightness"></label>
+        <label class="holo-control" for="holo-pathGain"><span class="holo-control-label"><span data-vfd="label" data-vfd-tone="dim">PATH GLOW</span><output id="holo-pathGain-value" for="holo-pathGain" data-vfd="label" data-vfd-align="right">18%</output></span><input id="holo-pathGain" data-vfd="slider" type="range" min="0" max="1" step="0.01" value="0.18" aria-label="Traced voxel path brightness"></label>
+        <label class="holo-control" for="holo-falloff" title="Inverse-square attenuation from the projector: higher values dim distant path cells faster. Zero gives uniform path brightness."><span class="holo-control-label"><span data-vfd="label" data-vfd-tone="dim">FALLOFF</span><output id="holo-falloff-value" for="holo-falloff" data-vfd="label" data-vfd-align="right">1.0X</output></span><input id="holo-falloff" data-vfd="slider" type="range" min="0" max="8" step="0.1" value="1" aria-label="Voxel path inverse-square falloff"></label>
+      </section>
+      <section class="holo-data-status" aria-label="Map data status">
+        <p id="holo-status" data-vfd="label" data-vfd-lines="5" role="status">READY TO LOAD MAP</p>
+        <button id="holo-retry" data-vfd="button" type="button">RETRY MAP</button>
+        <p id="holo-data-info" data-vfd="label" data-vfd-tone="dim" data-vfd-lines="6" data-vfd-multiline="true">OSM FOOTPRINTS / HEIGHTS TAGGED OR ESTIMATED</p>
+        <p class="holo-palette-note" data-vfd="label" data-vfd-tone="dim" data-vfd-lines="4">COLOR: HOLOGRAM PALETTE. HEIGHTS MAY BE ESTIMATED.</p>
+        <a class="holo-attribution" data-vfd="label" data-vfd-tone="dim" data-vfd-label="(C) OPENSTREETMAP CONTRIBUTORS" data-vfd-lines="2" href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener noreferrer">© OpenStreetMap contributors</a>
+      </section>
+    </aside>
+  </main>
+</body>
+</html>

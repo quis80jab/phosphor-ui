@@ -1,0 +1,437 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Phosphor project backup",
+  "description": "Lossless allowlisted browser settings. New captures use version 3 with layout designer state. Versions 1 and 2 remain readable and restore only their original keys, preserving newer app state. UTF-8 serialized JSON must additionally be no larger than 16 MiB; project-backup.js enforces this aggregate bound. Raw strings are not interpreted during restore.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "format",
+    "version",
+    "origin",
+    "createdAt",
+    "entries",
+    "transientExclusions"
+  ],
+  "properties": {
+    "format": {
+      "const": "phosphor-project-backup"
+    },
+    "version": {
+      "enum": [
+        1,
+        2,
+        3
+      ]
+    },
+    "origin": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 2048,
+      "pattern": "^[^\\u0000-\\u001f\\u007f]+$"
+    },
+    "createdAt": {
+      "type": "string",
+      "format": "date-time",
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}\\.\\d{3}Z$"
+    },
+    "entries": {
+      "type": "object"
+    },
+    "transientExclusions": {
+      "type": "array",
+      "minItems": 6,
+      "maxItems": 6,
+      "prefixItems": [
+        {
+          "const": "Free-orbit camera angles and distance; only the saved view preset is included."
+        },
+        {
+          "const": "Drone flight pose, held state, Direct Operate mode, velocity and joystick input."
+        },
+        {
+          "const": "Drone gauge sensor-feed selection and sensor zoom."
+        },
+        {
+          "const": "Viewer playback running state, pointer selection, lasso gestures and undo history."
+        },
+        {
+          "const": "Open dialogs, focus, scrolling, search filters and uncommitted form drafts."
+        },
+        {
+          "const": "Fetched OSM tiles, decoded splats, GPU caches and in-memory baked color textures."
+        }
+      ],
+      "items": false
+    }
+  },
+  "$defs": {
+    "entriesV1": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "phosphor-screen-settings-v1",
+        "phosphor-config-library-v1",
+        "phosphor-transport-screen-intro-v1",
+        "phosphor-component-workbench-v1",
+        "phosphor-inspection-viewer-v1",
+        "phosphor-viewer-grid-guides",
+        "phosphor-ui-pages-v1",
+        "phosphor-ui-readiness-v1",
+        "phosphor-ui-logistics-v1",
+        "phosphor-config-library-v1-recovery",
+        "phosphor-component-workbench-v1-recovery",
+        "phosphor-inspection-viewer-v1-recovery"
+      ],
+      "properties": {
+        "phosphor-screen-settings-v1": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "maxLength": 16777216
+        },
+        "phosphor-config-library-v1": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "maxLength": 16777216
+        },
+        "phosphor-transport-screen-intro-v1": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "maxLength": 16777216
+        },
+        "phosphor-component-workbench-v1": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "maxLength": 16777216
+        },
+        "phosphor-inspection-viewer-v1": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "maxLength": 16777216
+        },
+        "phosphor-viewer-grid-guides": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "maxLength": 16777216
+        },
+        "phosphor-ui-pages-v1": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "maxLength": 16777216
+        },
+        "phosphor-ui-readiness-v1": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "maxLength": 16777216
+        },
+        "phosphor-ui-logistics-v1": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "maxLength": 16777216
+        },
+        "phosphor-config-library-v1-recovery": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "maxLength": 16777216
+        },
+        "phosphor-component-workbench-v1-recovery": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "maxLength": 16777216
+        },
+        "phosphor-inspection-viewer-v1-recovery": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "maxLength": 16777216
+        }
+      }
+    },
+    "entriesV2": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "phosphor-screen-settings-v1",
+        "phosphor-config-library-v1",
+        "phosphor-transport-screen-intro-v1",
+        "phosphor-component-workbench-v1",
+        "phosphor-inspection-viewer-v1",
+        "phosphor-viewer-grid-guides",
+        "phosphor-ui-pages-v1",
+        "phosphor-ui-readiness-v1",
+        "phosphor-ui-logistics-v1",
+        "phosphor-config-library-v1-recovery",
+        "phosphor-component-workbench-v1-recovery",
+        "phosphor-inspection-viewer-v1-recovery",
+        "phosphor-saas-workspace-v1"
+      ],
+      "properties": {
+        "phosphor-screen-settings-v1": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "maxLength": 16777216
+        },
+        "phosphor-config-library-v1": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "maxLength": 16777216
+        },
+        "phosphor-transport-screen-intro-v1": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "maxLength": 16777216
+        },
+        "phosphor-component-workbench-v1": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "maxLength": 16777216
+        },
+        "phosphor-inspection-viewer-v1": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "maxLength": 16777216
+        },
+        "phosphor-viewer-grid-guides": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "maxLength": 16777216
+        },
+        "phosphor-ui-pages-v1": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "maxLength": 16777216
+        },
+        "phosphor-ui-readiness-v1": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "maxLength": 16777216
+        },
+        "phosphor-ui-logistics-v1": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "maxLength": 16777216
+        },
+        "phosphor-config-library-v1-recovery": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "maxLength": 16777216
+        },
+        "phosphor-component-workbench-v1-recovery": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "maxLength": 16777216
+        },
+        "phosphor-inspection-viewer-v1-recovery": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "maxLength": 16777216
+        },
+        "phosphor-saas-workspace-v1": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "maxLength": 16777216
+        }
+      }
+    },
+    "entriesV3": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "phosphor-screen-settings-v1",
+        "phosphor-config-library-v1",
+        "phosphor-transport-screen-intro-v1",
+        "phosphor-component-workbench-v1",
+        "phosphor-inspection-viewer-v1",
+        "phosphor-viewer-grid-guides",
+        "phosphor-ui-pages-v1",
+        "phosphor-ui-readiness-v1",
+        "phosphor-ui-logistics-v1",
+        "phosphor-config-library-v1-recovery",
+        "phosphor-component-workbench-v1-recovery",
+        "phosphor-inspection-viewer-v1-recovery",
+        "phosphor-saas-workspace-v1",
+        "phosphor-flow-designer-v1"
+      ],
+      "properties": {
+        "phosphor-screen-settings-v1": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "maxLength": 16777216
+        },
+        "phosphor-config-library-v1": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "maxLength": 16777216
+        },
+        "phosphor-transport-screen-intro-v1": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "maxLength": 16777216
+        },
+        "phosphor-component-workbench-v1": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "maxLength": 16777216
+        },
+        "phosphor-inspection-viewer-v1": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "maxLength": 16777216
+        },
+        "phosphor-viewer-grid-guides": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "maxLength": 16777216
+        },
+        "phosphor-ui-pages-v1": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "maxLength": 16777216
+        },
+        "phosphor-ui-readiness-v1": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "maxLength": 16777216
+        },
+        "phosphor-ui-logistics-v1": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "maxLength": 16777216
+        },
+        "phosphor-config-library-v1-recovery": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "maxLength": 16777216
+        },
+        "phosphor-component-workbench-v1-recovery": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "maxLength": 16777216
+        },
+        "phosphor-inspection-viewer-v1-recovery": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "maxLength": 16777216
+        },
+        "phosphor-saas-workspace-v1": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "maxLength": 16777216
+        },
+        "phosphor-flow-designer-v1": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "maxLength": 16777216
+        }
+      }
+    }
+  },
+  "oneOf": [
+    {
+      "properties": {
+        "version": {
+          "const": 1
+        },
+        "entries": {
+          "$ref": "#/$defs/entriesV1"
+        }
+      }
+    },
+    {
+      "properties": {
+        "version": {
+          "const": 2
+        },
+        "entries": {
+          "$ref": "#/$defs/entriesV2"
+        }
+      }
+    },
+    {
+      "properties": {
+        "version": {
+          "const": 3
+        },
+        "entries": {
+          "$ref": "#/$defs/entriesV3"
+        }
+      }
+    }
+  ]
+}

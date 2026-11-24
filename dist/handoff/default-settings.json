@@ -1,0 +1,528 @@
+{
+  "format": "phosphor-factory-settings",
+  "version": 1,
+  "settings": {
+    "display": {
+      "shape": "square",
+      "pattern": "grid",
+      "size": 6,
+      "fill": 67,
+      "brightness": 100,
+      "bloom": 22,
+      "burn": 60,
+      "cursorSize": 80,
+      "refraction": 0,
+      "dispersion": 0,
+      "contrast": 110,
+      "phosphor": "mint",
+      "glass": 35,
+      "tilt": 0,
+      "zoom": 100,
+      "view": "composite",
+      "signal": "reference",
+      "menu": {
+        "functions": [
+          false,
+          false,
+          false,
+          false
+        ],
+        "channels": [
+          true,
+          false,
+          true,
+          true
+        ],
+        "x": 3568,
+        "y": 1868,
+        "selected": "B-2",
+        "confirmed": false,
+        "committed": {
+          "x": 3568,
+          "y": 1868
+        }
+      },
+      "transport": {
+        "track": 1,
+        "elapsed": 209,
+        "playing": false,
+        "stopped": false
+      },
+      "anodeEnabled": true,
+      "phosphorEnabled": true,
+      "gridEnabled": true,
+      "filamentEnabled": true,
+      "glassEnabled": true,
+      "glowEnabled": true,
+      "anodeOpacity": 8,
+      "gridOpacity": 3,
+      "gridPitch": 1.5,
+      "gridWire": 0.025,
+      "filamentOpacity": 8,
+      "filamentCount": 5,
+      "filamentWidth": 0.026,
+      "layerGap": 1.5,
+      "reflection": 8
+    },
+    "configs": [],
+    "transportIntro": false,
+    "workbench": {
+      "version": 1,
+      "optics": {
+        "brightness": 100,
+        "glow": 25,
+        "contrast": 110,
+        "grid": 35,
+        "refraction": 0
+      },
+      "widgets": {
+        "dial": {
+          "label": "ROTARY DIAL",
+          "value": 62,
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "unit": "%",
+          "color": "#83e8d0",
+          "size": 100,
+          "disabled": false,
+          "variant": "outline",
+          "mark": "dots",
+          "notes": "",
+          "query": "",
+          "active": [
+            false,
+            false,
+            false
+          ],
+          "option": 0
+        },
+        "wheel": {
+          "label": "ENCODER WHEEL",
+          "value": 24,
+          "min": 0,
+          "max": 99,
+          "step": 1,
+          "unit": "",
+          "color": "#8bd9ff",
+          "size": 100,
+          "disabled": false,
+          "variant": "outline",
+          "mark": "dots",
+          "notes": "",
+          "query": "",
+          "active": [
+            false,
+            false,
+            false
+          ],
+          "option": 0
+        },
+        "bar": {
+          "label": "PROGRESS",
+          "value": 68,
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "unit": "%",
+          "color": "#83e8d0",
+          "size": 100,
+          "disabled": false,
+          "variant": "outline",
+          "mark": "dots",
+          "notes": "",
+          "query": "",
+          "active": [
+            false,
+            false,
+            false
+          ],
+          "option": 0
+        },
+        "indicators": {
+          "label": "STATUS ARRAY",
+          "value": 0,
+          "min": 0,
+          "max": 2,
+          "step": 1,
+          "unit": "",
+          "color": "#79ecc3",
+          "size": 100,
+          "disabled": false,
+          "variant": "outline",
+          "mark": "dots",
+          "notes": "",
+          "query": "",
+          "active": [
+            true,
+            false,
+            false
+          ],
+          "option": 0
+        },
+        "slider": {
+          "label": "SIGNAL LEVEL",
+          "value": 58,
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "unit": "%",
+          "color": "#8ccfff",
+          "size": 100,
+          "disabled": false,
+          "variant": "outline",
+          "mark": "dots",
+          "notes": "",
+          "query": "",
+          "active": [
+            false,
+            false,
+            false
+          ],
+          "option": 0
+        },
+        "percentage": {
+          "label": "CAPACITY",
+          "value": 76,
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "unit": "%",
+          "color": "#a3e2d6",
+          "size": 100,
+          "disabled": false,
+          "variant": "outline",
+          "mark": "dots",
+          "notes": "",
+          "query": "",
+          "active": [
+            false,
+            false,
+            false
+          ],
+          "option": 0
+        },
+        "search": {
+          "label": "FIND A LAYER",
+          "value": 0,
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "unit": "",
+          "color": "#9bded0",
+          "size": 100,
+          "disabled": false,
+          "variant": "outline",
+          "mark": "dots",
+          "notes": "",
+          "query": "",
+          "active": [
+            false,
+            false,
+            false
+          ],
+          "option": 0
+        },
+        "buttons": {
+          "label": "ACTION KEYS",
+          "value": 0,
+          "min": 0,
+          "max": 2,
+          "step": 1,
+          "unit": "",
+          "color": "#94e3d3",
+          "size": 100,
+          "disabled": false,
+          "variant": "outline",
+          "mark": "dots",
+          "notes": "",
+          "query": "",
+          "active": [
+            false,
+            false,
+            false
+          ],
+          "option": 0
+        },
+        "toggle": {
+          "label": "OUTPUT ENABLE",
+          "value": 0,
+          "min": 0,
+          "max": 1,
+          "step": 1,
+          "unit": "",
+          "color": "#8de7bb",
+          "size": 100,
+          "disabled": false,
+          "variant": "outline",
+          "mark": "dots",
+          "notes": "",
+          "query": "",
+          "active": [
+            true,
+            false,
+            false
+          ],
+          "option": 0
+        },
+        "stepper": {
+          "label": "STEP VALUE",
+          "value": 12,
+          "min": 0,
+          "max": 99,
+          "step": 1,
+          "unit": "",
+          "color": "#9acfff",
+          "size": 100,
+          "disabled": false,
+          "variant": "outline",
+          "mark": "dots",
+          "notes": "",
+          "query": "",
+          "active": [
+            false,
+            false,
+            false
+          ],
+          "option": 0
+        },
+        "level": {
+          "label": "LEVEL METER",
+          "value": -12,
+          "min": -60,
+          "max": 0,
+          "step": 1,
+          "unit": "dB",
+          "color": "#86e5be",
+          "size": 100,
+          "disabled": false,
+          "variant": "outline",
+          "mark": "dots",
+          "notes": "",
+          "query": "",
+          "active": [
+            false,
+            false,
+            false
+          ],
+          "option": 0
+        },
+        "segments": {
+          "label": "CONTROL MODE",
+          "value": 0,
+          "min": 0,
+          "max": 2,
+          "step": 1,
+          "unit": "",
+          "color": "#a1d9ff",
+          "size": 100,
+          "disabled": false,
+          "variant": "outline",
+          "mark": "dots",
+          "notes": "",
+          "query": "",
+          "active": [
+            false,
+            false,
+            false
+          ],
+          "option": 0
+        }
+      },
+      "screens": {
+        "selected": "dial",
+        "menu": {
+          "functions": [
+            false,
+            false,
+            false,
+            false
+          ],
+          "channels": [
+            true,
+            false,
+            true,
+            true
+          ],
+          "x": 3568,
+          "y": 1868,
+          "selected": "B-2",
+          "confirmed": false,
+          "committed": {
+            "x": 3568,
+            "y": 1868
+          }
+        },
+        "transport": {
+          "track": 1,
+          "elapsed": 209,
+          "playing": false,
+          "stopped": false
+        }
+      }
+    },
+    "viewer": {
+      "version": 1,
+      "asset": "calibration",
+      "renderMode": "voxels",
+      "voxelScale": 1,
+      "pointEdits": {},
+      "hologram": {
+        "enabled": true,
+        "x": -0.3,
+        "z": 0,
+        "radius": 0.6,
+        "height": 3,
+        "intensity": 1,
+        "edge": 1.4,
+        "pathGain": 0.18,
+        "falloff": 1,
+        "offsetX": 0,
+        "offsetZ": 0,
+        "zoom": 1
+      },
+      "layers": {
+        "rgb": true,
+        "thermal": false,
+        "defect": true
+      },
+      "mark": "dots",
+      "frame": 0,
+      "speed": 1,
+      "loop": true,
+      "view": "iso",
+      "notes": ""
+    },
+    "viewerGridGuides": false,
+    "pages": {
+      "version": 1,
+      "page": "catalog",
+      "selected": "workflow",
+      "mark": "dots",
+      "guides": false,
+      "notes": {},
+      "optics": {
+        "brightness": 100,
+        "glow": 25,
+        "contrast": 110,
+        "grid": 35,
+        "refraction": 0
+      }
+    },
+    "saas": {
+      "version": 1,
+      "page": "overview",
+      "range": "30d",
+      "site": "all",
+      "workspaceName": "Phosphor field ops",
+      "notifications": true,
+      "digest": false,
+      "unit": "metric",
+      "brightness": 100,
+      "contrast": 110,
+      "grid": 50,
+      "glow": 40,
+      "chartColor": "mint",
+      "chartPattern": "dots",
+      "selectedComponent": "line",
+      "componentNotes": {},
+      "inspectionOverrides": {}
+    },
+    "designer": {
+      "format": "phosphor-flow-designer",
+      "version": 2,
+      "hiddenPages": [
+        {
+          "id": "sign-in",
+          "label": "Sign in"
+        },
+        {
+          "id": "sign-up",
+          "label": "Sign up"
+        },
+        {
+          "id": "reset-password",
+          "label": "Reset password"
+        }
+      ],
+      "pages": {
+        "home": [],
+        "site": [],
+        "cases": [],
+        "assets": [],
+        "system": [],
+        "calendar": [],
+        "analyze": [],
+        "sign-in": [],
+        "sign-up": [],
+        "reset-password": []
+      }
+    },
+    "readiness": {
+      "case": {
+        "stage": 0,
+        "description": "Engine Oil Consumption Engine 1",
+        "assignee": "",
+        "notes": "",
+        "recommendation": "Inspect engine 1 oil system and vibration sensor.",
+        "scheduled": "2025-05-05",
+        "reviewed": false,
+        "reviewedAlerts": [],
+        "merged": false,
+        "history": [
+          "Case opened / 19 FEB 2025"
+        ]
+      },
+      "caseTab": "Overview",
+      "parts": {
+        "query": "",
+        "nsn": "",
+        "failure": "",
+        "platform": "",
+        "lru": "all",
+        "sort": "nsn",
+        "direction": 1,
+        "page": 0,
+        "pageSize": 4,
+        "selected": "2840-01-345-6789",
+        "forecast": "inventory",
+        "start": "2025-02",
+        "end": "2025-08",
+        "series": {
+          "actual": true,
+          "forecast": true,
+          "threshold": true,
+          "events": true
+        },
+        "orders": {}
+      },
+      "value": {
+        "platform": "",
+        "base": "",
+        "tab": "value",
+        "failure": ""
+      },
+      "home": {
+        "news": -1,
+        "resource": -1,
+        "updates": false
+      }
+    },
+    "logistics": {
+      "layers": {
+        "services": true,
+        "commands": false,
+        "base": true,
+        "3d": false
+      },
+      "dismissed": [],
+      "selectedSite": "subic",
+      "selectedAlert": "cargo",
+      "alertsOpen": true,
+      "sort": "latest",
+      "zoom": 1,
+      "panX": 0,
+      "panY": 0
+    }
+  }
+}

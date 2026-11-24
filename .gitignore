@@ -1,0 +1,17 @@
+node_modules/
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+.DS_Store
+__pycache__/
+.openai/
+handoff/snapshots/
+dist/handoff/snapshots/
+dist/assets/replay/
+*.mcap
+*.bag
+*.ply
+*.zip
+coverage/

@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#05100e">
+  <meta name="description" content="Interactive readiness and logistics pages assembled from the Phosphor VFD component library.">
+  <title>UI Pages · Phosphor</title>
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./ui-pages.css">
+  <link rel="stylesheet" href="./ui-logistics.css">
+  <script type="module" src="./ui-pages.js"></script>
+</head>
+<body>
+  <canvas id="ui-pages-gl" aria-hidden="true"></canvas>
+  <div id="ui-shell">
+    <header class="lab-header">
+      <a href="./workbench.html" class="lab-brand" data-vfd="label" data-vfd-scale="2">PHOSPHOR</a>
+      <span class="lab-subtitle" data-vfd="label" data-vfd-tone="dim">COMPONENTS / UI PAGES</span>
+      <nav class="row" aria-label="Other labs"><a href="./saas.html" data-vfd="button">WORKSPACE</a><a href="./handoff.html" data-vfd="button">HANDOFF</a><a href="./workbench.html" data-vfd="button">COMPONENTS</a><a href="./viewer.html" data-vfd="button">3D VIEWER</a><button id="open-optics" data-vfd="button" aria-expanded="false">DISPLAY</button></nav>
+    </header>
+    <div class="lab-layout">
+      <aside class="lab-rail" data-vfd="panel" aria-label="UI lab navigation">
+        <span class="eyebrow" data-vfd="label">UI LIBRARY</span>
+        <nav id="page-nav" class="stack" aria-label="Page selection"></nav>
+        <div class="rail-bottom"><span data-vfd="label" class="eyebrow">REFERENCE STUDIES</span><p data-vfd="label">9 REFERENCES<br>5 ASSEMBLED PAGES</p><span data-vfd="label" data-vfd-color="#ffc782">DEMO DATA</span><button id="start-tour" data-vfd="button">GUIDED TOUR</button><button id="grid-toggle" data-vfd="button" aria-pressed="false">GRID GUIDES</button></div>
+      </aside>
+      <main class="lab-main">
+        <div class="page-heading"><div><span id="page-kicker" class="eyebrow" data-vfd="label">DESIGN SYSTEM / REFERENCE COMPONENTS</span><h1 id="page-title" data-vfd="label" data-vfd-scale="2">Component atlas</h1></div><span id="page-summary" data-vfd="label" class="muted">SELECT / TEST / ANNOTATE / ASSEMBLE</span></div>
+        <section id="page-host" aria-label="Interactive page"></section>
+        <div class="lab-status"><span id="lab-message" data-vfd="label" role="status">READY / LOCAL DEMO</span><span data-vfd="label" data-vfd-tone="dim">ONE DISPLAY / ONE PIXEL GRID</span></div>
+      </main>
+    </div>
+  </div>
+  <aside id="display-drawer" class="floating-panel" data-vfd="panel" data-vfd-layer="5" data-vfd-opaque="true" hidden aria-label="Display settings">
+    <div class="panel-head"><h2 data-vfd="label">DISPLAY LAYERS</h2><button id="close-optics" data-vfd="button">CLOSE</button></div>
+    <label class="field"><span data-vfd="label">CELL PATTERN</span><select id="page-pattern" data-vfd="select"><option value="dots">DOTS</option><option value="hashes">HASHES</option><option value="blocks">BLOCKS</option><option value="lines">LINES</option></select></label>
+    <div id="optics-fields" class="stack"></div>
+    <button id="reset-optics" data-vfd="button">RESTORE SHARED OPTICS</button>
+    <p data-vfd="label" class="muted">USES THE VIEWER VFD SHADER. SETTINGS SAVE WITH THIS LAB.</p>
+  </aside>
+  <section id="tour" class="tour-panel floating-panel" data-vfd="panel" data-vfd-layer="10" data-vfd-opaque="true" hidden role="dialog" aria-modal="false" aria-label="Guided tour">
+    <div class="panel-head"><span id="tour-count" data-vfd="label"></span><button id="tour-close" data-vfd="button">CLOSE</button></div><h2 id="tour-title" data-vfd="label" data-vfd-scale="2"></h2><p id="tour-copy" data-vfd="label"></p><div class="row"><button id="tour-back" data-vfd="button">PREVIOUS</button><button id="tour-next" data-vfd="button">NEXT</button></div>
+  </section>
+</body>
+</html>

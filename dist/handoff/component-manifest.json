@@ -1,0 +1,3945 @@
+{
+  "format": "phosphor-component-manifest",
+  "version": 1,
+  "pathBase": "project-root",
+  "catalogVersion": "2026-11-24",
+  "runtime": {
+    "moduleFormat": "native-browser-esm",
+    "buildRequired": false,
+    "serveOverHttp": true,
+    "graphics": "WebGL2",
+    "framework": "none"
+  },
+  "grid": {
+    "module": "dist/viewer-grid.js",
+    "pixelPitchCss": 1.4285714285714286,
+    "uiPixels": 8,
+    "uiCellCss": 11.428571428571429,
+    "seamWidthCss": 0.1142857142857143,
+    "glyph": {
+      "width": 5,
+      "height": 7
+    },
+    "marks": [
+      "dots",
+      "hashes",
+      "blocks",
+      "lines"
+    ],
+    "coordinateSpace": "Paint coordinates are integer display pixels; DOM layout is CSS pixels."
+  },
+  "pages": [
+    {
+      "id": "optical",
+      "entry": "dist/index.html",
+      "controller": "dist/app.js",
+      "css": [
+        "dist/style.css"
+      ]
+    },
+    {
+      "id": "workbench",
+      "entry": "dist/workbench.html",
+      "controller": "dist/workbench.js",
+      "css": [
+        "dist/workbench.css"
+      ]
+    },
+    {
+      "id": "ui-pages",
+      "entry": "dist/ui-pages.html",
+      "controller": "dist/ui-pages.js",
+      "css": [
+        "dist/ui-pages.css",
+        "dist/ui-logistics.css"
+      ],
+      "views": [
+        "catalog",
+        "home",
+        "cases",
+        "parts",
+        "value",
+        "logistics"
+      ]
+    },
+    {
+      "id": "viewer",
+      "entry": "dist/viewer.html",
+      "controller": "dist/viewer.js",
+      "css": [
+        "dist/viewer.css",
+        "dist/drone-cluster.css",
+        "dist/direct-operate.css"
+      ]
+    },
+    {
+      "id": "saas",
+      "entry": "dist/saas.html",
+      "controller": "dist/saas.js",
+      "css": [
+        "dist/ui-pages.css",
+        "dist/saas.css"
+      ],
+      "views": [
+        "overview",
+        "fleet",
+        "inspections",
+        "analytics",
+        "components",
+        "workspace"
+      ],
+      "viewQueryParameter": "page",
+      "viewTitles": {
+        "overview": "Operations overview",
+        "fleet": "Fleet workspace",
+        "inspections": "Inspection queue",
+        "analytics": "Inspection analytics",
+        "components": "Charts and instruments",
+        "workspace": "Workspace settings"
+      },
+      "dataMode": "labeled-demo-fixtures-and-browser-local-state"
+    },
+    {
+      "id": "blank",
+      "entry": "dist/blank.html",
+      "controller": "dist/blank.js",
+      "css": [
+        "dist/ui-pages.css",
+        "dist/blank.css"
+      ],
+      "views": [
+        "home",
+        "site",
+        "cases",
+        "assets",
+        "system",
+        "calendar",
+        "analyze"
+      ],
+      "viewQueryParameter": "page",
+      "stateModule": "dist/blank-state.js",
+      "stateKey": "phosphor-flow-designer-v1",
+      "viewLabels": {
+        "home": "Home",
+        "site": "Site",
+        "cases": "Cases",
+        "assets": "Assets",
+        "system": "System",
+        "calendar": "Calendar",
+        "analyze": "Analyze"
+      },
+      "dataMode": "browser-local-layout-design",
+      "stateVersion": 2,
+      "defaultHiddenViews": [
+        "sign-in",
+        "sign-up",
+        "reset-password"
+      ],
+      "hiddenViewNavigation": "Linked pages dialog and element page links; hidden pages are not main rail tabs.",
+      "elementTypes": [
+        "rectangle",
+        "divider"
+      ],
+      "keyboardTools": {
+        "select": "V",
+        "rectangle": "R",
+        "divider": "D",
+        "label": "T",
+        "delete": "Delete/Backspace",
+        "cancel": "Escape"
+      },
+      "authentication": "Blank design surfaces only; no authentication service or account handling.",
+      "preview": {
+        "toggle": "UI PREVIEW / EDIT LAYOUT",
+        "module": "dist/designer-preview.js",
+        "dataQueryParameter": "data",
+        "dataModes": [
+          "atlas",
+          "demo"
+        ],
+        "adapters": {
+          "atlas": "dist/designer-panels/index.js: painters fed by the architecture (dist/designer-architecture.js, marked DESIGN) and the sample records (dist/designer-records.js, marked SAMPLE).",
+          "demo": "dist/designer-elements.js and dist/designer-topology.js, unchanged byte for byte: the synthetic preview as it was before the atlas adapter (blank.html?data=demo)."
+        },
+        "recognizedLabels": [
+          "site map: assets highlighted",
+          "data panel",
+          "asset details",
+          "details",
+          "telemetry",
+          "coordinates",
+          "compass",
+          "mode",
+          "pending",
+          "recent",
+          "notes",
+          "device details",
+          "device info",
+          "location",
+          "installed modules",
+          "sensor types",
+          "device management",
+          "event details",
+          "analysis details",
+          "topology",
+          "system topology"
+        ],
+        "recognizedLabelsAdapter": "demo",
+        "registeredPanels": [
+          "*/link",
+          "*/next",
+          "*/return",
+          "*/step",
+          "*/view",
+          "analyze/analysis details",
+          "analyze/coverage over scans",
+          "analyze/expected, simulated, flown",
+          "analyze/findings over scans",
+          "analyze/models",
+          "analyze/pipeline timing",
+          "analyze/runs",
+          "analyze/scope",
+          "assets/asset list",
+          "assets/asset record",
+          "assets/identity and frame",
+          "assets/open cases",
+          "assets/planes, tanks, sites",
+          "assets/regime",
+          "assets/scans over time",
+          "assets/the asset model",
+          "assistant/conversation",
+          "assistant/what it may do",
+          "assistant/what it may not do",
+          "bench/props-off checklist",
+          "bench/the aircraft",
+          "bench/weight and balance",
+          "calendar/event details",
+          "calendar/gates before a flight",
+          "calendar/scope",
+          "calendar/the grid",
+          "calendar/upcoming",
+          "cases/action history",
+          "cases/case details",
+          "cases/case queue",
+          "cases/decision",
+          "cases/disposition, parts, sign-off",
+          "cases/evidence",
+          "cases/evidence trail",
+          "cases/filters",
+          "cases/findings",
+          "cases/frames",
+          "files/flights",
+          "files/recordings",
+          "files/results",
+          "files/sites",
+          "home/activity",
+          "home/cases to decide",
+          "home/flights under way",
+          "home/my assigned work",
+          "home/needs attention",
+          "home/notes",
+          "home/sites and devices",
+          "home/system state",
+          "home/today",
+          "pipeline/jobs",
+          "pipeline/pipeline",
+          "pipeline/the picked stage",
+          "reset-password/reset password",
+          "settings/layout",
+          "settings/preview data",
+          "settings/units and time",
+          "sign-in/about sign-in",
+          "sign-in/sign in",
+          "sign-up/sign up",
+          "simkit/render jobs",
+          "simkit/scenarios",
+          "simkit/training runs",
+          "simkit/truth",
+          "site-compare/compare",
+          "site-compare/expected, simulated, flown",
+          "site-compare/scans of this area",
+          "site-compare/scans over time",
+          "site-compare/show",
+          "site-compare/two scans",
+          "site-compare/what changed",
+          "site-compare/which target",
+          "site-find/edit the outline",
+          "site-find/find a place",
+          "site-find/keep the site",
+          "site-find/picked building",
+          "site-find/places found",
+          "site-find/roof by hand",
+          "site-find/site map",
+          "site-find/sites kept",
+          "site-find/what this site holds",
+          "site-find/where it came from",
+          "site-preview/checks",
+          "site-preview/coverage by target",
+          "site-preview/flights at this site",
+          "site-preview/generator",
+          "site-preview/height along the path",
+          "site-preview/home",
+          "site-preview/how far it reaches",
+          "site-preview/make the plan",
+          "site-preview/missions",
+          "site-preview/settings",
+          "site-preview/slam and splat expected",
+          "site-preview/the plan from above",
+          "site-preview/this flight covers",
+          "site-review/export to the rtx 2080",
+          "site-review/jobs",
+          "site-review/picked",
+          "site-review/pipeline",
+          "site-review/recordings of this flight",
+          "site-review/show",
+          "site-review/the recording",
+          "site-review/the result",
+          "site-review/this run, measured",
+          "site-review/topics",
+          "site-run/before it flies",
+          "site-run/fly on",
+          "site-run/live view with telemetry",
+          "site-run/on the view",
+          "site-run/ready?",
+          "site-run/recording",
+          "site-run/sensors live",
+          "site-run/simulator view",
+          "site-run/start, pause, return, stop",
+          "site-run/the run",
+          "site-run/who holds control",
+          "site-simulate/run the simulation",
+          "site-simulate/runs so far",
+          "site-simulate/sensors on board",
+          "site-simulate/simulate on",
+          "site-simulate/simulated camera",
+          "site-simulate/the guard",
+          "site-simulate/the run",
+          "site-simulate/the simulated scene",
+          "site-simulate/waypoint",
+          "site-simulate/where it left the plan",
+          "site-simulate/wind and faults",
+          "site/asset details",
+          "site/compass",
+          "site/coordinates",
+          "site/data panel",
+          "site/details",
+          "site/mode",
+          "site/notes",
+          "site/pending",
+          "site/recent",
+          "site/site map: assets highlighted",
+          "site/telemetry",
+          "system-activity/command log",
+          "system-activity/deploys",
+          "system-activity/leases",
+          "system-chains/chains",
+          "system-chains/the picked step of a chain",
+          "system-device/device",
+          "system-device/driver",
+          "system-device/logs",
+          "system-device/ports",
+          "system-device/sensors",
+          "system-device/static pods",
+          "system-modules/interfaces",
+          "system-modules/module apps in the shell",
+          "system-modules/modules",
+          "system-modules/the picked module",
+          "system/command path",
+          "system/deploy",
+          "system/device details",
+          "system/device info",
+          "system/device management",
+          "system/installed modules",
+          "system/links",
+          "system/location",
+          "system/sensor types",
+          "system/telemetry of the picked device",
+          "system/topology"
+        ],
+        "labelMatching": "Trim, lowercase and collapse whitespace. atlas: the painter of the box's own page (page/label), else a shared one: step boxes (\"step n: name\"), return and next, view tabs (\"view: name\"), then any linked box. demo: recognizedLabels; details only on Site.",
+        "panelMap": "dist/designer-panel-map.js: per element ID, the element that paints it, the adapter and feed it will use, who builds that, and what exists today.",
+        "architectureModule": "dist/designer-architecture.js",
+        "recordsModule": "dist/designer-records.js",
+        "layout": "handoff/designer/arachnid.flow-design.json, maintained by tools/build-designer-layout.mjs from the shipped demo layout; IMPORT it in the designer.",
+        "geometry": "Uses the original saved UI-cell bounds without changing the layout document.",
+        "rendering": "Pure sandbox painters feed the existing designer VFD framebuffer; no second compositor.",
+        "dataMode": "atlas (default): the design and sample records, marked DESIGN or SAMPLE, never live. demo: ephemeral synthetic demo state. Neither fetches, signs in or controls a device.",
+        "topologyModule": "dist/designer-arch-view.js",
+        "topologyPlacement": "Available System canvas area left of saved panels, or an explicitly named Topology/System topology rectangle; no saved geometry changes. The generated layout names a topology box on System, so atlas draws it there."
+      }
+    },
+    {
+      "id": "element-catalog",
+      "entry": "dist/sandbox-ui/elements.html",
+      "controller": "dist/sandbox-ui/src/bench.js",
+      "css": []
+    }
+  ],
+  "modules": [
+    {
+      "id": "glyphs",
+      "path": "dist/vfd-glyphs.js",
+      "kind": "pure-canvas-painter",
+      "exports": [
+        "pixelText",
+        "glyphMark",
+        "glyphRect"
+      ],
+      "entry": "pixelText(ctx,value,x,y,color,scale=1,options={})",
+      "returns": [
+        "void"
+      ],
+      "notes": [
+        "glyphRect and glyphMark are also public; coordinates are logical artwork pixels."
+      ]
+    },
+    {
+      "id": "grid",
+      "path": "dist/viewer-grid.js",
+      "kind": "layout-and-dom-adapter",
+      "exports": [
+        "PANE_ENLARGEMENT",
+        "UI_SCALE",
+        "PIXEL_PITCH",
+        "UI_PIXELS",
+        "UI_CELL",
+        "TOOL_RAIL_CELLS",
+        "TOOL_RAIL_BREAKPOINT",
+        "floorCell",
+        "gridMetrics",
+        "pixelBounds",
+        "installViewerGrid"
+      ],
+      "entry": "installViewerGrid()",
+      "returns": [
+        "cleanup function"
+      ],
+      "notes": [
+        "Pure constants, gridMetrics, floorCell and pixelBounds can be used without mounting. installViewerGrid assumes the viewer layout."
+      ]
+    },
+    {
+      "id": "grid-painter",
+      "path": "dist/viewer-grid-paint.js",
+      "kind": "canvas-painter-with-dom-input",
+      "exports": [
+        "compassCardinals",
+        "paintGridControl"
+      ],
+      "entry": "paintGridControl(ctx,{element,type,x,y,width,height,focused,held,playing,state})",
+      "returns": [
+        "void"
+      ],
+      "notes": [
+        "Renders at destination integer display-pixel bounds. element supplies DOM values, attributes, datasets and labels."
+      ]
+    },
+    {
+      "id": "universal-vfd",
+      "path": "dist/viewer-grid-renderer.js",
+      "kind": "webgl-compositor",
+      "exports": [
+        "createViewerGridRenderer"
+      ],
+      "entry": "createViewerGridRenderer(canvas,sourceCanvas,initialOptics={},sceneCanvas=null)",
+      "returns": [
+        "invalidate",
+        "setOptics",
+        "setSceneFrame",
+        "setSceneBounds",
+        "setSceneAvailable",
+        "setSceneMonochrome",
+        "setSceneGrid",
+        "setPattern",
+        "destroy"
+      ],
+      "notes": []
+    },
+    {
+      "id": "page-skin",
+      "path": "dist/ui-pages-skin.js",
+      "kind": "document-dom-adapter",
+      "exports": [
+        "mountUIPagesSkin"
+      ],
+      "entry": "mountUIPagesSkin({getState=()=>({})})",
+      "returns": [
+        "refresh",
+        "relayout",
+        "setOptics",
+        "destroy"
+      ],
+      "notes": [
+        "Requires canvas#ui-pages-gl. Discovers [data-vfd] throughout the document. Use ui-pages.css to preserve DOM fallback/accessibility and hide DOM visuals only after compositor success."
+      ]
+    },
+    {
+      "id": "viewer-skin",
+      "path": "dist/viewer-skin.js",
+      "kind": "application-shell-adapter",
+      "exports": [
+        "mountViewerSkin"
+      ],
+      "entry": "mountViewerSkin({getState,getPlaying})",
+      "returns": [
+        "refresh",
+        "refreshOverlay",
+        "destroy"
+      ],
+      "notes": [
+        "Requires viewer.html shell including #viewer-ui-gl, #cube-canvas, .workspace, .left-rail and #viewer-error; not a general arbitrary-root mount."
+      ]
+    },
+    {
+      "id": "grid-menus",
+      "path": "dist/viewer-grid-menus.js",
+      "kind": "document-dom-adapter",
+      "exports": [
+        "mountGridMenus"
+      ],
+      "entry": "mountGridMenus({refresh})",
+      "returns": [
+        "destroy"
+      ],
+      "notes": [
+        "Custom grid listboxes retain native select semantics; document-scoped."
+      ]
+    },
+    {
+      "id": "bench-painter",
+      "path": "dist/bench-widgets.js",
+      "kind": "pure-canvas-painter",
+      "exports": [
+        "BENCH_WIDTH",
+        "BENCH_HEIGHT",
+        "BENCH_CATALOG",
+        "paintWidget"
+      ],
+      "entry": "paintWidget(ctx,id,config={})",
+      "returns": [
+        "void"
+      ],
+      "notes": [
+        "Authored at BENCH_WIDTH=320 and BENCH_HEIGHT=200. Internal config.size is a workbench study control, not the viewer grid scale."
+      ]
+    },
+    {
+      "id": "bench-compositor",
+      "path": "dist/bench-renderer.js",
+      "kind": "webgl-compositor",
+      "exports": [
+        "createBenchRenderer"
+      ],
+      "entry": "createBenchRenderer(canvas,entries,initialOptics={})",
+      "returns": [
+        "invalidate",
+        "setOptics",
+        "exportPNG",
+        "draw",
+        "destroy"
+      ],
+      "notes": [
+        "Each entries item must contain a unique id, DOM element and source canvas."
+      ]
+    },
+    {
+      "id": "bench-console",
+      "path": "dist/bench-console.js",
+      "kind": "dom-mount",
+      "exports": [
+        "mountBenchConsole"
+      ],
+      "entry": "mountBenchConsole(element,{getState,onScreensChange,onWidgetChange,onEditWidget})",
+      "returns": [
+        "source",
+        "refresh",
+        "destroy"
+      ],
+      "notes": [
+        "See implementation for console state; combines both reference screens and workbench preview."
+      ]
+    },
+    {
+      "id": "position-artwork",
+      "path": "dist/reference-screen.js",
+      "kind": "pure-state-and-canvas",
+      "exports": [
+        "REFERENCE_WIDTH",
+        "REFERENCE_HEIGHT",
+        "REFERENCE_BUTTONS",
+        "createReferenceState",
+        "normalizeReferenceState",
+        "activateReference",
+        "paintReferenceButton",
+        "paintReference"
+      ],
+      "entry": "paintReference(ctx,state,options={}); activateReference(state,id)",
+      "returns": [
+        "normalized next state from activateReference"
+      ],
+      "notes": [
+        "Artwork is 256x128. X/Y are integer hundredths of a millimetre."
+      ]
+    },
+    {
+      "id": "transport-artwork",
+      "path": "dist/transport-screen.js",
+      "kind": "pure-state-and-canvas",
+      "exports": [
+        "TRANSPORT_WIDTH",
+        "TRANSPORT_HEIGHT",
+        "TRANSPORT_BUTTONS",
+        "createTransportState",
+        "normalizeTransportState",
+        "activateTransport",
+        "advanceTransport",
+        "paintTransportButton",
+        "paintTransport"
+      ],
+      "entry": "paintTransport(ctx,state,options={}); activateTransport(state,id); advanceTransport(state,seconds)",
+      "returns": [
+        "normalized next state from state functions"
+      ],
+      "notes": [
+        "Artwork is 256x128; nine demo tracks of 299 seconds each, no audio."
+      ]
+    },
+    {
+      "id": "reference-hit-controls",
+      "path": "dist/reference-controls.js",
+      "kind": "application-shell-adapter",
+      "exports": [
+        "mountReferenceControls"
+      ],
+      "entry": "mountReferenceControls(canvas,effect)",
+      "returns": [
+        "refresh",
+        "destroy"
+      ],
+      "notes": [
+        "Uses effect control-projection and activation APIs; see optical page shell."
+      ]
+    },
+    {
+      "id": "physical-optics",
+      "path": "dist/vfd-renderer.js",
+      "kind": "webgl-renderer",
+      "exports": [
+        "initVFD"
+      ],
+      "entry": "initVFD(canvas,buttons=[],initialSettings={})",
+      "returns": [
+        "move",
+        "pulse",
+        "configure",
+        "getSettings",
+        "refreshLayout",
+        "setButton",
+        "getControlProjection",
+        "activateControl",
+        "setControlFeedback",
+        "bakeColor",
+        "setBaked",
+        "hasBake",
+        "suspend",
+        "resume",
+        "getDiagnostics",
+        "destroy"
+      ],
+      "notes": [
+        "128x64 physical matrix is distinct from the 256x128 reference artwork modes."
+      ]
+    },
+    {
+      "id": "readiness-pages",
+      "path": "dist/ui-readiness.js",
+      "kind": "dom-mount",
+      "exports": [
+        "READINESS_COMPONENTS",
+        "mountReadiness",
+        "mountReadinessComponent"
+      ],
+      "entry": "mountReadiness(host,page,{refresh,navigate,notify,component}); mountReadinessComponent(host,id,options)",
+      "returns": [
+        "cleanup function"
+      ],
+      "notes": [
+        "Page state currently uses browser localStorage and included demo records."
+      ]
+    },
+    {
+      "id": "logistics-page",
+      "path": "dist/ui-logistics.js",
+      "kind": "dom-mount",
+      "exports": [
+        "resolveLogisticsCommand",
+        "mountLogistics"
+      ],
+      "entry": "mountLogistics(host,{refresh,navigate,notify})",
+      "returns": [
+        "cleanup function"
+      ],
+      "notes": [
+        "Mounts the whole interacting logistics page; no exported per-component logistics mount. Catalog scopes the complete page via internal ui-pages.js scopeComponent."
+      ]
+    },
+    {
+      "id": "scene-viewer",
+      "path": "dist/cube-renderer.js",
+      "kind": "webgl-renderer",
+      "exports": [
+        "createCubeViewer"
+      ],
+      "entry": "createCubeViewer(canvas,{onPoseChange,onInteraction,onError,onAssetState,onPointEdit,onMapState,onMapTranslation,onMapMarker,onDirectOperateChange})",
+      "returns": [
+        "setDirectOperate",
+        "getDirectOperate",
+        "setDroneInput",
+        "clearDroneInput",
+        "setDirectOperateLayout",
+        "setMapMarkerHeld",
+        "focusMapMarker",
+        "setMapZoom",
+        "getMapZoom",
+        "setMapTranslation",
+        "getMapTranslation",
+        "setHologramSettings",
+        "retryMap",
+        "getMapStatus",
+        "setVoxelScale",
+        "setEditTool",
+        "setPointEdits",
+        "deleteSelected",
+        "restorePoints",
+        "undoEdit",
+        "clearSelection",
+        "selectAll",
+        "createGroup",
+        "selectGroup",
+        "removeGroup",
+        "setRenderMode",
+        "setFrame",
+        "setLayers",
+        "setAppearance",
+        "setView",
+        "setAsset",
+        "resetView",
+        "destroy"
+      ],
+      "notes": []
+    },
+    {
+      "id": "hologram-scene",
+      "path": "dist/hologram-map.js",
+      "kind": "three-scene",
+      "exports": [
+        "MAP_BOUNDS",
+        "HOLOGRAM_LIGHTING",
+        "MAP_DEFAULTS",
+        "MAP_ORBIT_MARKER",
+        "hologramGlowParameters",
+        "hologramBandAtHeight",
+        "hologramConeContains",
+        "hologramVoxelEmission",
+        "projectMapPoint",
+        "unprojectMapPoint",
+        "mapSpot",
+        "createMapTiles",
+        "tileMeetsSpot",
+        "mapQuery",
+        "coastlineLand",
+        "createHologramMap"
+      ],
+      "entry": "createHologramMap({signal,onProgress,onDirty,fetchImpl})",
+      "returns": [],
+      "notes": [
+        "Uses live Overpass OpenStreetMap building/context data. MAP_BOUNDS, MAP_DEFAULTS, HOLOGRAM_LIGHTING and projection helpers are public."
+      ]
+    },
+    {
+      "id": "marker-flag",
+      "path": "dist/map-marker-flag.js",
+      "kind": "dom-mount-with-required-markup",
+      "exports": [
+        "markerCoordinates",
+        "markerFlagLayout",
+        "mountMapMarkerFlag"
+      ],
+      "entry": "mountMapMarkerFlag({root,canvas,onView,refresh})",
+      "returns": [
+        "update",
+        "destroy"
+      ],
+      "notes": [
+        "Root must contain .map-marker-card, #map-marker-flag, #map-marker-view and .map-marker-coordinates. Marker screen coordinates are normalized 0..1."
+      ]
+    },
+    {
+      "id": "drone-cluster",
+      "path": "dist/drone-cluster.js",
+      "kind": "dom-mount",
+      "exports": [
+        "droneTelemetry",
+        "mountDroneCluster"
+      ],
+      "entry": "mountDroneCluster({viewport,canvas,onHold,onDirectOperate,refresh})",
+      "returns": [
+        "root",
+        "open",
+        "close",
+        "receive",
+        "destroy"
+      ],
+      "notes": [
+        "onLocate is accepted by current implementation but unused; not an integration command. Telemetry must have finite heading/yaw/roll/pitch/altitude."
+      ]
+    },
+    {
+      "id": "drone-painter",
+      "path": "dist/drone-cluster-paint.js",
+      "kind": "canvas-painter-with-dom-input",
+      "exports": [
+        "droneBearingInfo",
+        "paintDroneControl"
+      ],
+      "entry": "paintDroneControl(ctx,{element,type,x,y,width,height,focused})",
+      "returns": [
+        "boolean: type handled"
+      ],
+      "notes": []
+    },
+    {
+      "id": "direct-controls",
+      "path": "dist/direct-operate.js",
+      "kind": "dom-mount",
+      "exports": [
+        "joystickVector",
+        "normalizedOperateRect",
+        "mountDirectOperate"
+      ],
+      "entry": "mountDirectOperate({viewport,canvas,onInput,onExit,onLayout,refresh})",
+      "returns": [
+        "root",
+        "open",
+        "close",
+        "receive",
+        "destroy"
+      ],
+      "notes": [
+        "Independent two-pointer sticks. onInput receives yaw/lift/forward/strafe in [-1,1]. onLayout receives normalized top-left map/feed rectangles or null."
+      ]
+    },
+    {
+      "id": "direct-painter",
+      "path": "dist/direct-operate-paint.js",
+      "kind": "canvas-painter-with-dom-input",
+      "exports": [
+        "paintDirectOperateControl"
+      ],
+      "entry": "paintDirectOperateControl(ctx,{element,type,x,y,width,height,focused})",
+      "returns": [
+        "boolean: type handled"
+      ],
+      "notes": []
+    },
+    {
+      "id": "direct-cameras",
+      "path": "dist/direct-operate-renderer.js",
+      "kind": "three-scene-adapter",
+      "exports": [
+        "createDirectOperateRenderer"
+      ],
+      "entry": "createDirectOperateRenderer(scene)",
+      "returns": [
+        "rig",
+        "cameras",
+        "setActive",
+        "setLayout",
+        "update",
+        "render",
+        "dispose"
+      ],
+      "notes": [
+        "Shares one WebGL renderer and scene for chase, north-up map and FPV scissor passes. Needs finite marker.position and metersToWorld."
+      ]
+    },
+    {
+      "id": "drone-flight",
+      "path": "dist/drone-flight.js",
+      "kind": "pure-state-model",
+      "exports": [
+        "DRONE_FLIGHT_LIMITS",
+        "createDroneFlight"
+      ],
+      "entry": "createDroneFlight({bounds,pose})",
+      "returns": [
+        "reset",
+        "getState",
+        "setInput",
+        "clearInput",
+        "advance"
+      ],
+      "notes": [
+        "Metres: +X east, +Z south; heading 0 north/90 east, positive yaw clockwise. Fixed 120Hz simulation; call advance with seconds. Demo only."
+      ]
+    },
+    {
+      "id": "point-model",
+      "path": "dist/point-edit-state.js",
+      "kind": "pure-state-model",
+      "exports": [
+        "MAX_POINT_COUNT",
+        "MAX_POINT_GROUPS",
+        "normalizeIndexRanges",
+        "normalizePointEditSnapshot",
+        "createPointEditModel"
+      ],
+      "entry": "createPointEditModel(count,snapshot)",
+      "returns": [],
+      "notes": [
+        "Normalized original-point ranges persist; live selection and undo stack do not."
+      ]
+    },
+    {
+      "id": "point-editor",
+      "path": "dist/viewer-point-editor.js",
+      "kind": "three-scene-adapter",
+      "exports": [
+        "insidePolygon",
+        "createPointEditor"
+      ],
+      "entry": "createPointEditor(mesh,{snapshot,signal,onProgress,onChange,onDirty})",
+      "returns": [],
+      "notes": [
+        "Async Spark extended-splat editor; source points are hidden reversibly."
+      ]
+    },
+    {
+      "id": "hologram-voxels",
+      "path": "dist/hologram-voxels.js",
+      "kind": "pure-geometry-data",
+      "exports": [
+        "buildMapVoxels"
+      ],
+      "entry": "buildMapVoxels(buildings,{project,heightScale,cellSize,bounds,maxCells,getColor})",
+      "returns": [],
+      "notes": [
+        "Returns typed positions/colors/edge flags plus actual pitch and bounds."
+      ]
+    },
+    {
+      "id": "hologram-paths",
+      "path": "dist/hologram-paths.js",
+      "kind": "pure-geometry-data",
+      "exports": [
+        "inverseSquareFalloff",
+        "buildVoxelPaths"
+      ],
+      "entry": "buildVoxelPaths({positions,colors,source,cellSize,maxCells,maxSteps})",
+      "returns": [],
+      "notes": [
+        "inverseSquareFalloff is exported; bounded deduplicated light-path lattice."
+      ]
+    },
+    {
+      "id": "saas-viz",
+      "path": "dist/saas-viz.js",
+      "kind": "integer-canvas-painter-and-dom-adapter",
+      "exports": [
+        "VFD_CHART_COLORS",
+        "VFD_CHART_TYPES",
+        "formatVFDValue",
+        "normalizeVFDChart",
+        "vfdChartDomain",
+        "paintVFDChart",
+        "hitVFDChart",
+        "bindVFDChart"
+      ],
+      "entry": "bindVFDChart(canvas,{getSpec,onSelect,refresh})",
+      "returns": [
+        "refresh",
+        "destroy"
+      ],
+      "notes": [
+        "paintVFDChart(ctx,width,height,spec) draws at destination display-pixel resolution and returns {width,height,type,items}.",
+        "bindVFDChart assigns canvas.vfdDraw for the existing page compositor, preserves native focus/labels, and handles click and Arrow/Home/End selection.",
+        "Call binding.refresh() after changing the specification to refresh its accessible label and request a shared-skin repaint. Call destroy() before removing the canvas.",
+        "No shader, animation loop or implicit persistence is created by this module."
+      ]
+    },
+    {
+      "id": "saas-state",
+      "path": "dist/saas-state.js",
+      "kind": "demo-state-model-and-storage-adapter",
+      "exports": [
+        "SAAS_STORAGE_KEY",
+        "SAAS_PAGES",
+        "COMPONENT_IDS",
+        "SITE_IDS",
+        "RANGE_IDS",
+        "INSPECTION_STATUSES",
+        "FLEET",
+        "INSPECTIONS",
+        "defaultSaasState",
+        "normalizeSaasState",
+        "loadSaasState",
+        "saveSaasState",
+        "filterFleet",
+        "filterInspections",
+        "updateInspection",
+        "getDashboardData"
+      ],
+      "entry": "loadSaasState(storage)",
+      "returns": [
+        "state",
+        "error when loading fails",
+        "cause when loading fails"
+      ],
+      "notes": [
+        "defaultSaasState and normalizeSaasState return the bounded version-1 workspace state.",
+        "saveSaasState(state,storage) returns {state,error?,cause?}; a storage failure must remain visible to the user.",
+        "filterFleet({query,site,status}) and filterInspections(state,{query,site,status}) return matching demo records.",
+        "updateInspection(state,id,{status?,note?}) returns normalized next state without mutating its input.",
+        "getDashboardData({range,site,state}) returns deterministic labeled demonstration metrics and chart arrays; it is not a telemetry service."
+      ]
+    },
+    {
+      "id": "blank-state",
+      "path": "dist/blank-state.js",
+      "kind": "layout-state-model-and-storage-adapter",
+      "exports": [
+        "DESIGN_STORAGE_KEY",
+        "DESIGN_PAGES",
+        "DEFAULT_HIDDEN_PAGES",
+        "createDefaultDesign",
+        "normalizeDesign",
+        "readDesign",
+        "saveDesign"
+      ],
+      "entry": "readDesign(storage)",
+      "returns": [
+        "state",
+        "error",
+        "blocked"
+      ],
+      "notes": [
+        "Layout geometry uses integer UI-cell coordinates; each cell is eight display pixels.",
+        "Version 2 documents contain format, version, hiddenPages and pages. The storage key retains its v1 suffix.",
+        "readDesign reports blocked or malformed saved data without overwriting it.",
+        "normalizeDesign strictly validates v1 or v2 documents; v1 migrates rectangles to typed elements and adds three default hidden pages.",
+        "saveDesign writes normalized version 2 and throws on validation or storage failure.",
+        "Selection, tool state, gestures and undo/redo history are not part of the saved layout document."
+      ]
+    },
+    {
+      "id": "designer-elements",
+      "path": "dist/designer-elements.js",
+      "kind": "label-driven-canvas-preview-and-demo-controller",
+      "exports": [
+        "hasDesignElement",
+        "paintDesignElement",
+        "activateDesignElement"
+      ],
+      "entry": "paintDesignElement(ctx,rect,{page,allRects})",
+      "returns": "Boolean indicating a recognized painter; activateDesignElement returns whether demo state changed.",
+      "dependencies": [
+        "dist/sandbox-ui/src/ladder.js",
+        "dist/sandbox-ui/src/palette.js",
+        "dist/sandbox-ui/src/phosphor.js",
+        "dist/sandbox-ui/src/paint/*.js",
+        "dist/designer-topology.js"
+      ],
+      "notes": [
+        "hasDesignElement(rect,page) checks the normalized label and page context.",
+        "rect uses saved integer UI-cell bounds; paintDesignElement converts each cell to eight display pixels and paints at the final size.",
+        "allRects supplies nested geometry so a parent panel does not paint through its child boxes.",
+        "activateDesignElement(rect,{x,y},{page}) takes coordinates normalized 0..1 within the saved rectangle.",
+        "Pure painter sources are copied from sandbox-ui/elements.html dependencies; only phosphor imports are adapted to the shared display glyph/grid modules.",
+        "Map selection, panel toggles, module selection, simulated controls and schedule/metric changes are module-local demo state.",
+        "This module creates no compositor and does not mutate layout documents, persist state, fetch data or control devices.",
+        "System device panels read the current topology selection and demo access role; Viewer management rejects control actions."
+      ]
+    },
+    {
+      "id": "designer-topology",
+      "path": "dist/designer-topology.js",
+      "kind": "canvas-topology-painter-and-local-demo-selection",
+      "exports": [
+        "paintSystemTopology",
+        "activateSystemTopology",
+        "getSystemTopologyState"
+      ],
+      "entry": "paintSystemTopology(ctx,bounds)",
+      "coordinates": "bounds {x,y,width,height} and point {x,y} use display pixels, not UI cells or normalized coordinates.",
+      "returns": {
+        "activateSystemTopology": "Boolean indicating a node selection or demo-role change",
+        "getSystemTopologyState": "{selected,accessRole}; selected is frozen metadata {id,name,type,subtype,model,location,sensors,modules}"
+      },
+      "nodeTypes": [
+        "device",
+        "sensor",
+        "processor",
+        "admin",
+        "viewer"
+      ],
+      "nodeIds": [
+        "admin",
+        "viewer",
+        "gateway",
+        "drone",
+        "edge",
+        "rgb",
+        "thermal",
+        "depth"
+      ],
+      "connectionStyles": {
+        "ethernet": "double line",
+        "wifi": "dots",
+        "usb": "solid line",
+        "access": "dashes"
+      },
+      "notes": [
+        "Distinct raster glyphs and captions identify node types. Links are labeled and a legend explains their line styles.",
+        "Selecting Admin or Viewer changes the module-local demo access role; selecting a physical node preserves that role.",
+        "Repaint topology and dependent designer element panels after activation reports a change.",
+        "Viewer device management is read-only; Admin physical-node controls change simulated control and pause state only.",
+        "Roles demonstrate UI behavior, not authentication or production authorization.",
+        "No layout mutation, persistence, network access, device commands or additional compositor."
+      ]
+    },
+    {
+      "id": "designer-preview",
+      "path": "dist/designer-preview.js",
+      "kind": "preview-dispatcher",
+      "exports": [
+        "hasDesignElement",
+        "paintDesignElement",
+        "activateDesignElement",
+        "previewData",
+        "setPreviewData",
+        "PREVIEW_DATA_MODES"
+      ],
+      "notes": [
+        "Hands each box to the atlas painters (dist/designer-panels/) or, with ?data=demo, to dist/designer-elements.js.",
+        "Same signatures as designer-elements.js: rect in UI cells, activation point normalized 0..1; activation returns true, false or {navigate: pageId}."
+      ]
+    },
+    {
+      "id": "designer-data",
+      "path": "dist/designer-data.js",
+      "kind": "preview-data-mode",
+      "exports": [
+        "PREVIEW_DATA_MODES",
+        "previewData",
+        "setPreviewData"
+      ],
+      "notes": [
+        "atlas (default) or demo, from the ?data= query parameter; anything else throws RangeError."
+      ]
+    },
+    {
+      "id": "designer-arch-view",
+      "path": "dist/designer-arch-view.js",
+      "kind": "canvas-diagrams-and-shared-selection",
+      "exports": [
+        "paintSystemTopology",
+        "activateSystemTopology",
+        "getSystemTopologyState",
+        "paintArchView",
+        "activateArchView",
+        "getArchSelection",
+        "selectArch",
+        "setArchPerson",
+        "resetArchSelection",
+        "topologyLayoutFor"
+      ],
+      "coordinates": "bounds and point in display pixels, as designer-topology.js",
+      "notes": [
+        "Paints synthetic topology, command-path and chain diagrams with shared selection state. Legacy operator/viewer controls are simulated."
+      ]
+    },
+    {
+      "id": "designer-arch-layout",
+      "path": "dist/designer-arch-layout.js",
+      "kind": "pure-tier-layout",
+      "exports": [
+        "FORMS",
+        "layoutTiers",
+        "nodeAt"
+      ],
+      "notes": [
+        "Tiers in rows on one column grid; links only in channels and lanes, never through a node; gaps widen to hold their lanes; full, medium, compact, then pages."
+      ]
+    },
+    {
+      "id": "designer-architecture",
+      "path": "dist/designer-architecture.js",
+      "kind": "architecture-data",
+      "exports": [
+        "NODES",
+        "LINKS",
+        "MODULES",
+        "INTERFACES",
+        "CHAINS",
+        "COMMAND_PATH",
+        "SAFETY",
+        "STATES",
+        "OWNERS",
+        "ORIGINS",
+        "TIERS",
+        "LINK_KINDS",
+        "GLYPHS",
+        "OPEN_WITH_THE_LEAD"
+      ],
+      "notes": [
+        "Synthetic topology fixtures for visual testing. No deployed system state or private design provenance is included."
+      ]
+    },
+    {
+      "id": "designer-records",
+      "path": "dist/designer-records.js",
+      "kind": "sample-records",
+      "exports": [
+        "SAMPLE",
+        "assetById",
+        "flightById",
+        "runById",
+        "caseById",
+        "findingById",
+        "recordingById"
+      ],
+      "notes": [
+        "Fictional records shared by the detailed page previews; public OSM geometry retains its attribution."
+      ]
+    },
+    {
+      "id": "designer-outline",
+      "path": "dist/designer-outline.js",
+      "kind": "outline-spec",
+      "exports": [
+        "OUTLINE",
+        "STEPS",
+        "LINKED_PAGES",
+        "FLOW_BOARD_WINDOWS"
+      ],
+      "notes": [
+        "Defines the 26-page demo layout. The builder adds missing boxes without moving existing layout geometry."
+      ]
+    },
+    {
+      "id": "designer-panel-map",
+      "path": "dist/designer-panel-map.js",
+      "kind": "host-owned-binding-map",
+      "exports": [
+        "PANEL_MAP",
+        "PANEL_STATES",
+        "ADAPTERS",
+        "bindingOf"
+      ],
+      "notes": [
+        "Demo binding metadata keyed by element ID; host programs supply their own data."
+      ]
+    },
+    {
+      "id": "designer-panels",
+      "path": "dist/designer-panels/index.js",
+      "kind": "atlas-panel-painters",
+      "exports": [
+        "hasPanel",
+        "paintPanel",
+        "activatePanel",
+        "registeredLabels"
+      ],
+      "dependencies": [
+        "dist/designer-panels/kit.js",
+        "dist/designer-panels/state.js",
+        "dist/designer-panels/shared.js",
+        "dist/designer-panels/site.js",
+        "dist/designer-panels/steps.js",
+        "dist/designer-panels/system.js",
+        "dist/designer-panels/work.js",
+        "dist/designer-panels/beside.js"
+      ],
+      "notes": [
+        "One module a page; each painter draws inside its box only, never inside a box nested in it, and takes every figure from the records or the architecture.",
+        "Preview state (dist/designer-panels/state.js) lives in the page and is never saved."
+      ]
+    },
+    {
+      "id": "mcap-replay",
+      "path": "dist/mcap-replay.js",
+      "kind": "mcap-slam-replay-data",
+      "exports": [
+        "buildReplay",
+        "buildReplayAsync",
+        "frameAt",
+        "REPLAY_DEFAULTS"
+      ],
+      "dependencies": [
+        "dist/vendor/scan-reader/scan-viewer.js",
+        "dist/vendor/scan-reader/vendor/fzstd.js"
+      ],
+      "notes": [
+        "Reads an ARACHNID .mcap in the page (depth, camera info, pose, colour) and returns posed world points in time order, one contiguous range a frame.",
+        "The reader is copied from the Studio's glass/reader, the one arachnid-flight's scan viewer descends from."
+      ]
+    },
+    {
+      "id": "mcap-replay-scene",
+      "path": "dist/mcap-replay-scene.js",
+      "kind": "three-scene",
+      "exports": [
+        "createReplayScene"
+      ],
+      "notes": [
+        "The cloud so far, the frame now, the camera trail and frustum; setFrame(progress) follows the viewer timeline in recording time."
+      ]
+    },
+    {
+      "id": "scan-sites",
+      "path": "dist/scan-sites.js",
+      "kind": "scan-catalogue",
+      "exports": [
+        "SCAN_SITES"
+      ],
+      "notes": [
+        "Funes scans (CC BY-NC 4.0) with their real location, OSM outline and fit; files in dist/assets/scans, made by tools/import-obj-scan.mjs."
+      ]
+    },
+    {
+      "id": "scan-source",
+      "path": "dist/scan-source.js",
+      "kind": "hologram-point-sources",
+      "exports": [
+        "parseScanFile",
+        "stageFit",
+        "monumentSource",
+        "replaySource"
+      ],
+      "notes": [
+        "Fits a scan or a SLAM replay under the hologram projector, metres in proportion; monuments map stage points back to latitude and longitude."
+      ]
+    },
+    {
+      "id": "designer-navigation",
+      "path": "dist/designer-navigation.js",
+      "kind": "pure-navigation-metadata",
+      "exports": [
+        "groupDesignPages"
+      ],
+      "notes": [
+        "Groups main and linked pages without changing saved layouts."
+      ]
+    }
+  ],
+  "contracts": {
+    "widgetConfig": {
+      "normalizer": "dist/bench-store.js#normalizeWidget",
+      "fields": [
+        "label",
+        "value",
+        "min",
+        "max",
+        "step",
+        "unit",
+        "color",
+        "size",
+        "disabled",
+        "variant",
+        "mark",
+        "notes",
+        "query",
+        "active",
+        "option"
+      ],
+      "variants": [
+        "outline",
+        "solid",
+        "minimal"
+      ],
+      "notesMaxCodepoints": 4000
+    },
+    "droneInput": {
+      "fields": {
+        "yaw": "[-1,1], clockwise positive",
+        "lift": "[-1,1], up positive",
+        "forward": "[-1,1], body forward positive",
+        "strafe": "[-1,1], body right positive"
+      },
+      "leftStick": [
+        "yaw",
+        "lift"
+      ],
+      "rightStick": [
+        "strafe",
+        "forward"
+      ],
+      "neutral": {
+        "yaw": 0,
+        "lift": 0,
+        "forward": 0,
+        "strafe": 0
+      },
+      "safety": "Neutralize on release/cancel/lost capture/blur/hidden/destroy. Simulation does not connect to real hardware."
+    },
+    "droneTelemetry": {
+      "requiredFinite": [
+        "heading",
+        "yaw",
+        "roll",
+        "pitch",
+        "altitude"
+      ],
+      "directControlsAlsoRequire": [
+        "speed"
+      ],
+      "optional": [
+        "id",
+        "sensorKit",
+        "source",
+        "task",
+        "held",
+        "directOperate",
+        "latitude",
+        "longitude",
+        "verticalSpeed"
+      ],
+      "units": {
+        "heading": "degrees clockwise from north",
+        "yaw": "degrees clockwise from north",
+        "roll": "degrees, positive right bank",
+        "pitch": "degrees, positive nose up",
+        "altitude": "metres",
+        "speed": "metres/second",
+        "verticalSpeed": "metres/second",
+        "latitude": "degrees",
+        "longitude": "degrees"
+      }
+    },
+    "directRendererMarker": {
+      "required": [
+        "position[3]",
+        "metersToWorld"
+      ],
+      "pose": [
+        "heading",
+        "yaw",
+        "roll",
+        "pitch"
+      ],
+      "coordinates": "world-space position; scalar converts metres to current scene world units including map zoom"
+    },
+    "insetLayout": {
+      "map": "{x,y,width,height} or null",
+      "feed": "{x,y,width,height} or null",
+      "coordinates": "normalized 0..1 relative to the main canvas, top-left origin"
+    },
+    "refresh": "After programmatic data-vfd dataset or geometry changes call the matching skin refresh/relayout (viewer overlay: refreshOverlay(root)).",
+    "dispose": "Destroy mounts/renderers and call page cleanup functions before unmounting or rebuilding the host.",
+    "chartSpec": {
+      "normalizer": "dist/saas-viz.js#normalizeVFDChart",
+      "types": [
+        "line",
+        "bar",
+        "donut",
+        "gauge",
+        "heatmap",
+        "sparkline",
+        "bullet"
+      ],
+      "fields": [
+        "type",
+        "label",
+        "title",
+        "data",
+        "series",
+        "value",
+        "max",
+        "target",
+        "unit",
+        "color",
+        "selectedIndex",
+        "showLabels",
+        "columns"
+      ],
+      "dataItem": "{label,value,color?}; numeric values are also accepted",
+      "seriesItem": "{label,color?,values:number[]}; aligned to data indices",
+      "callback": {
+        "name": "onSelect",
+        "fields": [
+          "index",
+          "label",
+          "value",
+          "event"
+        ]
+      },
+      "rendering": "One integer framebuffer via canvas.vfdDraw; mountUIPagesSkin supplies shared optics.",
+      "persistence": "Host-owned; the chart binder does not access browser storage."
+    },
+    "flowDesign": {
+      "format": "phosphor-flow-designer",
+      "version": 2,
+      "normalizer": "dist/blank-state.js#normalizeDesign",
+      "fields": [
+        "format",
+        "version",
+        "hiddenPages",
+        "pages"
+      ],
+      "mainPageIds": [
+        "home",
+        "site",
+        "cases",
+        "assets",
+        "system",
+        "calendar",
+        "analyze"
+      ],
+      "defaultHiddenPageIds": [
+        "sign-in",
+        "sign-up",
+        "reset-password"
+      ],
+      "hiddenPageFields": [
+        "id",
+        "label"
+      ],
+      "maxHiddenPages": 32,
+      "hiddenPageId": "1-64 characters matching [a-z0-9]+(?:-[a-z0-9]+)*; unique across main and hidden pages; reserved object/document names rejected",
+      "hiddenPageLabelMaxLength": 40,
+      "hiddenPageLabel": "Trimmed, nonempty text without control characters",
+      "pageArrays": "One array for every main and hidden page ID, with at most 200 elements each.",
+      "elementFields": [
+        "id",
+        "type",
+        "x",
+        "y",
+        "width",
+        "height",
+        "label",
+        "link"
+      ],
+      "elementTypes": [
+        "rectangle",
+        "divider"
+      ],
+      "geometry": "Integer UI-cell coordinates within 512 by 512 cells. Rectangle minimum 4 by 3; horizontal divider height 1, width >= 4; vertical divider width 1, height >= 4.",
+      "elementLabelMaxLength": 80,
+      "link": "Existing main or hidden page ID, or null",
+      "migration": "Strictly validate a version 1 document, add type rectangle to its elements, then add blank sign-in, sign-up and reset-password pages. Reads migrate in memory without writing; the next successful save writes version 2.",
+      "backupBehavior": "The version 3 project backup retains the exact raw designer string. It does not perform layout migration."
+    }
+  },
+  "components": [
+    {
+      "id": "bench.dial",
+      "nativeId": "dial",
+      "type": "authored-canvas-widget",
+      "scope": "workbench",
+      "name": "Rotary dial",
+      "family": "Inputs",
+      "description": "An indexed dial with a live numeric readout.",
+      "module": "dist/bench-widgets.js",
+      "entry": "paintWidget(ctx,id,config)",
+      "logicalSize": [
+        320,
+        200
+      ],
+      "defaults": {
+        "label": "ROTARY DIAL",
+        "value": 62,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "%",
+        "color": "#83e8d0",
+        "size": 100,
+        "disabled": false,
+        "variant": "outline",
+        "mark": "dots",
+        "notes": "",
+        "query": "",
+        "active": [
+          false,
+          false,
+          false
+        ],
+        "option": 0
+      },
+      "configNormalizer": {
+        "module": "dist/bench-store.js",
+        "entry": "normalizeWidget(input,defaults)"
+      },
+      "interactionOwner": "dist/workbench.js (application controller; paintWidget is paint-only)",
+      "noteStorage": {
+        "key": "phosphor-component-workbench-v1",
+        "field": "widgets.dial.notes"
+      }
+    },
+    {
+      "id": "bench.wheel",
+      "nativeId": "wheel",
+      "type": "authored-canvas-widget",
+      "scope": "workbench",
+      "name": "Encoder wheel",
+      "family": "Inputs",
+      "description": "A ridged encoder for precise incremental adjustments.",
+      "module": "dist/bench-widgets.js",
+      "entry": "paintWidget(ctx,id,config)",
+      "logicalSize": [
+        320,
+        200
+      ],
+      "defaults": {
+        "label": "ENCODER WHEEL",
+        "value": 24,
+        "min": 0,
+        "max": 99,
+        "step": 1,
+        "unit": "",
+        "color": "#8bd9ff",
+        "size": 100,
+        "disabled": false,
+        "variant": "outline",
+        "mark": "dots",
+        "notes": "",
+        "query": "",
+        "active": [
+          false,
+          false,
+          false
+        ],
+        "option": 0
+      },
+      "configNormalizer": {
+        "module": "dist/bench-store.js",
+        "entry": "normalizeWidget(input,defaults)"
+      },
+      "interactionOwner": "dist/workbench.js (application controller; paintWidget is paint-only)",
+      "noteStorage": {
+        "key": "phosphor-component-workbench-v1",
+        "field": "widgets.wheel.notes"
+      }
+    },
+    {
+      "id": "bench.bar",
+      "nativeId": "bar",
+      "type": "authored-canvas-widget",
+      "scope": "workbench",
+      "name": "Progress bar",
+      "family": "Feedback",
+      "description": "A segmented bar for completion or signal strength.",
+      "module": "dist/bench-widgets.js",
+      "entry": "paintWidget(ctx,id,config)",
+      "logicalSize": [
+        320,
+        200
+      ],
+      "defaults": {
+        "label": "PROGRESS",
+        "value": 68,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "%",
+        "color": "#83e8d0",
+        "size": 100,
+        "disabled": false,
+        "variant": "outline",
+        "mark": "dots",
+        "notes": "",
+        "query": "",
+        "active": [
+          false,
+          false,
+          false
+        ],
+        "option": 0
+      },
+      "configNormalizer": {
+        "module": "dist/bench-store.js",
+        "entry": "normalizeWidget(input,defaults)"
+      },
+      "interactionOwner": "dist/workbench.js (application controller; paintWidget is paint-only)",
+      "noteStorage": {
+        "key": "phosphor-component-workbench-v1",
+        "field": "widgets.bar.notes"
+      }
+    },
+    {
+      "id": "bench.indicators",
+      "nativeId": "indicators",
+      "type": "authored-canvas-widget",
+      "scope": "workbench",
+      "name": "Status indicators",
+      "family": "Feedback",
+      "description": "Three independently switchable status lamps.",
+      "module": "dist/bench-widgets.js",
+      "entry": "paintWidget(ctx,id,config)",
+      "logicalSize": [
+        320,
+        200
+      ],
+      "defaults": {
+        "label": "STATUS ARRAY",
+        "value": 0,
+        "min": 0,
+        "max": 2,
+        "step": 1,
+        "unit": "",
+        "color": "#79ecc3",
+        "size": 100,
+        "disabled": false,
+        "variant": "outline",
+        "mark": "dots",
+        "notes": "",
+        "query": "",
+        "active": [
+          true,
+          false,
+          false
+        ],
+        "option": 0
+      },
+      "configNormalizer": {
+        "module": "dist/bench-store.js",
+        "entry": "normalizeWidget(input,defaults)"
+      },
+      "interactionOwner": "dist/workbench.js (application controller; paintWidget is paint-only)",
+      "noteStorage": {
+        "key": "phosphor-component-workbench-v1",
+        "field": "widgets.indicators.notes"
+      }
+    },
+    {
+      "id": "bench.slider",
+      "nativeId": "slider",
+      "type": "authored-canvas-widget",
+      "scope": "workbench",
+      "name": "Linear slider",
+      "family": "Inputs",
+      "description": "A continuous track with a visible thumb and value.",
+      "module": "dist/bench-widgets.js",
+      "entry": "paintWidget(ctx,id,config)",
+      "logicalSize": [
+        320,
+        200
+      ],
+      "defaults": {
+        "label": "SIGNAL LEVEL",
+        "value": 58,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "%",
+        "color": "#8ccfff",
+        "size": 100,
+        "disabled": false,
+        "variant": "outline",
+        "mark": "dots",
+        "notes": "",
+        "query": "",
+        "active": [
+          false,
+          false,
+          false
+        ],
+        "option": 0
+      },
+      "configNormalizer": {
+        "module": "dist/bench-store.js",
+        "entry": "normalizeWidget(input,defaults)"
+      },
+      "interactionOwner": "dist/workbench.js (application controller; paintWidget is paint-only)",
+      "noteStorage": {
+        "key": "phosphor-component-workbench-v1",
+        "field": "widgets.slider.notes"
+      }
+    },
+    {
+      "id": "bench.percentage",
+      "nativeId": "percentage",
+      "type": "authored-canvas-widget",
+      "scope": "workbench",
+      "name": "Percentage readout",
+      "family": "Feedback",
+      "description": "A large value supported by a circular progress display.",
+      "module": "dist/bench-widgets.js",
+      "entry": "paintWidget(ctx,id,config)",
+      "logicalSize": [
+        320,
+        200
+      ],
+      "defaults": {
+        "label": "CAPACITY",
+        "value": 76,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "%",
+        "color": "#a3e2d6",
+        "size": 100,
+        "disabled": false,
+        "variant": "outline",
+        "mark": "dots",
+        "notes": "",
+        "query": "",
+        "active": [
+          false,
+          false,
+          false
+        ],
+        "option": 0
+      },
+      "configNormalizer": {
+        "module": "dist/bench-store.js",
+        "entry": "normalizeWidget(input,defaults)"
+      },
+      "interactionOwner": "dist/workbench.js (application controller; paintWidget is paint-only)",
+      "noteStorage": {
+        "key": "phosphor-component-workbench-v1",
+        "field": "widgets.percentage.notes"
+      }
+    },
+    {
+      "id": "bench.search",
+      "nativeId": "search",
+      "type": "authored-canvas-widget",
+      "scope": "workbench",
+      "name": "Search field",
+      "family": "Inputs",
+      "description": "Filter the local optical-layer list.",
+      "module": "dist/bench-widgets.js",
+      "entry": "paintWidget(ctx,id,config)",
+      "logicalSize": [
+        320,
+        200
+      ],
+      "defaults": {
+        "label": "FIND A LAYER",
+        "value": 0,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "",
+        "color": "#9bded0",
+        "size": 100,
+        "disabled": false,
+        "variant": "outline",
+        "mark": "dots",
+        "notes": "",
+        "query": "",
+        "active": [
+          false,
+          false,
+          false
+        ],
+        "option": 0
+      },
+      "configNormalizer": {
+        "module": "dist/bench-store.js",
+        "entry": "normalizeWidget(input,defaults)"
+      },
+      "interactionOwner": "dist/workbench.js (application controller; paintWidget is paint-only)",
+      "noteStorage": {
+        "key": "phosphor-component-workbench-v1",
+        "field": "widgets.search.notes"
+      }
+    },
+    {
+      "id": "bench.buttons",
+      "nativeId": "buttons",
+      "type": "authored-canvas-widget",
+      "scope": "workbench",
+      "name": "Action buttons",
+      "family": "Actions",
+      "description": "Three independent keys with pressed-state feedback.",
+      "module": "dist/bench-widgets.js",
+      "entry": "paintWidget(ctx,id,config)",
+      "logicalSize": [
+        320,
+        200
+      ],
+      "defaults": {
+        "label": "ACTION KEYS",
+        "value": 0,
+        "min": 0,
+        "max": 2,
+        "step": 1,
+        "unit": "",
+        "color": "#94e3d3",
+        "size": 100,
+        "disabled": false,
+        "variant": "outline",
+        "mark": "dots",
+        "notes": "",
+        "query": "",
+        "active": [
+          false,
+          false,
+          false
+        ],
+        "option": 0
+      },
+      "configNormalizer": {
+        "module": "dist/bench-store.js",
+        "entry": "normalizeWidget(input,defaults)"
+      },
+      "interactionOwner": "dist/workbench.js (application controller; paintWidget is paint-only)",
+      "noteStorage": {
+        "key": "phosphor-component-workbench-v1",
+        "field": "widgets.buttons.notes"
+      }
+    },
+    {
+      "id": "bench.toggle",
+      "nativeId": "toggle",
+      "type": "authored-canvas-widget",
+      "scope": "workbench",
+      "name": "Power toggle",
+      "family": "Actions",
+      "description": "A binary control with an explicit on or off state.",
+      "module": "dist/bench-widgets.js",
+      "entry": "paintWidget(ctx,id,config)",
+      "logicalSize": [
+        320,
+        200
+      ],
+      "defaults": {
+        "label": "OUTPUT ENABLE",
+        "value": 0,
+        "min": 0,
+        "max": 1,
+        "step": 1,
+        "unit": "",
+        "color": "#8de7bb",
+        "size": 100,
+        "disabled": false,
+        "variant": "outline",
+        "mark": "dots",
+        "notes": "",
+        "query": "",
+        "active": [
+          true,
+          false,
+          false
+        ],
+        "option": 0
+      },
+      "configNormalizer": {
+        "module": "dist/bench-store.js",
+        "entry": "normalizeWidget(input,defaults)"
+      },
+      "interactionOwner": "dist/workbench.js (application controller; paintWidget is paint-only)",
+      "noteStorage": {
+        "key": "phosphor-component-workbench-v1",
+        "field": "widgets.toggle.notes"
+      }
+    },
+    {
+      "id": "bench.stepper",
+      "nativeId": "stepper",
+      "type": "authored-canvas-widget",
+      "scope": "workbench",
+      "name": "Numeric stepper",
+      "family": "Inputs",
+      "description": "A bounded numeric value with increment and decrement keys.",
+      "module": "dist/bench-widgets.js",
+      "entry": "paintWidget(ctx,id,config)",
+      "logicalSize": [
+        320,
+        200
+      ],
+      "defaults": {
+        "label": "STEP VALUE",
+        "value": 12,
+        "min": 0,
+        "max": 99,
+        "step": 1,
+        "unit": "",
+        "color": "#9acfff",
+        "size": 100,
+        "disabled": false,
+        "variant": "outline",
+        "mark": "dots",
+        "notes": "",
+        "query": "",
+        "active": [
+          false,
+          false,
+          false
+        ],
+        "option": 0
+      },
+      "configNormalizer": {
+        "module": "dist/bench-store.js",
+        "entry": "normalizeWidget(input,defaults)"
+      },
+      "interactionOwner": "dist/workbench.js (application controller; paintWidget is paint-only)",
+      "noteStorage": {
+        "key": "phosphor-component-workbench-v1",
+        "field": "widgets.stepper.notes"
+      }
+    },
+    {
+      "id": "bench.level",
+      "nativeId": "level",
+      "type": "authored-canvas-widget",
+      "scope": "workbench",
+      "name": "Level meter",
+      "family": "Feedback",
+      "description": "A bank of segmented vertical signal meters.",
+      "module": "dist/bench-widgets.js",
+      "entry": "paintWidget(ctx,id,config)",
+      "logicalSize": [
+        320,
+        200
+      ],
+      "defaults": {
+        "label": "LEVEL METER",
+        "value": -12,
+        "min": -60,
+        "max": 0,
+        "step": 1,
+        "unit": "dB",
+        "color": "#86e5be",
+        "size": 100,
+        "disabled": false,
+        "variant": "outline",
+        "mark": "dots",
+        "notes": "",
+        "query": "",
+        "active": [
+          false,
+          false,
+          false
+        ],
+        "option": 0
+      },
+      "configNormalizer": {
+        "module": "dist/bench-store.js",
+        "entry": "normalizeWidget(input,defaults)"
+      },
+      "interactionOwner": "dist/workbench.js (application controller; paintWidget is paint-only)",
+      "noteStorage": {
+        "key": "phosphor-component-workbench-v1",
+        "field": "widgets.level.notes"
+      }
+    },
+    {
+      "id": "bench.segments",
+      "nativeId": "segments",
+      "type": "authored-canvas-widget",
+      "scope": "workbench",
+      "name": "Segmented selector",
+      "family": "Actions",
+      "description": "Choose one mode from three mutually exclusive options.",
+      "module": "dist/bench-widgets.js",
+      "entry": "paintWidget(ctx,id,config)",
+      "logicalSize": [
+        320,
+        200
+      ],
+      "defaults": {
+        "label": "CONTROL MODE",
+        "value": 0,
+        "min": 0,
+        "max": 2,
+        "step": 1,
+        "unit": "",
+        "color": "#a1d9ff",
+        "size": 100,
+        "disabled": false,
+        "variant": "outline",
+        "mark": "dots",
+        "notes": "",
+        "query": "",
+        "active": [
+          false,
+          false,
+          false
+        ],
+        "option": 0
+      },
+      "configNormalizer": {
+        "module": "dist/bench-store.js",
+        "entry": "normalizeWidget(input,defaults)"
+      },
+      "interactionOwner": "dist/workbench.js (application controller; paintWidget is paint-only)",
+      "noteStorage": {
+        "key": "phosphor-component-workbench-v1",
+        "field": "widgets.segments.notes"
+      }
+    },
+    {
+      "id": "page.hero",
+      "nativeId": "hero",
+      "type": "assembled-component",
+      "scope": "home",
+      "name": "Hero / mission banner",
+      "family": "CONTENT",
+      "description": "A mission introduction with a raster aircraft illustration and direct entry into the application.",
+      "reference": "READINESS WELCOME",
+      "module": "dist/ui-readiness.js",
+      "entry": "mountReadinessComponent(host,id,options)",
+      "individuallyMountable": true,
+      "selector": "[data-ui-component=\"hero\"]",
+      "css": [
+        "dist/ui-pages.css"
+      ],
+      "noteStorage": {
+        "key": "phosphor-ui-pages-v1",
+        "field": "notes.hero"
+      }
+    },
+    {
+      "id": "page.news",
+      "nativeId": "news",
+      "type": "assembled-component",
+      "scope": "home",
+      "name": "News cards",
+      "family": "CONTENT",
+      "description": "A repeatable story card combining an illustration, title, summary and detail action.",
+      "reference": "READINESS WELCOME",
+      "module": "dist/ui-readiness.js",
+      "entry": "mountReadinessComponent(host,id,options)",
+      "individuallyMountable": true,
+      "selector": "[data-ui-component=\"news\"]",
+      "css": [
+        "dist/ui-pages.css"
+      ],
+      "noteStorage": {
+        "key": "phosphor-ui-pages-v1",
+        "field": "notes.news"
+      }
+    },
+    {
+      "id": "page.updates",
+      "nativeId": "updates",
+      "type": "assembled-component",
+      "scope": "home",
+      "name": "System updates",
+      "family": "CONTENT",
+      "description": "An expandable release feed for changes, dates and supporting detail.",
+      "reference": "READINESS WELCOME",
+      "module": "dist/ui-readiness.js",
+      "entry": "mountReadinessComponent(host,id,options)",
+      "individuallyMountable": true,
+      "selector": "[data-ui-component=\"updates\"]",
+      "css": [
+        "dist/ui-pages.css"
+      ],
+      "noteStorage": {
+        "key": "phosphor-ui-pages-v1",
+        "field": "notes.updates"
+      }
+    },
+    {
+      "id": "page.resources",
+      "nativeId": "resources",
+      "type": "assembled-component",
+      "scope": "home",
+      "name": "Resource list",
+      "family": "CONTENT",
+      "description": "A compact list of training, help and handbook entries with readable detail views.",
+      "reference": "READINESS WELCOME",
+      "module": "dist/ui-readiness.js",
+      "entry": "mountReadinessComponent(host,id,options)",
+      "individuallyMountable": true,
+      "selector": "[data-ui-component=\"resources\"]",
+      "css": [
+        "dist/ui-pages.css"
+      ],
+      "noteStorage": {
+        "key": "phosphor-ui-pages-v1",
+        "field": "notes.resources"
+      }
+    },
+    {
+      "id": "page.case-header",
+      "nativeId": "case-header",
+      "type": "assembled-component",
+      "scope": "cases",
+      "name": "Record header",
+      "family": "WORKFLOW",
+      "description": "Case identity, editable metadata, status and primary actions in a single record summary.",
+      "reference": "CASE DETAIL",
+      "module": "dist/ui-readiness.js",
+      "entry": "mountReadinessComponent(host,id,options)",
+      "individuallyMountable": true,
+      "selector": "[data-ui-component=\"case-header\"]",
+      "css": [
+        "dist/ui-pages.css"
+      ],
+      "noteStorage": {
+        "key": "phosphor-ui-pages-v1",
+        "field": "notes.case-header"
+      }
+    },
+    {
+      "id": "page.tabs",
+      "nativeId": "tabs",
+      "type": "assembled-component",
+      "scope": "cases",
+      "name": "Section tabs",
+      "family": "NAVIGATION",
+      "description": "Switch between the overview, maintenance, alerts, related cases and associated parts.",
+      "reference": "CASE DETAIL",
+      "module": "dist/ui-readiness.js",
+      "entry": "mountReadinessComponent(host,id,options)",
+      "individuallyMountable": true,
+      "selector": "[data-ui-component=\"tabs\"]",
+      "css": [
+        "dist/ui-pages.css"
+      ],
+      "noteStorage": {
+        "key": "phosphor-ui-pages-v1",
+        "field": "notes.tabs"
+      }
+    },
+    {
+      "id": "page.workflow",
+      "nativeId": "workflow",
+      "type": "assembled-component",
+      "scope": "cases",
+      "name": "Status stepper",
+      "family": "WORKFLOW",
+      "description": "Five maintenance stages with clear completed, current and upcoming states.",
+      "reference": "CASE STATUS",
+      "module": "dist/ui-readiness.js",
+      "entry": "mountReadinessComponent(host,id,options)",
+      "individuallyMountable": true,
+      "selector": "[data-ui-component=\"workflow\"]",
+      "css": [
+        "dist/ui-pages.css"
+      ],
+      "noteStorage": {
+        "key": "phosphor-ui-pages-v1",
+        "field": "notes.workflow"
+      }
+    },
+    {
+      "id": "page.actions",
+      "nativeId": "actions",
+      "type": "assembled-component",
+      "scope": "cases",
+      "name": "Quick action guide",
+      "family": "WORKFLOW",
+      "description": "Contextual actions advance the case through recommendation, scheduling and verification.",
+      "reference": "QUICK ACTION GUIDE",
+      "module": "dist/ui-readiness.js",
+      "entry": "mountReadinessComponent(host,id,options)",
+      "individuallyMountable": true,
+      "selector": "[data-ui-component=\"actions\"]",
+      "css": [
+        "dist/ui-pages.css"
+      ],
+      "noteStorage": {
+        "key": "phosphor-ui-pages-v1",
+        "field": "notes.actions"
+      }
+    },
+    {
+      "id": "page.filters",
+      "nativeId": "filters",
+      "type": "assembled-component",
+      "scope": "parts",
+      "name": "Filter panel",
+      "family": "INPUT",
+      "description": "Stock number, failure, platform and risk filters with explicit apply and clear actions.",
+      "reference": "SPARE PARTS",
+      "module": "dist/ui-readiness.js",
+      "entry": "mountReadinessComponent(host,id,options)",
+      "individuallyMountable": true,
+      "selector": "[data-ui-component=\"filters\"]",
+      "css": [
+        "dist/ui-pages.css"
+      ],
+      "noteStorage": {
+        "key": "phosphor-ui-pages-v1",
+        "field": "notes.filters"
+      }
+    },
+    {
+      "id": "page.table",
+      "nativeId": "table",
+      "type": "assembled-component",
+      "scope": "parts",
+      "name": "Search / data table",
+      "family": "DATA",
+      "description": "Searchable and sortable inventory rows. Select a stock number to inspect its demand forecast.",
+      "reference": "SPARE PARTS",
+      "module": "dist/ui-readiness.js",
+      "entry": "mountReadinessComponent(host,id,options)",
+      "individuallyMountable": true,
+      "selector": "[data-ui-component=\"table\"]",
+      "css": [
+        "dist/ui-pages.css"
+      ],
+      "noteStorage": {
+        "key": "phosphor-ui-pages-v1",
+        "field": "notes.table"
+      }
+    },
+    {
+      "id": "page.pagination",
+      "nativeId": "pagination",
+      "type": "assembled-component",
+      "scope": "parts",
+      "name": "Pagination",
+      "family": "NAVIGATION",
+      "description": "Page size and directional controls keep a large record set manageable.",
+      "reference": "SPARE PARTS",
+      "module": "dist/ui-readiness.js",
+      "entry": "mountReadinessComponent(host,id,options)",
+      "individuallyMountable": true,
+      "selector": "[data-ui-component=\"pagination\"]",
+      "css": [
+        "dist/ui-pages.css"
+      ],
+      "noteStorage": {
+        "key": "phosphor-ui-pages-v1",
+        "field": "notes.pagination"
+      }
+    },
+    {
+      "id": "page.forecast",
+      "nativeId": "forecast",
+      "type": "assembled-component",
+      "scope": "parts",
+      "name": "Inventory forecast",
+      "family": "CHART",
+      "description": "Actual and forecast inventory, reorder threshold and dated maintenance events on one timeline.",
+      "reference": "NSN DETAIL",
+      "module": "dist/ui-readiness.js",
+      "entry": "mountReadinessComponent(host,id,options)",
+      "individuallyMountable": true,
+      "selector": "[data-ui-component=\"forecast\"]",
+      "css": [
+        "dist/ui-pages.css"
+      ],
+      "noteStorage": {
+        "key": "phosphor-ui-pages-v1",
+        "field": "notes.forecast"
+      }
+    },
+    {
+      "id": "page.chart-legend",
+      "nativeId": "chart-legend",
+      "type": "assembled-component",
+      "scope": "parts",
+      "name": "Chart legend",
+      "family": "CHART",
+      "description": "Toggle actual, forecast, threshold and event series to isolate the information you need.",
+      "reference": "NSN DETAIL",
+      "module": "dist/ui-readiness.js",
+      "entry": "mountReadinessComponent(host,id,options)",
+      "individuallyMountable": true,
+      "selector": "[data-ui-component=\"chart-legend\"]",
+      "css": [
+        "dist/ui-pages.css"
+      ],
+      "noteStorage": {
+        "key": "phosphor-ui-pages-v1",
+        "field": "notes.chart-legend"
+      }
+    },
+    {
+      "id": "page.metrics",
+      "nativeId": "metrics",
+      "type": "assembled-component",
+      "scope": "value",
+      "name": "Metric summary",
+      "family": "DATA",
+      "description": "Total, realized and unrealized value paired with avoided maintenance hours.",
+      "reference": "VALUE DASHBOARD",
+      "module": "dist/ui-readiness.js",
+      "entry": "mountReadinessComponent(host,id,options)",
+      "individuallyMountable": true,
+      "selector": "[data-ui-component=\"metrics\"]",
+      "css": [
+        "dist/ui-pages.css"
+      ],
+      "noteStorage": {
+        "key": "phosphor-ui-pages-v1",
+        "field": "notes.metrics"
+      }
+    },
+    {
+      "id": "page.stacked-bars",
+      "nativeId": "stacked-bars",
+      "type": "assembled-component",
+      "scope": "value",
+      "name": "Stacked comparison",
+      "family": "CHART",
+      "description": "Compare realized and potential impact by platform, switching between value and hours.",
+      "reference": "VALUE DASHBOARD",
+      "module": "dist/ui-readiness.js",
+      "entry": "mountReadinessComponent(host,id,options)",
+      "individuallyMountable": true,
+      "selector": "[data-ui-component=\"stacked-bars\"]",
+      "css": [
+        "dist/ui-pages.css"
+      ],
+      "noteStorage": {
+        "key": "phosphor-ui-pages-v1",
+        "field": "notes.stacked-bars"
+      }
+    },
+    {
+      "id": "page.distribution",
+      "nativeId": "distribution",
+      "type": "assembled-component",
+      "scope": "value",
+      "name": "Failure distribution",
+      "family": "CHART",
+      "description": "A breakdown of demo failure modes complements the platform-level comparison.",
+      "reference": "VALUE DASHBOARD",
+      "module": "dist/ui-readiness.js",
+      "entry": "mountReadinessComponent(host,id,options)",
+      "individuallyMountable": true,
+      "selector": "[data-ui-component=\"distribution\"]",
+      "css": [
+        "dist/ui-pages.css"
+      ],
+      "noteStorage": {
+        "key": "phosphor-ui-pages-v1",
+        "field": "notes.distribution"
+      }
+    },
+    {
+      "id": "page.insights",
+      "nativeId": "insights",
+      "type": "assembled-component",
+      "scope": "logistics",
+      "name": "Attention summary",
+      "family": "DATA",
+      "description": "Expandable critical risk counts route attention to the corresponding alerts.",
+      "reference": "LOGISTICS INSIGHTS",
+      "module": "dist/ui-logistics.js",
+      "entry": "mountLogistics(host,options)",
+      "individuallyMountable": false,
+      "selector": "[data-ui-component=\"insights\"]",
+      "css": [
+        "dist/ui-pages.css",
+        "dist/ui-logistics.css"
+      ],
+      "noteStorage": {
+        "key": "phosphor-ui-pages-v1",
+        "field": "notes.insights"
+      }
+    },
+    {
+      "id": "page.supply-status",
+      "nativeId": "supply-status",
+      "type": "assembled-component",
+      "scope": "logistics",
+      "name": "Supply risk list",
+      "family": "DATA",
+      "description": "Supply classes combine names, descriptions and colored risk indicators.",
+      "reference": "LOGISTICS INSIGHTS",
+      "module": "dist/ui-logistics.js",
+      "entry": "mountLogistics(host,options)",
+      "individuallyMountable": false,
+      "selector": "[data-ui-component=\"supply-status\"]",
+      "css": [
+        "dist/ui-pages.css",
+        "dist/ui-logistics.css"
+      ],
+      "noteStorage": {
+        "key": "phosphor-ui-pages-v1",
+        "field": "notes.supply-status"
+      }
+    },
+    {
+      "id": "page.map",
+      "nativeId": "map",
+      "type": "assembled-component",
+      "scope": "logistics",
+      "name": "Interactive map",
+      "family": "SPATIAL",
+      "description": "Pan and zoom a pixel map, select a port or airport and inspect its linked alert.",
+      "reference": "LOGISTICS MAP",
+      "module": "dist/ui-logistics.js",
+      "entry": "mountLogistics(host,options)",
+      "individuallyMountable": false,
+      "selector": "[data-ui-component=\"map\"]",
+      "css": [
+        "dist/ui-pages.css",
+        "dist/ui-logistics.css"
+      ],
+      "noteStorage": {
+        "key": "phosphor-ui-pages-v1",
+        "field": "notes.map"
+      }
+    },
+    {
+      "id": "page.map-legend",
+      "nativeId": "map-legend",
+      "type": "assembled-component",
+      "scope": "logistics",
+      "name": "Map legend",
+      "family": "SPATIAL",
+      "description": "Identify airport and seaport markers and their risk states.",
+      "reference": "LOGISTICS MAP",
+      "module": "dist/ui-logistics.js",
+      "entry": "mountLogistics(host,options)",
+      "individuallyMountable": false,
+      "selector": "[data-ui-component=\"map-legend\"]",
+      "css": [
+        "dist/ui-pages.css",
+        "dist/ui-logistics.css"
+      ],
+      "noteStorage": {
+        "key": "phosphor-ui-pages-v1",
+        "field": "notes.map-legend"
+      }
+    },
+    {
+      "id": "page.map-toolbar",
+      "nativeId": "map-toolbar",
+      "type": "assembled-component",
+      "scope": "logistics",
+      "name": "Layer controls",
+      "family": "INPUT",
+      "description": "Toggle services, commands, bases and the map projection; zoom or reset the view.",
+      "reference": "LOGISTICS MAP",
+      "module": "dist/ui-logistics.js",
+      "entry": "mountLogistics(host,options)",
+      "individuallyMountable": false,
+      "selector": "[data-ui-component=\"map-toolbar\"]",
+      "css": [
+        "dist/ui-pages.css",
+        "dist/ui-logistics.css"
+      ],
+      "noteStorage": {
+        "key": "phosphor-ui-pages-v1",
+        "field": "notes.map-toolbar"
+      }
+    },
+    {
+      "id": "page.alerts",
+      "nativeId": "alerts",
+      "type": "assembled-component",
+      "scope": "logistics",
+      "name": "Alert drawer",
+      "family": "WORKFLOW",
+      "description": "Search and sort priority cards, inspect targets, and acknowledge a selected alert.",
+      "reference": "LOGISTICS ALERTS",
+      "module": "dist/ui-logistics.js",
+      "entry": "mountLogistics(host,options)",
+      "individuallyMountable": false,
+      "selector": "[data-ui-component=\"alerts\"]",
+      "css": [
+        "dist/ui-pages.css",
+        "dist/ui-logistics.css"
+      ],
+      "noteStorage": {
+        "key": "phosphor-ui-pages-v1",
+        "field": "notes.alerts"
+      }
+    },
+    {
+      "id": "page.command-search",
+      "nativeId": "command-search",
+      "type": "assembled-component",
+      "scope": "logistics",
+      "name": "Command search",
+      "family": "INPUT",
+      "description": "A local command bar searches the demo records and moves the map to matching locations.",
+      "reference": "LOGISTICS SEARCH",
+      "module": "dist/ui-logistics.js",
+      "entry": "mountLogistics(host,options)",
+      "individuallyMountable": false,
+      "selector": "[data-ui-component=\"command-search\"]",
+      "css": [
+        "dist/ui-pages.css",
+        "dist/ui-logistics.css"
+      ],
+      "noteStorage": {
+        "key": "phosphor-ui-pages-v1",
+        "field": "notes.command-search"
+      }
+    },
+    {
+      "id": "vfd.label",
+      "type": "label",
+      "scope": "viewer-grid-painter",
+      "nativeId": "label",
+      "module": "dist/viewer-grid-paint.js",
+      "entry": "paintGridControl",
+      "dataVfd": "label",
+      "inputs": [
+        "textContent",
+        "data-vfd-label",
+        "data-vfd-tone",
+        "data-vfd-align",
+        "data-vfd-lines",
+        "data-vfd-multiline"
+      ],
+      "interaction": "Use semantic DOM controls and native event handlers; raster painting does not attach application actions."
+    },
+    {
+      "id": "vfd.panel",
+      "type": "panel",
+      "scope": "viewer-grid-painter",
+      "nativeId": "panel",
+      "module": "dist/viewer-grid-paint.js",
+      "entry": "paintGridControl",
+      "dataVfd": "panel",
+      "inputs": [
+        "data-vfd-opaque"
+      ],
+      "interaction": "Use semantic DOM controls and native event handlers; raster painting does not attach application actions."
+    },
+    {
+      "id": "vfd.button",
+      "type": "button",
+      "scope": "viewer-grid-painter",
+      "nativeId": "button",
+      "module": "dist/viewer-grid-paint.js",
+      "entry": "paintGridControl",
+      "dataVfd": "button",
+      "inputs": [
+        "textContent",
+        "aria-pressed",
+        "aria-current",
+        "aria-selected",
+        "disabled"
+      ],
+      "interaction": "Use semantic DOM controls and native event handlers; raster painting does not attach application actions."
+    },
+    {
+      "id": "vfd.search",
+      "type": "search",
+      "scope": "viewer-grid-painter",
+      "nativeId": "search",
+      "module": "dist/viewer-grid-paint.js",
+      "entry": "paintGridControl",
+      "dataVfd": "search",
+      "inputs": [
+        "value",
+        "placeholder",
+        "selectionStart",
+        "selectionEnd",
+        "disabled"
+      ],
+      "interaction": "Use semantic DOM controls and native event handlers; raster painting does not attach application actions."
+    },
+    {
+      "id": "vfd.select",
+      "type": "select",
+      "scope": "viewer-grid-painter",
+      "nativeId": "select",
+      "module": "dist/viewer-grid-paint.js",
+      "entry": "paintGridControl",
+      "dataVfd": "select",
+      "inputs": [
+        "value",
+        "selectedOptions",
+        "disabled"
+      ],
+      "interaction": "Use semantic DOM controls and native event handlers; raster painting does not attach application actions."
+    },
+    {
+      "id": "vfd.slider",
+      "type": "slider",
+      "scope": "viewer-grid-painter",
+      "nativeId": "slider",
+      "module": "dist/viewer-grid-paint.js",
+      "entry": "paintGridControl",
+      "dataVfd": "slider",
+      "inputs": [
+        "min",
+        "max",
+        "value",
+        "disabled"
+      ],
+      "interaction": "Use semantic DOM controls and native event handlers; raster painting does not attach application actions."
+    },
+    {
+      "id": "vfd.time",
+      "type": "time",
+      "scope": "viewer-grid-painter",
+      "nativeId": "time",
+      "module": "dist/viewer-grid-paint.js",
+      "entry": "paintGridControl",
+      "dataVfd": "time",
+      "inputs": [
+        "textContent"
+      ],
+      "interaction": "Use semantic DOM controls and native event handlers; raster painting does not attach application actions."
+    },
+    {
+      "id": "vfd.capture",
+      "type": "capture",
+      "scope": "viewer-grid-painter",
+      "nativeId": "capture",
+      "module": "dist/viewer-grid-paint.js",
+      "entry": "paintGridControl",
+      "dataVfd": "capture",
+      "inputs": [
+        ".capture-name",
+        "aria-pressed"
+      ],
+      "interaction": "Use semantic DOM controls and native event handlers; raster painting does not attach application actions."
+    },
+    {
+      "id": "vfd.transport-key",
+      "type": "transport-key",
+      "scope": "viewer-grid-painter",
+      "nativeId": "transport-key",
+      "module": "dist/viewer-grid-paint.js",
+      "entry": "paintGridControl",
+      "dataVfd": "transport-key",
+      "inputs": [
+        "id: stop-playback|stop|play-pause|play|step-back|previous|step-forward|next",
+        "aria-pressed",
+        "playing paint option"
+      ],
+      "interaction": "Use semantic DOM controls and native event handlers; raster painting does not attach application actions."
+    },
+    {
+      "id": "vfd.thermal-ramp",
+      "type": "thermal-ramp",
+      "scope": "viewer-grid-painter",
+      "nativeId": "thermal-ramp",
+      "module": "dist/viewer-grid-paint.js",
+      "entry": "paintGridControl",
+      "dataVfd": "thermal-ramp",
+      "inputs": [],
+      "interaction": "Use semantic DOM controls and native event handlers; raster painting does not attach application actions."
+    },
+    {
+      "id": "vfd.alert",
+      "type": "alert",
+      "scope": "viewer-grid-painter",
+      "nativeId": "alert",
+      "module": "dist/viewer-grid-paint.js",
+      "entry": "paintGridControl",
+      "dataVfd": "alert",
+      "inputs": [
+        "textContent"
+      ],
+      "interaction": "Use semantic DOM controls and native event handlers; raster painting does not attach application actions."
+    },
+    {
+      "id": "vfd.compass",
+      "type": "compass",
+      "scope": "viewer-grid-painter",
+      "nativeId": "compass",
+      "module": "dist/viewer-grid-paint.js",
+      "entry": "paintGridControl",
+      "dataVfd": "compass",
+      "inputs": [
+        "data-heading",
+        "data-elevation",
+        "data-gesture"
+      ],
+      "interaction": "Use semantic DOM controls and native event handlers; raster painting does not attach application actions."
+    },
+    {
+      "id": "vfd.histogram",
+      "type": "histogram",
+      "scope": "viewer-grid-painter",
+      "nativeId": "histogram",
+      "module": "dist/viewer-grid-paint.js",
+      "entry": "paintGridControl",
+      "dataVfd": "histogram",
+      "inputs": [
+        "data-bins",
+        "data-selected-bins"
+      ],
+      "interaction": "Use semantic DOM controls and native event handlers; raster painting does not attach application actions."
+    },
+    {
+      "id": "vfd.lasso-overlay",
+      "type": "lasso-overlay",
+      "scope": "viewer-grid-painter",
+      "nativeId": "lasso-overlay",
+      "module": "dist/viewer-grid-paint.js",
+      "entry": "paintGridControl",
+      "dataVfd": "lasso-overlay",
+      "inputs": [
+        "data-points"
+      ],
+      "interaction": "Use semantic DOM controls and native event handlers; raster painting does not attach application actions."
+    },
+    {
+      "id": "vfd.marker-tether",
+      "type": "marker-tether",
+      "scope": "viewer-grid-painter",
+      "nativeId": "marker-tether",
+      "module": "dist/viewer-grid-paint.js",
+      "entry": "paintGridControl",
+      "dataVfd": "marker-tether",
+      "inputs": [
+        "data-points"
+      ],
+      "interaction": "Use semantic DOM controls and native event handlers; raster painting does not attach application actions."
+    },
+    {
+      "id": "vfd.marker-panel",
+      "type": "marker-panel",
+      "scope": "viewer-grid-painter",
+      "nativeId": "marker-panel",
+      "module": "dist/viewer-grid-paint.js",
+      "entry": "paintGridControl",
+      "dataVfd": "marker-panel",
+      "inputs": [],
+      "interaction": "Use semantic DOM controls and native event handlers; raster painting does not attach application actions."
+    },
+    {
+      "id": "vfd.marker-flag",
+      "type": "marker-flag",
+      "scope": "viewer-grid-painter",
+      "nativeId": "marker-flag",
+      "module": "dist/viewer-grid-paint.js",
+      "entry": "paintGridControl",
+      "dataVfd": "marker-flag",
+      "inputs": [
+        "data-latitude",
+        "data-longitude"
+      ],
+      "interaction": "Use semantic DOM controls and native event handlers; raster painting does not attach application actions."
+    },
+    {
+      "id": "vfd.drone-panel",
+      "type": "drone-panel",
+      "scope": "viewer-grid-painter",
+      "nativeId": "drone-panel",
+      "module": "dist/viewer-grid-paint.js",
+      "entry": "paintGridControl",
+      "dataVfd": "drone-panel",
+      "inputs": [],
+      "interaction": "Use semantic DOM controls and native event handlers; raster painting does not attach application actions."
+    },
+    {
+      "id": "vfd.drone-header",
+      "type": "drone-header",
+      "scope": "viewer-grid-painter",
+      "nativeId": "drone-header",
+      "module": "dist/viewer-grid-paint.js",
+      "entry": "paintGridControl",
+      "dataVfd": "drone-header",
+      "inputs": [],
+      "interaction": "Use semantic DOM controls and native event handlers; raster painting does not attach application actions."
+    },
+    {
+      "id": "vfd.drone-heading",
+      "type": "drone-heading",
+      "scope": "viewer-grid-painter",
+      "nativeId": "drone-heading",
+      "module": "dist/viewer-grid-paint.js",
+      "entry": "paintGridControl",
+      "dataVfd": "drone-heading",
+      "inputs": [
+        "data-heading",
+        "data-available"
+      ],
+      "interaction": "Use semantic DOM controls and native event handlers; raster painting does not attach application actions."
+    },
+    {
+      "id": "vfd.drone-altitude",
+      "type": "drone-altitude",
+      "scope": "viewer-grid-painter",
+      "nativeId": "drone-altitude",
+      "module": "dist/viewer-grid-paint.js",
+      "entry": "paintGridControl",
+      "dataVfd": "drone-altitude",
+      "inputs": [
+        "data-altitude",
+        "data-available"
+      ],
+      "interaction": "Use semantic DOM controls and native event handlers; raster painting does not attach application actions."
+    },
+    {
+      "id": "vfd.drone-attitude",
+      "type": "drone-attitude",
+      "scope": "viewer-grid-painter",
+      "nativeId": "drone-attitude",
+      "module": "dist/viewer-grid-paint.js",
+      "entry": "paintGridControl",
+      "dataVfd": "drone-attitude",
+      "inputs": [
+        "data-axis",
+        "data-value",
+        "data-available"
+      ],
+      "interaction": "Use semantic DOM controls and native event handlers; raster painting does not attach application actions."
+    },
+    {
+      "id": "vfd.drone-feed",
+      "type": "drone-feed",
+      "scope": "viewer-grid-painter",
+      "nativeId": "drone-feed",
+      "module": "dist/viewer-grid-paint.js",
+      "entry": "paintGridControl",
+      "dataVfd": "drone-feed",
+      "inputs": [
+        "data-feed",
+        "data-zoom",
+        "data-heading",
+        "data-roll",
+        "data-pitch",
+        "data-available"
+      ],
+      "interaction": "Use semantic DOM controls and native event handlers; raster painting does not attach application actions."
+    },
+    {
+      "id": "vfd.operate-stick",
+      "type": "operate-stick",
+      "scope": "viewer-grid-painter",
+      "nativeId": "operate-stick",
+      "module": "dist/viewer-grid-paint.js",
+      "entry": "paintGridControl",
+      "dataVfd": "operate-stick",
+      "inputs": [
+        "data-side",
+        "data-x",
+        "data-y",
+        "data-available"
+      ],
+      "interaction": "Use semantic DOM controls and native event handlers; raster painting does not attach application actions."
+    },
+    {
+      "id": "vfd.operate-frame",
+      "type": "operate-frame",
+      "scope": "viewer-grid-painter",
+      "nativeId": "operate-frame",
+      "module": "dist/viewer-grid-paint.js",
+      "entry": "paintGridControl",
+      "dataVfd": "operate-frame",
+      "inputs": [
+        "data-side"
+      ],
+      "interaction": "Use semantic DOM controls and native event handlers; raster painting does not attach application actions."
+    },
+    {
+      "id": "vfd.operate-hud",
+      "type": "operate-hud",
+      "scope": "viewer-grid-painter",
+      "nativeId": "operate-hud",
+      "module": "dist/viewer-grid-paint.js",
+      "entry": "paintGridControl",
+      "dataVfd": "operate-hud",
+      "inputs": [
+        "data-axis",
+        "data-value",
+        "data-available"
+      ],
+      "interaction": "Use semantic DOM controls and native event handlers; raster painting does not attach application actions."
+    },
+    {
+      "id": "vfd.canvas",
+      "type": "canvas",
+      "scope": "ui-pages-skin",
+      "nativeId": "canvas",
+      "module": "dist/ui-pages-skin.js",
+      "entry": "mountUIPagesSkin",
+      "dataVfd": "canvas",
+      "inputs": [
+        "element.vfdDraw(ctx,width,height)"
+      ],
+      "interaction": "Use semantic DOM controls and native event handlers; raster painting does not attach application actions."
+    },
+    {
+      "id": "reference.position.f1",
+      "nativeId": "f1",
+      "type": "reference-button",
+      "scope": "position-artwork",
+      "name": "F1",
+      "kind": "function",
+      "module": "dist/reference-screen.js",
+      "entry": "paintReferenceButton(ctx,button,options)",
+      "action": "activateReference(state,id)",
+      "bounds": {
+        "x": 1,
+        "y": 1,
+        "width": 29,
+        "height": 28
+      },
+      "logicalScreen": [
+        256,
+        128
+      ],
+      "channel": 0
+    },
+    {
+      "id": "reference.position.f2",
+      "nativeId": "f2",
+      "type": "reference-button",
+      "scope": "position-artwork",
+      "name": "F2",
+      "kind": "function",
+      "module": "dist/reference-screen.js",
+      "entry": "paintReferenceButton(ctx,button,options)",
+      "action": "activateReference(state,id)",
+      "bounds": {
+        "x": 33,
+        "y": 1,
+        "width": 29,
+        "height": 28
+      },
+      "logicalScreen": [
+        256,
+        128
+      ],
+      "channel": 1
+    },
+    {
+      "id": "reference.position.f3",
+      "nativeId": "f3",
+      "type": "reference-button",
+      "scope": "position-artwork",
+      "name": "F3",
+      "kind": "function",
+      "module": "dist/reference-screen.js",
+      "entry": "paintReferenceButton(ctx,button,options)",
+      "action": "activateReference(state,id)",
+      "bounds": {
+        "x": 65,
+        "y": 1,
+        "width": 29,
+        "height": 28
+      },
+      "logicalScreen": [
+        256,
+        128
+      ],
+      "channel": 2
+    },
+    {
+      "id": "reference.position.f4",
+      "nativeId": "f4",
+      "type": "reference-button",
+      "scope": "position-artwork",
+      "name": "F4",
+      "kind": "function",
+      "module": "dist/reference-screen.js",
+      "entry": "paintReferenceButton(ctx,button,options)",
+      "action": "activateReference(state,id)",
+      "bounds": {
+        "x": 97,
+        "y": 1,
+        "width": 29,
+        "height": 28
+      },
+      "logicalScreen": [
+        256,
+        128
+      ],
+      "channel": 3
+    },
+    {
+      "id": "reference.position.channel-0-off",
+      "nativeId": "channel-0-off",
+      "type": "reference-button",
+      "scope": "position-artwork",
+      "name": "OFF",
+      "kind": "channel",
+      "module": "dist/reference-screen.js",
+      "entry": "paintReferenceButton(ctx,button,options)",
+      "action": "activateReference(state,id)",
+      "bounds": {
+        "x": 1,
+        "y": 65,
+        "width": 29,
+        "height": 29
+      },
+      "logicalScreen": [
+        256,
+        128
+      ],
+      "channel": 0
+    },
+    {
+      "id": "reference.position.channel-0-on",
+      "nativeId": "channel-0-on",
+      "type": "reference-button",
+      "scope": "position-artwork",
+      "name": "ON",
+      "kind": "channel",
+      "module": "dist/reference-screen.js",
+      "entry": "paintReferenceButton(ctx,button,options)",
+      "action": "activateReference(state,id)",
+      "bounds": {
+        "x": 1,
+        "y": 96,
+        "width": 29,
+        "height": 29
+      },
+      "logicalScreen": [
+        256,
+        128
+      ],
+      "channel": 0
+    },
+    {
+      "id": "reference.position.channel-1-off",
+      "nativeId": "channel-1-off",
+      "type": "reference-button",
+      "scope": "position-artwork",
+      "name": "OFF",
+      "kind": "channel",
+      "module": "dist/reference-screen.js",
+      "entry": "paintReferenceButton(ctx,button,options)",
+      "action": "activateReference(state,id)",
+      "bounds": {
+        "x": 33,
+        "y": 65,
+        "width": 29,
+        "height": 29
+      },
+      "logicalScreen": [
+        256,
+        128
+      ],
+      "channel": 1
+    },
+    {
+      "id": "reference.position.channel-1-on",
+      "nativeId": "channel-1-on",
+      "type": "reference-button",
+      "scope": "position-artwork",
+      "name": "ON",
+      "kind": "channel",
+      "module": "dist/reference-screen.js",
+      "entry": "paintReferenceButton(ctx,button,options)",
+      "action": "activateReference(state,id)",
+      "bounds": {
+        "x": 33,
+        "y": 96,
+        "width": 29,
+        "height": 29
+      },
+      "logicalScreen": [
+        256,
+        128
+      ],
+      "channel": 1
+    },
+    {
+      "id": "reference.position.channel-2-off",
+      "nativeId": "channel-2-off",
+      "type": "reference-button",
+      "scope": "position-artwork",
+      "name": "OFF",
+      "kind": "channel",
+      "module": "dist/reference-screen.js",
+      "entry": "paintReferenceButton(ctx,button,options)",
+      "action": "activateReference(state,id)",
+      "bounds": {
+        "x": 65,
+        "y": 65,
+        "width": 29,
+        "height": 29
+      },
+      "logicalScreen": [
+        256,
+        128
+      ],
+      "channel": 2
+    },
+    {
+      "id": "reference.position.channel-2-on",
+      "nativeId": "channel-2-on",
+      "type": "reference-button",
+      "scope": "position-artwork",
+      "name": "ON",
+      "kind": "channel",
+      "module": "dist/reference-screen.js",
+      "entry": "paintReferenceButton(ctx,button,options)",
+      "action": "activateReference(state,id)",
+      "bounds": {
+        "x": 65,
+        "y": 96,
+        "width": 29,
+        "height": 29
+      },
+      "logicalScreen": [
+        256,
+        128
+      ],
+      "channel": 2
+    },
+    {
+      "id": "reference.position.channel-3-off",
+      "nativeId": "channel-3-off",
+      "type": "reference-button",
+      "scope": "position-artwork",
+      "name": "OFF",
+      "kind": "channel",
+      "module": "dist/reference-screen.js",
+      "entry": "paintReferenceButton(ctx,button,options)",
+      "action": "activateReference(state,id)",
+      "bounds": {
+        "x": 97,
+        "y": 65,
+        "width": 29,
+        "height": 29
+      },
+      "logicalScreen": [
+        256,
+        128
+      ],
+      "channel": 3
+    },
+    {
+      "id": "reference.position.channel-3-on",
+      "nativeId": "channel-3-on",
+      "type": "reference-button",
+      "scope": "position-artwork",
+      "name": "ON",
+      "kind": "channel",
+      "module": "dist/reference-screen.js",
+      "entry": "paintReferenceButton(ctx,button,options)",
+      "action": "activateReference(state,id)",
+      "bounds": {
+        "x": 97,
+        "y": 96,
+        "width": 29,
+        "height": 29
+      },
+      "logicalScreen": [
+        256,
+        128
+      ],
+      "channel": 3
+    },
+    {
+      "id": "reference.position.up",
+      "nativeId": "up",
+      "type": "reference-button",
+      "scope": "position-artwork",
+      "name": "Up",
+      "kind": "direction",
+      "module": "dist/reference-screen.js",
+      "entry": "paintReferenceButton(ctx,button,options)",
+      "action": "activateReference(state,id)",
+      "bounds": {
+        "x": 193,
+        "y": 32,
+        "width": 29,
+        "height": 29
+      },
+      "logicalScreen": [
+        256,
+        128
+      ]
+    },
+    {
+      "id": "reference.position.left",
+      "nativeId": "left",
+      "type": "reference-button",
+      "scope": "position-artwork",
+      "name": "Left",
+      "kind": "direction",
+      "module": "dist/reference-screen.js",
+      "entry": "paintReferenceButton(ctx,button,options)",
+      "action": "activateReference(state,id)",
+      "bounds": {
+        "x": 161,
+        "y": 64,
+        "width": 29,
+        "height": 29
+      },
+      "logicalScreen": [
+        256,
+        128
+      ]
+    },
+    {
+      "id": "reference.position.set",
+      "nativeId": "set",
+      "type": "reference-button",
+      "scope": "position-artwork",
+      "name": "SET",
+      "kind": "set",
+      "module": "dist/reference-screen.js",
+      "entry": "paintReferenceButton(ctx,button,options)",
+      "action": "activateReference(state,id)",
+      "bounds": {
+        "x": 193,
+        "y": 64,
+        "width": 29,
+        "height": 29
+      },
+      "logicalScreen": [
+        256,
+        128
+      ]
+    },
+    {
+      "id": "reference.position.right",
+      "nativeId": "right",
+      "type": "reference-button",
+      "scope": "position-artwork",
+      "name": "Right",
+      "kind": "direction",
+      "module": "dist/reference-screen.js",
+      "entry": "paintReferenceButton(ctx,button,options)",
+      "action": "activateReference(state,id)",
+      "bounds": {
+        "x": 225,
+        "y": 64,
+        "width": 29,
+        "height": 29
+      },
+      "logicalScreen": [
+        256,
+        128
+      ]
+    },
+    {
+      "id": "reference.position.down",
+      "nativeId": "down",
+      "type": "reference-button",
+      "scope": "position-artwork",
+      "name": "Down",
+      "kind": "direction",
+      "module": "dist/reference-screen.js",
+      "entry": "paintReferenceButton(ctx,button,options)",
+      "action": "activateReference(state,id)",
+      "bounds": {
+        "x": 193,
+        "y": 96,
+        "width": 29,
+        "height": 29
+      },
+      "logicalScreen": [
+        256,
+        128
+      ]
+    },
+    {
+      "id": "reference.position.item-a1",
+      "nativeId": "item-a1",
+      "type": "reference-button",
+      "scope": "position-artwork",
+      "name": "A-1",
+      "kind": "item",
+      "module": "dist/reference-screen.js",
+      "entry": "paintReferenceButton(ctx,button,options)",
+      "action": "activateReference(state,id)",
+      "bounds": {
+        "x": 130,
+        "y": 87,
+        "width": 30,
+        "height": 10
+      },
+      "logicalScreen": [
+        256,
+        128
+      ],
+      "channel": 0
+    },
+    {
+      "id": "reference.position.item-b2",
+      "nativeId": "item-b2",
+      "type": "reference-button",
+      "scope": "position-artwork",
+      "name": "B-2",
+      "kind": "item",
+      "module": "dist/reference-screen.js",
+      "entry": "paintReferenceButton(ctx,button,options)",
+      "action": "activateReference(state,id)",
+      "bounds": {
+        "x": 130,
+        "y": 97,
+        "width": 30,
+        "height": 10
+      },
+      "logicalScreen": [
+        256,
+        128
+      ],
+      "channel": 1
+    },
+    {
+      "id": "reference.position.item-c3",
+      "nativeId": "item-c3",
+      "type": "reference-button",
+      "scope": "position-artwork",
+      "name": "C-3",
+      "kind": "item",
+      "module": "dist/reference-screen.js",
+      "entry": "paintReferenceButton(ctx,button,options)",
+      "action": "activateReference(state,id)",
+      "bounds": {
+        "x": 130,
+        "y": 107,
+        "width": 30,
+        "height": 10
+      },
+      "logicalScreen": [
+        256,
+        128
+      ],
+      "channel": 2
+    },
+    {
+      "id": "reference.position.item-d4",
+      "nativeId": "item-d4",
+      "type": "reference-button",
+      "scope": "position-artwork",
+      "name": "D-4",
+      "kind": "item",
+      "module": "dist/reference-screen.js",
+      "entry": "paintReferenceButton(ctx,button,options)",
+      "action": "activateReference(state,id)",
+      "bounds": {
+        "x": 130,
+        "y": 117,
+        "width": 30,
+        "height": 10
+      },
+      "logicalScreen": [
+        256,
+        128
+      ],
+      "channel": 3
+    },
+    {
+      "id": "reference.transport.stop",
+      "nativeId": "stop",
+      "type": "reference-button",
+      "scope": "transport-artwork",
+      "name": "Stop",
+      "kind": "transport",
+      "module": "dist/transport-screen.js",
+      "entry": "paintTransportButton(ctx,button,options)",
+      "action": "activateTransport(state,id)",
+      "bounds": {
+        "x": 5,
+        "y": 101,
+        "width": 34,
+        "height": 23
+      },
+      "logicalScreen": [
+        256,
+        128
+      ]
+    },
+    {
+      "id": "reference.transport.previous",
+      "nativeId": "previous",
+      "type": "reference-button",
+      "scope": "transport-artwork",
+      "name": "Previous track",
+      "kind": "transport",
+      "module": "dist/transport-screen.js",
+      "entry": "paintTransportButton(ctx,button,options)",
+      "action": "activateTransport(state,id)",
+      "bounds": {
+        "x": 44,
+        "y": 101,
+        "width": 34,
+        "height": 23
+      },
+      "logicalScreen": [
+        256,
+        128
+      ]
+    },
+    {
+      "id": "reference.transport.play",
+      "nativeId": "play",
+      "type": "reference-button",
+      "scope": "transport-artwork",
+      "name": "Play or pause",
+      "kind": "transport",
+      "module": "dist/transport-screen.js",
+      "entry": "paintTransportButton(ctx,button,options)",
+      "action": "activateTransport(state,id)",
+      "bounds": {
+        "x": 83,
+        "y": 101,
+        "width": 34,
+        "height": 23
+      },
+      "logicalScreen": [
+        256,
+        128
+      ]
+    },
+    {
+      "id": "reference.transport.next",
+      "nativeId": "next",
+      "type": "reference-button",
+      "scope": "transport-artwork",
+      "name": "Next track",
+      "kind": "transport",
+      "module": "dist/transport-screen.js",
+      "entry": "paintTransportButton(ctx,button,options)",
+      "action": "activateTransport(state,id)",
+      "bounds": {
+        "x": 122,
+        "y": 101,
+        "width": 34,
+        "height": 23
+      },
+      "logicalScreen": [
+        256,
+        128
+      ]
+    },
+    {
+      "id": "drone.cluster",
+      "type": "mounted-panel",
+      "scope": "viewer",
+      "module": "dist/drone-cluster.js",
+      "entry": "mountDroneCluster",
+      "css": [
+        "dist/drone-cluster.css"
+      ],
+      "contains": [
+        "vfd.drone-panel",
+        "vfd.drone-header",
+        "vfd.drone-heading",
+        "vfd.drone-altitude",
+        "vfd.drone-attitude",
+        "vfd.drone-feed",
+        "vfd.button",
+        "vfd.slider"
+      ]
+    },
+    {
+      "id": "drone.direct-operate",
+      "type": "mounted-overlay",
+      "scope": "viewer",
+      "module": "dist/direct-operate.js",
+      "entry": "mountDirectOperate",
+      "css": [
+        "dist/direct-operate.css"
+      ],
+      "contains": [
+        "vfd.operate-stick",
+        "vfd.operate-frame",
+        "vfd.operate-hud",
+        "vfd.label",
+        "vfd.button"
+      ]
+    },
+    {
+      "id": "drone.map-flag",
+      "type": "mounted-overlay",
+      "scope": "viewer",
+      "module": "dist/map-marker-flag.js",
+      "entry": "mountMapMarkerFlag",
+      "css": [
+        "dist/viewer.css"
+      ],
+      "contains": [
+        "vfd.marker-tether",
+        "vfd.marker-panel",
+        "vfd.marker-flag",
+        "vfd.button"
+      ]
+    },
+    {
+      "id": "saas.line",
+      "nativeId": "line",
+      "type": "destination-canvas-chart",
+      "scope": "saas",
+      "name": "Trend graph",
+      "family": "DATA VISUALIZATION",
+      "description": "Select a point on an integer-raster time series, with optional comparison series.",
+      "module": "dist/saas-viz.js",
+      "entry": "bindVFDChart(canvas,{getSpec,onSelect,refresh})",
+      "painter": "paintVFDChart(ctx,width,height,{type:\"line\",...spec})",
+      "configNormalizer": {
+        "module": "dist/saas-viz.js",
+        "entry": "normalizeVFDChart(spec)"
+      },
+      "individuallyMountable": true,
+      "css": [
+        "dist/ui-pages.css"
+      ],
+      "interactionOwner": "bindVFDChart supplies pointer/keyboard selection; host owns data, selectedIndex and compositor refresh.",
+      "noteStorage": {
+        "key": "phosphor-saas-workspace-v1",
+        "field": "componentNotes.line"
+      }
+    },
+    {
+      "id": "saas.bar",
+      "nativeId": "bar",
+      "type": "destination-canvas-chart",
+      "scope": "saas",
+      "name": "Bar graph",
+      "family": "DATA VISUALIZATION",
+      "description": "Compare categories using labeled horizontal bars on the display pixel lattice.",
+      "module": "dist/saas-viz.js",
+      "entry": "bindVFDChart(canvas,{getSpec,onSelect,refresh})",
+      "painter": "paintVFDChart(ctx,width,height,{type:\"bar\",...spec})",
+      "configNormalizer": {
+        "module": "dist/saas-viz.js",
+        "entry": "normalizeVFDChart(spec)"
+      },
+      "individuallyMountable": true,
+      "css": [
+        "dist/ui-pages.css"
+      ],
+      "interactionOwner": "bindVFDChart supplies pointer/keyboard selection; host owns data, selectedIndex and compositor refresh.",
+      "noteStorage": {
+        "key": "phosphor-saas-workspace-v1",
+        "field": "componentNotes.bar"
+      }
+    },
+    {
+      "id": "saas.donut",
+      "nativeId": "donut",
+      "type": "destination-canvas-chart",
+      "scope": "saas",
+      "name": "Distribution ring",
+      "family": "DATA VISUALIZATION",
+      "description": "Show categorical shares with selectable raster ring segments.",
+      "module": "dist/saas-viz.js",
+      "entry": "bindVFDChart(canvas,{getSpec,onSelect,refresh})",
+      "painter": "paintVFDChart(ctx,width,height,{type:\"donut\",...spec})",
+      "configNormalizer": {
+        "module": "dist/saas-viz.js",
+        "entry": "normalizeVFDChart(spec)"
+      },
+      "individuallyMountable": true,
+      "css": [
+        "dist/ui-pages.css"
+      ],
+      "interactionOwner": "bindVFDChart supplies pointer/keyboard selection; host owns data, selectedIndex and compositor refresh.",
+      "noteStorage": {
+        "key": "phosphor-saas-workspace-v1",
+        "field": "componentNotes.donut"
+      }
+    },
+    {
+      "id": "saas.gauge",
+      "nativeId": "gauge",
+      "type": "destination-canvas-chart",
+      "scope": "saas",
+      "name": "Radial meter",
+      "family": "DATA VISUALIZATION",
+      "description": "Show a finite value and target on a segmented arc.",
+      "module": "dist/saas-viz.js",
+      "entry": "bindVFDChart(canvas,{getSpec,onSelect,refresh})",
+      "painter": "paintVFDChart(ctx,width,height,{type:\"gauge\",...spec})",
+      "configNormalizer": {
+        "module": "dist/saas-viz.js",
+        "entry": "normalizeVFDChart(spec)"
+      },
+      "individuallyMountable": true,
+      "css": [
+        "dist/ui-pages.css"
+      ],
+      "interactionOwner": "bindVFDChart supplies pointer/keyboard selection; host owns data, selectedIndex and compositor refresh.",
+      "noteStorage": {
+        "key": "phosphor-saas-workspace-v1",
+        "field": "componentNotes.gauge"
+      }
+    },
+    {
+      "id": "saas.heatmap",
+      "nativeId": "heatmap",
+      "type": "destination-canvas-chart",
+      "scope": "saas",
+      "name": "Activity matrix",
+      "family": "DATA VISUALIZATION",
+      "description": "Compare data values by raster-cell intensity, with pointer and keyboard selection.",
+      "module": "dist/saas-viz.js",
+      "entry": "bindVFDChart(canvas,{getSpec,onSelect,refresh})",
+      "painter": "paintVFDChart(ctx,width,height,{type:\"heatmap\",...spec})",
+      "configNormalizer": {
+        "module": "dist/saas-viz.js",
+        "entry": "normalizeVFDChart(spec)"
+      },
+      "individuallyMountable": true,
+      "css": [
+        "dist/ui-pages.css"
+      ],
+      "interactionOwner": "bindVFDChart supplies pointer/keyboard selection; host owns data, selectedIndex and compositor refresh.",
+      "noteStorage": {
+        "key": "phosphor-saas-workspace-v1",
+        "field": "componentNotes.heatmap"
+      }
+    },
+    {
+      "id": "saas.sparkline",
+      "nativeId": "sparkline",
+      "type": "destination-canvas-chart",
+      "scope": "saas",
+      "name": "Sparkline",
+      "family": "DATA VISUALIZATION",
+      "description": "Show a compact, selectable time series inside a metric card.",
+      "module": "dist/saas-viz.js",
+      "entry": "bindVFDChart(canvas,{getSpec,onSelect,refresh})",
+      "painter": "paintVFDChart(ctx,width,height,{type:\"sparkline\",...spec})",
+      "configNormalizer": {
+        "module": "dist/saas-viz.js",
+        "entry": "normalizeVFDChart(spec)"
+      },
+      "individuallyMountable": true,
+      "css": [
+        "dist/ui-pages.css"
+      ],
+      "interactionOwner": "bindVFDChart supplies pointer/keyboard selection; host owns data, selectedIndex and compositor refresh.",
+      "noteStorage": {
+        "key": "phosphor-saas-workspace-v1",
+        "field": "componentNotes.sparkline"
+      }
+    },
+    {
+      "id": "saas.bullet",
+      "nativeId": "bullet",
+      "type": "destination-canvas-chart",
+      "scope": "saas",
+      "name": "Linear meter",
+      "family": "DATA VISUALIZATION",
+      "description": "Show progress against a bounded maximum and optional target.",
+      "module": "dist/saas-viz.js",
+      "entry": "bindVFDChart(canvas,{getSpec,onSelect,refresh})",
+      "painter": "paintVFDChart(ctx,width,height,{type:\"bullet\",...spec})",
+      "configNormalizer": {
+        "module": "dist/saas-viz.js",
+        "entry": "normalizeVFDChart(spec)"
+      },
+      "individuallyMountable": true,
+      "css": [
+        "dist/ui-pages.css"
+      ],
+      "interactionOwner": "bindVFDChart supplies pointer/keyboard selection; host owns data, selectedIndex and compositor refresh.",
+      "noteStorage": {
+        "key": "phosphor-saas-workspace-v1",
+        "field": "componentNotes.bullet"
+      }
+    }
+  ],
+  "storage": [
+    {
+      "id": "optical",
+      "key": "phosphor-screen-settings-v1",
+      "module": "dist/settings.js",
+      "normalizer": "normalizeSettings",
+      "description": "Active optical controls and both reference screen states",
+      "scope": "browser-origin"
+    },
+    {
+      "id": "config-library",
+      "key": "phosphor-config-library-v1",
+      "module": "dist/config-store.js",
+      "normalizer": "sanitizeConfigs",
+      "description": "Up to 50 named optical configurations",
+      "scope": "browser-origin"
+    },
+    {
+      "id": "optical-intro",
+      "key": "phosphor-transport-screen-intro-v1",
+      "module": "dist/editor.js",
+      "normalizer": null,
+      "description": "One-time optical introduction flag",
+      "scope": "browser-origin"
+    },
+    {
+      "id": "workbench",
+      "key": "phosphor-component-workbench-v1",
+      "module": "dist/bench-store.js",
+      "normalizer": "normalizeBenchState",
+      "description": "12 widget configs/notes, shared optics and reference states",
+      "scope": "browser-origin"
+    },
+    {
+      "id": "viewer",
+      "key": "phosphor-inspection-viewer-v1",
+      "module": "dist/viewer-state.js",
+      "normalizer": "normalizeViewerState",
+      "description": "Asset, render mode, voxel size, point edit ranges/groups, hologram parameters, layers, playback frame/speed/loop, view preset and notes",
+      "scope": "browser-origin"
+    },
+    {
+      "id": "viewer-guides",
+      "key": "phosphor-viewer-grid-guides",
+      "module": "dist/viewer-skin.js",
+      "normalizer": null,
+      "description": "Boolean string layout-guide preference",
+      "scope": "browser-origin"
+    },
+    {
+      "id": "ui-pages",
+      "key": "phosphor-ui-pages-v1",
+      "module": "dist/ui-pages-state.js",
+      "normalizer": "normalizePagesState",
+      "description": "Page, selected component, notes, optics and grid guides",
+      "scope": "browser-origin"
+    },
+    {
+      "id": "readiness",
+      "key": "phosphor-ui-readiness-v1",
+      "module": "dist/ui-readiness.js",
+      "normalizer": null,
+      "description": "Local readiness demo workflow, parts and dashboard state",
+      "scope": "browser-origin"
+    },
+    {
+      "id": "logistics",
+      "key": "phosphor-ui-logistics-v1",
+      "module": "dist/ui-logistics.js",
+      "normalizer": null,
+      "description": "Local logistics map layers/view, alert selections and dismissed demo alerts",
+      "scope": "browser-origin"
+    },
+    {
+      "id": "saas",
+      "key": "phosphor-saas-workspace-v1",
+      "module": "dist/saas-state.js",
+      "normalizer": "normalizeSaasState",
+      "description": "SaaS page/range/site, workspace preferences, optical values, instrument palette/pattern, selected instrument, per-instrument notes and inspection review overrides",
+      "scope": "browser-origin"
+    },
+    {
+      "id": "designer",
+      "key": "phosphor-flow-designer-v1",
+      "module": "dist/blank-state.js",
+      "normalizer": "normalizeDesign",
+      "description": "Main and hidden page definitions, rectangle/divider IDs and types, integer grid geometry, labels and optional page-link targets",
+      "scope": "browser-origin",
+      "documentVersion": 2
+    }
+  ],
+  "notPersistedByCurrentStores": [
+    "Live point selection",
+    "Point undo stack",
+    "Transient drone flight pose and control inputs",
+    "Open overlays and pointer gestures",
+    "Downloaded live OSM tile cache",
+    "A generated in-memory baked texture",
+    "SaaS table search/status/sort, chart-point selection, and the live instrument value slider",
+    "Designer current tool, selected element, pointer gesture and undo/redo history",
+    "Designer UI preview toggle and synthetic named-panel interaction state",
+    "Designer topology node selection and demo Admin/Viewer access role"
+  ],
+  "constraints": [
+    "One static window-wide display lattice and a UI layout grid divisible by 8 display pixels.",
+    "Repaint viewer controls at final integer bounds; do not stretch raster control assets.",
+    "Render the native 3D scene and UI into the shared compositor; avoid independent per-control grids or bloom passes.",
+    "Keep semantic DOM controls accessible and fallback-visible until the optical renderer succeeds.",
+    "Use the same vendored Three.js instance for Spark and scene code.",
+    "Original UI code has no separately declared open-source license; no license grant is invented here.",
+    "Logistics and readiness are demo workflows; maps/sensors/flight do not provide operational or hardware guarantees."
+  ],
+  "licenses": [
+    {
+      "id": "three",
+      "name": "Three.js",
+      "version": "0.187.0",
+      "license": "MIT",
+      "notice": "dist/vendor/LICENSE",
+      "provenance": "dist/vendor/README.md"
+    },
+    {
+      "id": "spark",
+      "name": "Spark",
+      "version": "2.4.0",
+      "license": "MIT",
+      "notice": "dist/vendor/SPARK-LICENSE",
+      "provenance": "dist/vendor/SPARK-README.md"
+    },
+    {
+      "id": "pumpkin",
+      "name": "Pumpkin!",
+      "author": "Mavrick Hansen",
+      "license": "CC BY 4.0",
+      "notice": "dist/assets/pumpkin-license.txt",
+      "optionalAsset": true
+    },
+    {
+      "id": "shopping-center",
+      "name": "Shopping Center Trees MK",
+      "author": "Natural Splats",
+      "license": "CC BY 4.0",
+      "notice": "dist/imported-scenes.js",
+      "optionalAsset": true,
+      "bundled": false
+    },
+    {
+      "id": "snow-globe",
+      "name": "Jam and Cheese Croissant",
+      "author": "Mateo Vallarino",
+      "license": "CC BY-NC 4.0",
+      "notice": "dist/imported-scenes.js",
+      "optionalAsset": true,
+      "restriction": "Noncommercial use restriction applies to this capture; UI reuse does not require bundling it.",
+      "bundled": false
+    },
+    {
+      "id": "osm",
+      "name": "OpenStreetMap",
+      "license": "ODbL data",
+      "attribution": "\u00a9 OpenStreetMap contributors",
+      "attributionUrl": "https://www.openstreetmap.org/copyright",
+      "sourceModule": "dist/hologram-map.js",
+      "networkRequired": true
+    }
+  ],
+  "programKit": {
+    "entry": "dist/phosphor-kit.js",
+    "mount": "mountPhosphorKit",
+    "controlTypes": [
+      "button",
+      "toggle",
+      "slider",
+      "search",
+      "label"
+    ],
+    "layoutUnits": "UI cells, each 8 by 8 display pixels",
+    "example": "dist/integration-example.html",
+    "methods": [
+      "render",
+      "update",
+      "getValues",
+      "getState",
+      "setOptics",
+      "setPattern",
+      "getControlElement",
+      "destroy"
+    ],
+    "callback": {
+      "name": "onChange",
+      "fields": [
+        "id",
+        "type",
+        "value",
+        "values",
+        "event"
+      ]
+    },
+    "implicitPersistence": false
+  },
+  "projectBackup": {
+    "module": "dist/project-backup.js",
+    "schema": "dist/project-backup.schema.json",
+    "page": "dist/handoff.html",
+    "format": "phosphor-project-backup",
+    "version": 3,
+    "functions": [
+      "createProjectBackup",
+      "parseProjectBackup",
+      "restoreProjectBackup",
+      "defaultProjectSettings"
+    ],
+    "defaultRestoreMode": "merge",
+    "snapshotFolder": "handoff/snapshots",
+    "snapshotsPublished": false,
+    "supportedVersions": [
+      1,
+      2,
+      3
+    ],
+    "legacyRestoreBehavior": "Versions 1 and 2 restore only their original 12 and 13 keys and preserve newer designer state; version 1 also preserves SaaS state, including in replace mode.",
+    "keyCounts": {
+      "1": 12,
+      "2": 13,
+      "3": 14
+    },
+    "saasStorageKey": "phosphor-saas-workspace-v1",
+    "designerStorageKey": "phosphor-flow-designer-v1"
+  }
+}

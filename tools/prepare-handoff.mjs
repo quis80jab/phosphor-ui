@@ -1,0 +1,14 @@
+import {mkdir,readFile,writeFile,copyFile} from 'node:fs/promises';
+import {fileURLToPath} from 'node:url';
+import path from 'node:path';
+import {defaultProjectSettings} from '../dist/project-backup.js';
+const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
+const target=path.join(root,'dist/handoff');
+await mkdir(target,{recursive:true});
+for(const name of ['HANDOFF.md','COMPONENTS.md','component-manifest.json','SAAS-PLAN.md','SAAS-COMPONENTS.md'])await copyFile(path.join(root,'handoff',name),path.join(target,name));
+const manifest=JSON.parse(await readFile(path.join(target,'component-manifest.json'),'utf8'));
+if(!manifest.format)throw new Error('Missing component manifest format.');
+const defaults={format:'phosphor-factory-settings',version:1,settings:defaultProjectSettings()};
+await writeFile(path.join(target,'default-settings.json'),JSON.stringify(defaults,null,2)+'\n');
+await writeFile(path.join(root,'handoff/default-settings.json'),JSON.stringify(defaults,null,2)+'\n');
+console.log('Prepared public component documentation and factory settings. Browser snapshots remain local.');
